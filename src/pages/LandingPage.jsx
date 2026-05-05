@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 import Hero from "../components/landingpage/Hero";
 import Partners from "../components/landingpage/Partners";
 import Fleet from "../components/landingpage/Fleet";
 import Technology from "../components/landingpage/Technology";
 import FAQ from "../components/landingpage/FAQ";
 import { ScrollDrift } from "../components/animations/Antigravity";
-import UseCases from '../components/landingpage/UseCases';
-import Process from '../components/landingpage/Process';
-import Gallery from '../components/landingpage/Gallery';
+import UseCases from "../components/landingpage/UseCases";
+import Process from "../components/landingpage/Process";
+import Gallery from "../components/landingpage/Gallery";
 
 const LandingPage = () => {
   return (
