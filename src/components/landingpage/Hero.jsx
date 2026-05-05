@@ -10,14 +10,16 @@ const stats = [
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen w-full overflow-hidden bg-background">
+    <section
+     id="home"
+     className="relative min-h-screen w-full overflow-hidden bg-background">
       {/* Background image (video fallback / poster) */}
       <div className="absolute inset-0">
         <video src={heroVdo}
           alt="Tactical drone over mountain terrain"
           width={1920}
           height={1080}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[72%_68%] md:object-center"
           autoPlay
           muted
           loop
