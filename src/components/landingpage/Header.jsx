@@ -98,7 +98,7 @@ const Header = () => {
 
           <div className="flex flex-col leading-none">
             <span className="font-display text-base font-bold tracking-widest">
-              DRONEOPS
+              ARCANUM
             </span>
             <span className="label-mono text-[9px] mt-0.5">
               TACTICAL UAV SYS

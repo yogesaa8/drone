@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import g1 from "../assets/gallery-1.jpg";
-import g2 from "../assets/gallery-2.jpg";
-import g4 from "../assets/gallery-4.jpg";
+import g1 from "../assets/gallary/gallery1.jpg";
+import g2 from "../assets/gallary/gallery2.jpg";
+import g4 from "../assets/gallary/gallery4.jpg";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
 

@@ -1,9 +1,4 @@
 import viper from "../assets/drone-viper.jpg";
-import g1 from "../assets/gallery-1.jpg";
-import g2 from "../assets/gallery-2.jpg";
-import g3 from "../assets/gallery-3.jpg";
-import g4 from "../assets/gallery-4.jpg";
-import g5 from "../assets/gallery-5.jpg";
 
 import d1_1 from "../assets/d1/1.1.png"
 import d2_1 from "../assets/d1/1.2.png"
@@ -25,6 +20,23 @@ import d3_3 from "../assets/d3/3.2.png"
 import d4_3 from "../assets/d3/3.3.png"
 import d5_3 from "../assets/d3/3.4.png"
 import model3 from "../assets/d3/03.glb?url"
+
+// gallery
+import g1 from "../assets/gallary/gallery1.jpg";
+import g2 from "../assets/gallary/gallery2.jpg";
+import g3 from "../assets/gallary/gallery3.jpg";
+import g4 from "../assets/gallary/gallery4.jpg";
+import g5 from "../assets/gallary/gallery5.jpg";
+import g6 from "../assets/gallary/1.png";
+import g7 from "../assets/gallary/2.png";
+import g8 from "../assets/gallary/3.png";
+import g9 from "../assets/gallary/4.png";
+import g10 from "../assets/gallary/5.png";
+import g11 from "../assets/gallary/6.png";
+import g12 from "../assets/gallary/7.png";
+import g13 from "../assets/gallary/8.png";
+import g14 from "../assets/gallary/9.png";
+
 
 
 export const drones = [
@@ -102,9 +114,19 @@ export const drones = [
 ];
 
 export const gallery = [
+  { src: g2, caption: "Industrial Inspection - Refinery 04" },
+  { src: g3, caption: "Desert Surveillance - Grid 19N" },
+  { src: g5, caption: "Pad Standby - Forward Operating Base" },
+  { src: g4, caption: "Command Operations - TOC Alpha" },
   { src: g1, caption: "Mountain Recon — Sector 7-A" },
-  { src: g2, caption: "Industrial Inspection — Refinery 04" },
-  { src: g3, caption: "Desert Surveillance — Grid 19N" },
-  { src: g5, caption: "Pad Standby — Forward Operating Base" },
-  { src: g4, caption: "Command Operations — TOC Alpha" },
+
+  { src: g6, caption: "Night Patrol — Border Zone Echo" },
+  { src: g7, caption: "Aerial Mapping — Canyon Ridge" },
+  { src: g8, caption: "Rapid Deployment — Hangar Delta" },
+  { src: g9, caption: "Tactical Sweep — Urban Sector 12" },
+  { src: g10, caption: "Drone Calibration — Control Bay 3" },
+  { src: g11, caption: "Perimeter Watch — Outpost Sigma" },
+  { src: g12, caption: "Thermal Scan — Northern Corridor" },
+  { src: g13, caption: "Fleet Coordination — Mission Control" },
+  { src: g14, caption: "High Altitude Recon — Arctic Pass" },
 ];

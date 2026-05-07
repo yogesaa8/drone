@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../components/landingpage/Hero";
 import Partners from "../components/landingpage/Partners";
 import Fleet from "../components/landingpage/Fleet";
