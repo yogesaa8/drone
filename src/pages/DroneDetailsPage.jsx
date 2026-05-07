@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { FiMaximize2, FiX } from "react-icons/fi";
 import { drones } from "../data/data";
 import DroneViewer from "../components/DroneViewer";
 
@@ -7,18 +8,21 @@ const DroneDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [active, setActive] = useState(0);
-  const [mounted, setMounted] = useState(false);
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   const drone = drones.find((d) => d.id === id);
 
   useEffect(() => {
-    setMounted(true);
     window.scrollTo(0, 0);
   }, [id]);
 
   useEffect(() => {
-    setActive(0);
-  }, [drone]);
+    document.body.style.overflow = isPreviewOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isPreviewOpen]);
 
   if (!drone) {
     return (
@@ -66,6 +70,15 @@ const DroneDetailsPage = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
+              <button
+                type="button"
+                onClick={() => setIsPreviewOpen(true)}
+                aria-label="Open image fullscreen"
+                title="Open fullscreen"
+                className="absolute top-3 right-3 z-20 grid h-9 w-9 place-items-center border border-border bg-background/80 text-foreground transition-colors hover:border-tactical hover:text-tactical"
+              >
+                <FiMaximize2 size={16} />
+              </button>
               <div className="absolute top-3 left-3 label-mono text-[10px] bg-background/70 px-2 py-1">
                 VIEW {String(active + 1).padStart(2, "0")} /{" "}
                 {String(drone.gallery.length).padStart(2, "0")}
@@ -108,7 +121,7 @@ const DroneDetailsPage = () => {
                   ● ACTIVE
                 </div>
                 <div className="absolute inset-0">
-                  {mounted && <DroneViewer variant={drone.id} />}
+                  <DroneViewer variant={drone.id} model={drone.model} />
                 </div>
               </div>
             </div> */}
@@ -122,7 +135,7 @@ const DroneDetailsPage = () => {
                 </span>
               </div>
 
-              <div className="relative h-[240px] sm:h-[300px] md:aspect-video md:h-auto bg-background border border-dashed border-border overflow-hidden">
+              <div className="relative h-[300px] sm:h-[360px] md:h-[390px] lg:h-[430px] bg-background border border-dashed border-border overflow-hidden">
                 <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none z-10" />
 
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-tactical/60 to-transparent animate-scanner z-10 pointer-events-none" />
@@ -136,7 +149,7 @@ const DroneDetailsPage = () => {
                 </div>
 
                 <div className="absolute inset-0">
-                  {mounted && <DroneViewer variant={drone.id} />}
+                  <DroneViewer variant={drone.id} model={drone.model} />
                 </div>
               </div>
             </div>
@@ -204,6 +217,29 @@ const DroneDetailsPage = () => {
           </div>
         </div>
       </div>
+
+      {isPreviewOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 p-4 md:p-8"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setIsPreviewOpen(false)}
+            aria-label="Close fullscreen image"
+            title="Close"
+            className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center border border-border bg-charcoal text-foreground transition-colors hover:border-tactical hover:text-tactical md:right-8 md:top-8"
+          >
+            <FiX size={22} />
+          </button>
+          <img
+            src={drone.gallery[active]}
+            alt={`${drone.name} fullscreen view ${active + 1}`}
+            className="max-h-full max-w-full object-contain"
+          />
+        </div>
+      )}
     </div>
   );
 };

@@ -1,12 +1,31 @@
-import raven from "../assets/drone-raven.jpg";
-import falcon from "../assets/drone-falcon.jpg";
 import viper from "../assets/drone-viper.jpg";
-import atlas from "../assets/drone-atlas.jpg";
 import g1 from "../assets/gallery-1.jpg";
 import g2 from "../assets/gallery-2.jpg";
 import g3 from "../assets/gallery-3.jpg";
 import g4 from "../assets/gallery-4.jpg";
 import g5 from "../assets/gallery-5.jpg";
+
+import d1_1 from "../assets/d1/1.1.png"
+import d2_1 from "../assets/d1/1.2.png"
+import d3_1 from "../assets/d1/1.3.png"
+import d4_1 from "../assets/d1/1.4.png"
+import d5_1 from "../assets/d1/1.5.png"
+import model1 from "../assets/d1/01.glb?url"
+
+import d1_2 from "../assets/d2/2.png"
+import d2_2 from "../assets/d2/2.1.png"
+import d3_2 from "../assets/d2/2.2.png"
+import d4_2 from "../assets/d2/2.3.png"
+import d5_2 from "../assets/d2/2.4.png"
+import model2 from "../assets/d2/02.glb?url"
+
+import d1_3 from "../assets/d3/3.png"
+import d2_3 from "../assets/d3/3.1.png"
+import d3_3 from "../assets/d3/3.2.png"
+import d4_3 from "../assets/d3/3.3.png"
+import d5_3 from "../assets/d3/3.4.png"
+import model3 from "../assets/d3/03.glb?url"
+
 
 export const drones = [
   {
@@ -14,8 +33,9 @@ export const drones = [
     serial: "UAV-RX1-048",
     name: "Raven X1 Recon",
     use: "Long-range surveillance",
-    image: raven,
-    gallery: [raven, g1, g3, g5],
+    image: d1_1,
+    gallery: [d2_1, d3_1, d4_1, d5_1],
+    model: model1,
     specs: [
       ["Endurance", "48 min"],
       ["Range", "12 km"],
@@ -31,8 +51,9 @@ export const drones = [
     serial: "UAV-FM4-112",
     name: "Falcon M4 Tactical",
     use: "Tactical field mapping",
-    image: falcon,
-    gallery: [falcon, g2, g1, g4],
+    image: d1_2,
+    gallery: [d2_2, d3_2, d4_2, d5_2],
+    model: model2,
     specs: [
       ["Endurance", "42 min"],
       ["Sensor", "LiDAR Ready"],
@@ -65,8 +86,9 @@ export const drones = [
     serial: "UAV-AHL-301",
     name: "Atlas HeavyLift",
     use: "Payload and emergency delivery",
-    image: atlas,
-    gallery: [atlas, g2, g4, g5],
+    image: d1_3,
+    gallery: [d2_3, d3_3, d4_3, d5_3],
+    model: model3,
     specs: [
       ["Payload", "4.5 kg"],
       ["Battery", "Dual Hot-Swap"],
