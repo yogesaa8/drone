@@ -7,10 +7,10 @@ const ProductCard = ({ item, type, onClick }) => {
 
   return (
     <article
-      className="group bg-charcoal flex flex-col cursor-pointer relative border border-border"
+      className="group bg-charcoal flex flex-col cursor-pointer relative border border-border min-w-0"
       onClick={onClick}
     >
-      <div className="relative aspect-4/3 overflow-hidden bg-background">
+      <div className="relative aspect-[4/3] overflow-hidden bg-background">
         <img
           src={item.image}
           alt={item.name}
@@ -31,18 +31,20 @@ const ProductCard = ({ item, type, onClick }) => {
       </div>
 
       <div className="p-5 flex flex-col flex-1">
-        <div className="label-mono text-tactical text-[10px] mb-2 uppercase">
+        <div className="label-mono text-tactical text-[10px] mb-2 uppercase break-words">
           {item.use || item.category || type}
         </div>
-        <h3 className="font-display text-xl font-bold leading-tight">
+        <h3 className="font-display text-xl font-bold leading-tight break-words">
           {item.name}
         </h3>
 
         <div className="mt-4 grid grid-cols-2 gap-2">
           {item.specs.slice(0, 4).map(([k, v]) => (
-            <div key={k} className="border-l border-tactical/40 pl-2">
+            <div key={k} className="border-l border-tactical/40 pl-2 min-w-0">
               <div className="label-mono text-[9px] uppercase">{k}</div>
-              <div className="text-sm font-semibold mt-0.5">{v}</div>
+              <div className="text-sm font-semibold mt-0.5 break-words">
+                {v}
+              </div>
             </div>
           ))}
         </div>
@@ -50,7 +52,7 @@ const ProductCard = ({ item, type, onClick }) => {
         <Link
           to={actionTo}
           onClick={(event) => event.stopPropagation()}
-          className="mt-6 w-full btn-ghost justify-between py-3!"
+          className="mt-6 w-full btn-ghost justify-between !py-3"
         >
           <span>
             {type === "drone" ? "View Details" : "Request Configuration"}
@@ -77,7 +79,7 @@ const ProductsPage = () => {
             ▌ Inventory / Full Catalog
           </span>
         </div>
-        <h1 className="font-display text-5xl md:text-7xl font-bold mb-6">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
           Advanced Equipment
         </h1>
         <p className="text-muted-foreground max-w-2xl text-lg">
@@ -89,7 +91,7 @@ const ProductsPage = () => {
       <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-10 space-y-32">
         {/* 1. Drone Section */}
         <section>
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
             <h2 className="font-display text-3xl font-bold">
               01 / Fleet Drones
             </h2>
@@ -109,7 +111,7 @@ const ProductsPage = () => {
 
         {/* 2. Drone Parts Section */}
         <section>
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
             <h2 className="font-display text-3xl font-bold">
               02 / Precision Parts
             </h2>
@@ -117,14 +119,19 @@ const ProductsPage = () => {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {droneParts.map((p) => (
-              <ProductCard key={p.id} item={p} type="component" />
+              <ProductCard
+                key={p.id}
+                item={p}
+                type="component"
+                onClick={() => navigate("/contact")}
+              />
             ))}
           </div>
         </section>
 
         {/* 3. Inside Kit Section */}
         <section>
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
             <h2 className="font-display text-3xl font-bold">
               03 / Mission Kits
             </h2>
@@ -132,7 +139,12 @@ const ProductsPage = () => {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {insideKits.map((k) => (
-              <ProductCard key={k.id} item={k} type="kit" />
+              <ProductCard
+                key={k.id}
+                item={k}
+                type="kit"
+                onClick={() => navigate("/contact")}
+              />
             ))}
           </div>
         </section>

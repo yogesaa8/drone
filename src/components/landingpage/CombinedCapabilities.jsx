@@ -73,7 +73,7 @@ const MissionTechGrid = () => {
                 <FloatUpText delay={0.2}>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
                         {combinedData.map((c, i) => (
-                            <div key={i} className="bg-charcoal p-8 group hover:bg-background zero-g-hover">
+                            <div key={c.mission} className="bg-charcoal p-8 group hover:bg-background zero-g-hover min-w-0">
                                 
                                 {/* Mission Part */}
                                 <div className="flex items-start justify-between mb-4">
@@ -84,7 +84,7 @@ const MissionTechGrid = () => {
                                         {c.icon}
                                     </div>
                                 </div>
-                                <h3 className="font-display text-xl font-semibold mb-1">{c.mission}</h3>
+                                <h3 className="font-display text-xl font-semibold mb-1 break-words">{c.mission}</h3>
                                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">{c.missionDesc}</p>
 
                                 {/* Divider */}
@@ -93,7 +93,7 @@ const MissionTechGrid = () => {
                                 {/* Tech Part */}
                                 <div className="flex items-center gap-2 mb-2">
                                     <span className="text-tactical text-sm">{c.techIcon}</span>
-                                    <span className="label-mono text-tactical text-[10px] tracking-wider">POWERED BY: {c.tech.toUpperCase()}</span>
+                                    <span className="label-mono text-tactical text-[10px] tracking-wider break-words">POWERED BY: {c.tech.toUpperCase()}</span>
                                 </div>
                                 <p className="text-xs text-muted-foreground/80 leading-relaxed">{c.techDesc}</p>
 

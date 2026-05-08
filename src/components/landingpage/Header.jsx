@@ -21,19 +21,13 @@ const navClass = ({ isActive }) =>
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
+  const [theme, setTheme] = useState(() => {
     const storedTheme = localStorage.getItem("theme");
 
-    if (storedTheme === "dark") {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
+    document.documentElement.classList.toggle("dark", storedTheme === "dark");
+
+    return storedTheme === "dark" ? "dark" : "light";
+  });
 
   useEffect(() => {
     const onScroll = () => {
@@ -48,11 +42,14 @@ const Header = () => {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme((currentTheme) => {
+      const nextTheme = currentTheme === "light" ? "dark" : "light";
 
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
+      localStorage.setItem("theme", nextTheme);
+      document.documentElement.classList.toggle("dark", nextTheme === "dark");
+
+      return nextTheme;
+    });
   };
 
   const toggleMenu = (e) => {
@@ -109,9 +106,11 @@ const Header = () => {
 
         <div className="hidden lg:flex items-center gap-4">
           {/* Theme Toggle */}
-          <div
+          <button
+            type="button"
             onClick={toggleTheme}
             className="flex items-center gap-2 cursor-pointer group"
+            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
           >
             <div className="text-xl transition-transform duration-300 group-hover:rotate-12">
               {theme === "light" ? (
@@ -124,9 +123,9 @@ const Header = () => {
             <span className="label-mono text-[10px] uppercase">
               {theme === "light" ? "Light Mode" : "Dark Mode"}
             </span>
-          </div>
+          </button>
 
-          <Link to="/contact" className="btn-tactical py-2.5! px-4!">
+          <Link to="/contact" className="btn-tactical !px-4 !py-2.5">
             Request Demo
           </Link>
         </div>
@@ -151,7 +150,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-background border-t border-border">
+        <div className="lg:hidden bg-background border-t border-border max-h-[calc(100vh-4rem)] overflow-y-auto">
           <nav className="px-6 py-6 flex flex-col gap-4">
             {links.map((l) => (
               <NavLink

@@ -1,4 +1,3 @@
-import React from 'react'
 const features = [
     {
         title: "AI Target Tracking",
@@ -56,7 +55,7 @@ const Technology = () => {
                     {features.map((f, i) => (
                         <div
                             key={f.title}
-                            className="bg-charcoal p-7 group hover:bg-background transition-colors relative"
+                            className="bg-charcoal p-7 group hover:bg-background transition-colors relative min-w-0"
                         >
                             <div className="flex items-start justify-between mb-6">
                                 <div className="w-12 h-12 border border-tactical/60 flex items-center justify-center text-tactical text-xl group-hover:border-tactical transition-colors">
@@ -66,7 +65,7 @@ const Technology = () => {
                                     MODULE {String(i + 1).padStart(2, "0")}
                                 </span>
                             </div>
-                            <h3 className="font-display text-lg font-semibold mb-2">{f.title}</h3>
+                            <h3 className="font-display text-lg font-semibold mb-2 break-words">{f.title}</h3>
                             <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
                             <div className="mt-5 h-px bg-gradient-to-r from-tactical/40 to-transparent" />
                         </div>

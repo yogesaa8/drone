@@ -1,10 +1,8 @@
 import Hero from "../components/landingpage/Hero";
 import Partners from "../components/landingpage/Partners";
 import Fleet from "../components/landingpage/Fleet";
-import Technology from "../components/landingpage/Technology";
 import FAQ from "../components/landingpage/FAQ";
 import { ScrollDrift } from "../components/animations/Antigravity";
-import UseCases from "../components/landingpage/UseCases";
 import Process from "../components/landingpage/Process";
 import Gallery from "../components/landingpage/Gallery";
 import PerformanceSpecs from "../components/landingpage/PerformanceSpecs";
@@ -27,7 +25,7 @@ const LandingPage = () => {
         <Gallery />
       </ScrollDrift>
       <ScrollDrift offset={25}>
-        <PerformanceSpecs/>
+        <PerformanceSpecs />
       </ScrollDrift>
       <ScrollDrift offset={15}>
         <Process />

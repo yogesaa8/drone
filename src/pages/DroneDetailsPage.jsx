@@ -44,9 +44,9 @@ const DroneDetailsPage = () => {
     <div className="py-24 lg:py-32 flex items-center justify-center px-4 md:px-8 max-w-7xl mx-auto w-full">
       <div className="relative w-full max-w-6xl bg-charcoal border border-border animate-fade-up">
         {/* Top bar */}
-        <div className="flex items-center justify-between border-b border-border px-5 py-3 bg-background/60">
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-tactical animate-hud-pulse" />
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border px-5 py-3 bg-background/60">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-2 h-2 shrink-0 bg-tactical animate-hud-pulse" />
             <span className="label-mono text-[10px]">
               UNIT BRIEF / {drone.serial}
             </span>
@@ -54,7 +54,7 @@ const DroneDetailsPage = () => {
           <button
             onClick={() => navigate("/")}
             aria-label="Back to Fleet"
-            className="px-4 py-1.5 border border-border flex items-center justify-center hover:border-tactical hover:text-tactical transition-colors text-xs font-mono"
+            className="px-4 py-1.5 border border-border flex items-center justify-center hover:border-tactical hover:text-tactical transition-colors text-xs font-mono sm:shrink-0"
           >
             ← BACK TO FLEET
           </button>
@@ -63,7 +63,7 @@ const DroneDetailsPage = () => {
         <div className="grid lg:grid-cols-2 gap-px bg-border">
           {/* Image gallery */}
           <div className="bg-charcoal p-6 lg:p-8">
-            <div className="relative aspect-4/3 bg-background corner-frame overflow-hidden">
+            <div className="relative aspect-[4/3] bg-background corner-frame overflow-hidden">
               <img
                 src={drone.gallery[active]}
                 alt={`${drone.name} view ${active + 1}`}

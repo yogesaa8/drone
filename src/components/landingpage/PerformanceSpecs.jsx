@@ -52,7 +52,7 @@ const PerformanceSpecs = () => {
                             {stats.map((s) => (
                                 <div
                                     key={s.label}
-                                    className="bg-charcoal p-6 text-center group hover:bg-background transition-colors"
+                                    className="bg-charcoal p-6 text-center group hover:bg-background transition-colors min-w-0"
                                 >
                                     <div className="font-display text-3xl lg:text-4xl font-bold text-tactical mb-1">
                                         {s.value}
@@ -91,12 +91,14 @@ const PerformanceSpecs = () => {
                             {specs.map((s, i) => (
                                 <div
                                     key={s.label}
-                                    className={`flex items-center justify-between px-6 py-4 group hover:bg-background transition-colors ${
+                                    className={`flex items-center justify-between gap-4 px-6 py-4 group hover:bg-background transition-colors ${
                                         i < specs.length - 1 ? "border-b border-border" : ""
                                     }`}
                                 >
-                                    <span className="text-sm text-muted-foreground">{s.label}</span>
-                                    <span className="font-display text-sm font-semibold text-tactical">
+                                    <span className="text-sm text-muted-foreground">
+                                        {s.label}
+                                    </span>
+                                    <span className="font-display text-sm font-semibold text-tactical text-right">
                                         {s.value}
                                     </span>
                                 </div>

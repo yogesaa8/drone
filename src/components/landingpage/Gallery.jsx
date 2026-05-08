@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { gallery } from "../../data/data";
 import { AnimatedGrid } from "../animations/AnimatedGrid";
 
@@ -58,7 +58,7 @@ const Gallery = () => {
 
             <div className="absolute top-2 right-2 sm:top-4 sm:right-4 label-mono text-[8px] sm:text-[10px] text-tactical bg-background/70 px-2 py-1 rounded-sm flex items-center gap-1 sm:gap-2">
               <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-tactical animate-hud-pulse rounded-full" />
-              <span className="hidden xs:inline">ARCHIVED FEED</span>
+              <span className="hidden sm:inline">ARCHIVED FEED</span>
             </div>
 
             {/* caption */}

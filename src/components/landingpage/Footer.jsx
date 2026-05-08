@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 const cols = [
   {
@@ -28,6 +30,40 @@ const cols = [
 ];
 
 const Footer = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    setLoading(true);
+
+    formData.append("apiKey", import.meta.env.VITE_STATICFORMS_API_KEY);
+
+    try {
+      const res = await fetch("https://api.staticforms.dev/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast.success("Subscribed successfully!");
+        form.reset();
+      } else {
+        toast.error("Subscription failed!");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong!");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className="border-t border-border bg-charcoal/40">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
@@ -37,25 +73,43 @@ const Footer = () => {
               <div className="w-8 h-8 border border-tactical relative flex items-center justify-center">
                 <div className="w-2 h-2 bg-tactical animate-hud-pulse" />
               </div>
+
               <span className="font-display text-lg font-bold tracking-widest">
                 DRONEOPS
               </span>
             </div>
+
             <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
               Advanced UAV systems engineered for intelligence, inspection, and
               mission-critical deployment.
             </p>
+
+            {/* Subscribe Form */}
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubscribe}
               className="mt-6 flex border border-border max-w-sm"
             >
               <input
                 type="tel"
+                name="phone"
+                required
                 placeholder="Enter Mobile Number"
-                className="flex-1 bg-transparent px-3 py-2.5 text-sm focus:outline-none"
+                className="min-w-0 flex-1 bg-transparent px-3 py-2.5 text-sm focus:outline-none"
               />
-              <button className="px-4 bg-tactical text-primary-foreground font-mono text-xs tracking-widest uppercase hover:bg-tactical/80 transition-colors">
-                Subscribe
+
+              {/* Optional hidden field */}
+              <input
+                type="hidden"
+                name="message"
+                value="New footer subscription request"
+              />
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="shrink-0 px-4 bg-tactical text-primary-foreground font-mono text-xs tracking-widest uppercase hover:bg-tactical/80 transition-colors disabled:opacity-50"
+              >
+                {loading ? "..." : "Subscribe"}
               </button>
             </form>
           </div>
@@ -65,6 +119,7 @@ const Footer = () => {
               <div className="label-mono text-tactical text-[10px] mb-4">
                 ▌ {c.t.toUpperCase()}
               </div>
+
               <ul className="space-y-2.5">
                 {c.items.map((it) => (
                   <li key={typeof it === "string" ? it : it.label}>
@@ -94,28 +149,6 @@ const Footer = () => {
           <div className="flex flex-col items-center gap-4 text-center">
             <div className="label-mono text-[9px] leading-relaxed max-w-60">
               © 2026 DRONEOPS SYSTEMS — ALL RIGHTS RESERVED
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 label-mono text-[9px]">
-              {["LinkedIn", "YouTube", "Instagram", "X / Twitter"].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  className="hover:text-tactical transition-colors"
-                >
-                  {s}
-                </a>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 label-mono text-[9px]">
-              <a href="#" className="hover:text-tactical transition-colors">
-                Privacy Policy
-              </a>
-              <span className="text-border">|</span>
-              <a href="#" className="hover:text-tactical transition-colors">
-                Terms of Use
-              </a>
             </div>
           </div>
         </div>

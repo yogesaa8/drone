@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FloatUpText } from "../animations/Antigravity";
-import { AnimatedGrid } from "../animations/AnimatedGrid";
 
 const faqs = [
   {
@@ -60,11 +59,13 @@ const FAQ = () => {
                                         aria-expanded={isOpen}
                                         aria-controls={`faq-${i}`}
                                     >
-                                        <div className="flex items-center gap-4">
-                                            <span className="label-mono text-tactical text-[10px]">
+                                        <div className="flex items-center gap-4 min-w-0">
+                                            <span className="label-mono text-tactical text-[10px] shrink-0">
                                                 {String(i + 1).padStart(2, "0")}
                                             </span>
-                                            <span className="font-display text-base md:text-lg font-semibold">{f.q}</span>
+                                            <span className="font-display text-base md:text-lg font-semibold break-words">
+                                                {f.q}
+                                            </span>
                                         </div>
                                         <span
                                             className={`w-8 h-8 border border-border flex-shrink-0 flex items-center justify-center text-tactical transition-transform ${isOpen ? "rotate-45" : ""
@@ -79,7 +80,7 @@ const FAQ = () => {
                                             }`}
                                     >
                                         <div className="overflow-hidden">
-                                            <p className="px-6 pb-5 pl-16 text-sm text-muted-foreground leading-relaxed">
+                                            <p className="px-6 pb-5 md:pl-16 text-sm text-muted-foreground leading-relaxed">
                                                 {f.a}
                                             </p>
                                         </div>

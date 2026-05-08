@@ -1,5 +1,4 @@
 import { FloatUpText } from "../animations/Antigravity";
-import { AnimatedGrid } from "../animations/AnimatedGrid";
 
 const cases = [
     {
@@ -51,7 +50,7 @@ const UseCases = () => {
                 <FloatUpText delay={0.2}>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
                         {cases.map((c, i) => (
-                            <div key={c.t} className="bg-charcoal p-8 group hover:bg-background zero-g-hover">
+                            <div key={c.t} className="bg-charcoal p-8 group hover:bg-background zero-g-hover min-w-0">
                                 <div className="flex items-start justify-between mb-6">
                                     <span className="font-display text-5xl font-bold text-tactical/30 group-hover:text-tactical transition-colors leading-none">
                                         {String(i + 1).padStart(2, "0")}
@@ -60,7 +59,7 @@ const UseCases = () => {
                                         {c.i}
                                     </div>
                                 </div>
-                                <h3 className="font-display text-xl font-semibold mb-2">{c.t}</h3>
+                                <h3 className="font-display text-xl font-semibold mb-2 break-words">{c.t}</h3>
                                 <p className="text-sm text-muted-foreground leading-relaxed">{c.d}</p>
                             </div>
                         ))}

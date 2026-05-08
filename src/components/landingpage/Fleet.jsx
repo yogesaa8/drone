@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom';
-import { drones } from '../../data/data';
-import { AnimatedGrid } from '../animations/AnimatedGrid';
+import { useNavigate } from "react-router-dom";
+import { drones } from "../../data/data";
+import { AnimatedGrid } from "../animations/AnimatedGrid";
 
 const Fleet = () => {
   const navigate = useNavigate();
@@ -30,8 +30,8 @@ const Fleet = () => {
           {featuredDrones.map((d, i) => (
             <article
               key={d.id}
-              className="group bg-charcoal flex flex-col cursor-pointer relative"
-              onClick={() => navigate('/drone/' + d.id)}
+              className="group bg-charcoal flex flex-col cursor-pointer relative min-w-0"
+              onClick={() => navigate("/drone/" + d.id)}
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-background">
                 <img
@@ -53,13 +53,17 @@ const Fleet = () => {
                 <div className="label-mono text-tactical text-[10px] mb-2">
                   {d.use.toUpperCase()}
                 </div>
-                <h3 className="font-display text-xl font-bold leading-tight">{d.name}</h3>
+                <h3 className="font-display text-xl font-bold leading-tight break-words">
+                  {d.name}
+                </h3>
 
                 <div className="mt-4 grid grid-cols-2 gap-2">
                   {d.specs.slice(0, 4).map(([k, v]) => (
-                    <div key={k} className="border-l border-tactical/40 pl-2">
+                    <div key={k} className="border-l border-tactical/40 pl-2 min-w-0">
                       <div className="label-mono text-[9px]">{k}</div>
-                      <div className="text-sm font-semibold mt-0.5">{v}</div>
+                      <div className="text-sm font-semibold mt-0.5 break-words">
+                        {v}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -68,7 +72,7 @@ const Fleet = () => {
                   className="mt-6 w-full btn-ghost justify-between !py-3"
                   onClick={(e) => {
                     e.stopPropagation();
-                    navigate('/drone/' + d.id);
+                    navigate("/drone/" + d.id);
                   }}
                 >
                   <span>View Details</span>
@@ -81,7 +85,7 @@ const Fleet = () => {
 
         <div className="mt-16 flex justify-center">
           <button 
-            onClick={() => navigate('/products')}
+            onClick={() => navigate("/products")}
             className="btn-tactical !px-12 !py-4 text-lg flex items-center gap-4 group"
           >
             <span>VIEW ALL PRODUCTS</span>
@@ -90,7 +94,7 @@ const Fleet = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Fleet
+export default Fleet;

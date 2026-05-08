@@ -390,18 +390,3 @@
     box-shadow: 0 8px 25px -5px rgba(140, 170, 90, 0.1);
   }
 }
-
-@keyframes grid-move {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(60px);
-    /* backgroundSize ke barabar */
-  }
-}
-
-.animate-grid-move {
-  animation: grid-move 4s linear infinite;
-}

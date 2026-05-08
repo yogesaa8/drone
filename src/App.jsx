@@ -8,11 +8,12 @@ import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import DroneDetailsPage from "./pages/DroneDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
+import BlogPostPage from "./pages/BlogPostPage";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-background text-foreground flex flex-col">
+      <div className="min-h-screen bg-background text-foreground flex flex-col overflow-x-hidden">
         <Header />
         <main className="grow">
           <Routes>
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/mission" element={<MissionPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/drone/:id" element={<DroneDetailsPage />} />
