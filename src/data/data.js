@@ -31,7 +31,7 @@ import d3_4 from "../assets/d4/4.2.png"
 import d4_4 from "../assets/d4/4.3.png"
 import d5_4 from "../assets/d4/4.4.png"
 import d6_4 from "../assets/d4/4.5.png"
-import model4 from "../assets/d4/4.glb?url"
+import model4 from "../assets/d4/04.glb?url"
 
 import d1_5 from "../assets/d5/5.png"
 import d2_5 from "../assets/d5/5.1.png"
@@ -39,7 +39,7 @@ import d3_5 from "../assets/d5/5.2.png"
 import d4_5 from "../assets/d5/5.3.png"
 import d5_5 from "../assets/d5/5.4.png"
 import d6_5 from "../assets/d5/5.5.png"
-import model5 from "../assets/d5/5.glb?url"
+import model5 from "../assets/d5/05.glb?url"
 
 // gallery
 import g1 from "../assets/gallary/gallery1.jpg";
