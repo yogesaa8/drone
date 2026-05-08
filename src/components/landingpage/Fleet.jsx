@@ -4,11 +4,12 @@ import { AnimatedGrid } from '../animations/AnimatedGrid';
 
 const Fleet = () => {
   const navigate = useNavigate();
+  const featuredDrones = drones.slice(0, 4);
 
   return (
     <section id="fleet" className="py-24 lg:py-32 relative">
       <AnimatedGrid />
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -26,7 +27,7 @@ const Fleet = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
-          {drones.map((d, i) => (
+          {featuredDrones.map((d, i) => (
             <article
               key={d.id}
               className="group bg-charcoal flex flex-col cursor-pointer relative"
@@ -39,7 +40,7 @@ const Fleet = () => {
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
                 <div className="absolute top-3 left-3 label-mono text-[10px] bg-background/70 px-2 py-1">
                   UNIT {String(i + 1).padStart(2, "0")}
                 </div>
@@ -76,6 +77,16 @@ const Fleet = () => {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-16 flex justify-center">
+          <button 
+            onClick={() => navigate('/products')}
+            className="btn-tactical !px-12 !py-4 text-lg flex items-center gap-4 group"
+          >
+            <span>VIEW ALL PRODUCTS</span>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
         </div>
       </div>
     </section>

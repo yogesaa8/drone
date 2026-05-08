@@ -50,8 +50,8 @@ const Footer = () => {
               className="mt-6 flex border border-border max-w-sm"
             >
               <input
-                type="email"
-                placeholder="Enter email"
+                type="tel"
+                placeholder="Enter Mobile Number"
                 className="flex-1 bg-transparent px-3 py-2.5 text-sm focus:outline-none"
               />
               <button className="px-4 bg-tactical text-primary-foreground font-mono text-xs tracking-widest uppercase hover:bg-tactical/80 transition-colors">
@@ -92,7 +92,7 @@ const Footer = () => {
 
         <div className="mt-10 pt-5 border-t border-border">
           <div className="flex flex-col items-center gap-4 text-center">
-            <div className="label-mono text-[9px] leading-relaxed max-w-[240px]">
+            <div className="label-mono text-[9px] leading-relaxed max-w-60">
               © 2026 DRONEOPS SYSTEMS — ALL RIGHTS RESERVED
             </div>
 

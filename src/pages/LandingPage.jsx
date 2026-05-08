@@ -7,6 +7,8 @@ import { ScrollDrift } from "../components/animations/Antigravity";
 import UseCases from "../components/landingpage/UseCases";
 import Process from "../components/landingpage/Process";
 import Gallery from "../components/landingpage/Gallery";
+import PerformanceSpecs from "../components/landingpage/PerformanceSpecs";
+import MissionTechGrid from "../components/landingpage/CombinedCapabilities";
 
 const LandingPage = () => {
   return (
@@ -19,13 +21,13 @@ const LandingPage = () => {
         <Fleet />
       </ScrollDrift>
       <ScrollDrift offset={20}>
-        <Technology />
+        <MissionTechGrid />
       </ScrollDrift>
       <ScrollDrift offset={40}>
         <Gallery />
       </ScrollDrift>
       <ScrollDrift offset={25}>
-        <UseCases />
+        <PerformanceSpecs/>
       </ScrollDrift>
       <ScrollDrift offset={15}>
         <Process />

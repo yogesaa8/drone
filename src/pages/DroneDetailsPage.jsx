@@ -63,7 +63,7 @@ const DroneDetailsPage = () => {
         <div className="grid lg:grid-cols-2 gap-px bg-border">
           {/* Image gallery */}
           <div className="bg-charcoal p-6 lg:p-8">
-            <div className="relative aspect-[4/3] bg-background corner-frame overflow-hidden">
+            <div className="relative aspect-4/3 bg-background corner-frame overflow-hidden">
               <img
                 src={drone.gallery[active]}
                 alt={`${drone.name} view ${active + 1}`}
@@ -135,10 +135,10 @@ const DroneDetailsPage = () => {
                 </span>
               </div>
 
-              <div className="relative h-[300px] sm:h-[360px] md:h-[390px] lg:h-[430px] bg-background border border-dashed border-border overflow-hidden">
+              <div className="relative h-75 sm:h-90 md:h-97.5 lg:h-107.5 bg-background border border-dashed border-border overflow-hidden">
                 <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none z-10" />
 
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-tactical/60 to-transparent animate-scanner z-10 pointer-events-none" />
+                <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-tactical/60 to-transparent animate-scanner z-10 pointer-events-none" />
 
                 <div className="absolute top-2 left-2 label-mono text-[8px] md:text-[9px] bg-background/70 px-2 py-1 z-10">
                   MODEL.{drone.id.toUpperCase()}
@@ -208,7 +208,7 @@ const DroneDetailsPage = () => {
                 Request Configuration
               </button>
               <button
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/products")}
                 className="btn-ghost flex-1 justify-center"
               >
                 Return to Fleet
@@ -220,7 +220,7 @@ const DroneDetailsPage = () => {
 
       {isPreviewOpen && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 p-4 md:p-8"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-background/95 p-4 md:p-8"
           role="dialog"
           aria-modal="true"
         >

@@ -8,7 +8,7 @@ export const AnimatedGrid = () => {
       <div 
         className="absolute inset-0 pointer-events-none z-10"
         style={{
-          background: "linear-gradient(to bottom, var(--color-background) 0%, transparent 15%, transparent 85%, var(--color-background) 100%)"
+          background: "linear-gradient(to bottom, var(--color-background) 0%, transparent 5%, transparent 95%, var(--color-background) 100%)"
         }}
       />
     </div>

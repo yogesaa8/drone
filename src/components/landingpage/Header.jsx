@@ -1,11 +1,13 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import fireworks from "../../assets/fireworks.mp4";
 import { IoMdClose } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
+import { IoIosSunny } from "react-icons/io";
+import { AiFillMoon } from "react-icons/ai";
 
 const links = [
   { to: "/", label: "Home" },
+  { to: "/products", label: "Products" },
   { to: "/about", label: "About" },
   { to: "/mission", label: "Mission" },
   { to: "/blog", label: "Blog" },
@@ -20,7 +22,6 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("light");
-  const videoRef = useRef(null);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -62,18 +63,6 @@ const Header = () => {
 
   const closeMenu = () => {
     setOpen(false);
-  };
-
-  const startVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
-    }
-  };
-
-  const stopVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-    }
   };
 
   return (
@@ -119,33 +108,30 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <div
-              onMouseEnter={startVideo}
-              onMouseLeave={stopVideo}
-              onClick={toggleTheme}
-              className="relative w-5 h-5 cursor-pointer"
-            >
-              <video
-                ref={videoRef}
-                src={fireworks}
-                className="w-full h-full object-cover rounded-sm"
-                muted
-                loop
-                playsInline
-                preload="auto"
-                title="theme mode"
-              />
+          {/* Theme Toggle */}
+          <div
+            onClick={toggleTheme}
+            className="flex items-center gap-2 cursor-pointer group"
+          >
+            <div className="text-xl transition-transform duration-300 group-hover:rotate-12">
+              {theme === "light" ? (
+                <IoIosSunny className="text-yellow-400" />
+              ) : (
+                <AiFillMoon className="text-blue-400" />
+              )}
             </div>
 
-            <span className="label-mono text-[10px]">SYSTEM {theme}</span>
+            <span className="label-mono text-[10px] uppercase">
+              {theme === "light" ? "Light Mode" : "Dark Mode"}
+            </span>
           </div>
 
-          <Link to="/contact" className="btn-tactical !py-2.5 !px-4">
+          <Link to="/contact" className="btn-tactical py-2.5! px-4!">
             Request Demo
           </Link>
         </div>
 
+        {/* Mobile Menu Button */}
         <button
           type="button"
           className={`lg:hidden border border-border flex items-center justify-center transition-all duration-300 ${
@@ -163,6 +149,7 @@ const Header = () => {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {open && (
         <div className="lg:hidden bg-background border-t border-border">
           <nav className="px-6 py-6 flex flex-col gap-4">
@@ -183,9 +170,19 @@ const Header = () => {
                 toggleTheme();
                 closeMenu();
               }}
-              className="font-mono text-sm tracking-widest uppercase text-muted-foreground hover:text-tactical text-left"
+              className="font-mono text-sm tracking-widest uppercase text-muted-foreground hover:text-tactical text-left flex items-center gap-2"
             >
-              Toggle Theme ({theme === "light" ? "Dark" : "Light"})
+              {theme === "light" ? (
+                <>
+                  <AiFillMoon className="text-blue-400 text-lg" />
+                  Switch to Dark
+                </>
+              ) : (
+                <>
+                  <IoIosSunny className="text-yellow-400 text-lg" />
+                  Switch to Light
+                </>
+              )}
             </button>
 
             <Link
