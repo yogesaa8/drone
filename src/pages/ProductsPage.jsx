@@ -1,9 +1,12 @@
+import { useEffect, useState } from "react";
+import { FiMaximize2, FiX } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import { drones, droneParts, insideKits } from "../data/data";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 
-const ProductCard = ({ item, type, onClick }) => {
+const ProductCard = ({ item, type, onClick, onZoom }) => {
   const actionTo = type === "drone" ? `/drone/${item.id}` : "/contact";
+  const canZoom = Boolean(onZoom);
 
   return (
     <article
@@ -27,6 +30,20 @@ const ProductCard = ({ item, type, onClick }) => {
           <div className="absolute top-3 right-3 label-mono text-[10px] text-tactical bg-background/70 px-2 py-1">
             {item.price}
           </div>
+        )}
+        {canZoom && (
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              onZoom(item);
+            }}
+            aria-label={`Open ${item.name} image fullscreen`}
+            title="Click to zoom"
+            className="absolute bottom-3 right-3 z-20 grid h-9 w-9 place-items-center border border-border bg-background/85 text-foreground transition-colors hover:border-tactical hover:text-tactical"
+          >
+            <FiMaximize2 size={16} />
+          </button>
         )}
       </div>
 
@@ -66,6 +83,28 @@ const ProductCard = ({ item, type, onClick }) => {
 
 const ProductsPage = () => {
   const navigate = useNavigate();
+  const [zoomedItem, setZoomedItem] = useState(null);
+
+  useEffect(() => {
+    document.body.style.overflow = zoomedItem ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [zoomedItem]);
+
+  useEffect(() => {
+    if (!zoomedItem) return;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setZoomedItem(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [zoomedItem]);
 
   return (
     <div className="pt-24 pb-16 min-h-screen relative overflow-hidden">
@@ -124,6 +163,7 @@ const ProductsPage = () => {
                 item={p}
                 type="component"
                 onClick={() => navigate("/contact")}
+                onZoom={setZoomedItem}
               />
             ))}
           </div>
@@ -144,11 +184,41 @@ const ProductsPage = () => {
                 item={k}
                 type="kit"
                 onClick={() => navigate("/contact")}
+                onZoom={setZoomedItem}
               />
             ))}
           </div>
         </section>
       </div>
+
+      {zoomedItem && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 p-4 md:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${zoomedItem.name} image preview`}
+          onClick={() => setZoomedItem(null)}
+        >
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              setZoomedItem(null);
+            }}
+            aria-label="Close fullscreen image"
+            title="Close"
+            className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center border border-border bg-charcoal text-foreground transition-colors hover:border-tactical hover:text-tactical md:right-8 md:top-8"
+          >
+            <FiX size={22} />
+          </button>
+          <img
+            src={zoomedItem.image}
+            alt={`${zoomedItem.name} fullscreen preview`}
+            className="max-h-full max-w-full object-contain"
+            onClick={(event) => event.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };

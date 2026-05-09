@@ -1,6 +1,3 @@
-import kitImg from "../assets/kit.png";
-
-
 import d1_1 from "../assets/d1/1.1.png"
 import d2_1 from "../assets/d1/1.2.png"
 import d3_1 from "../assets/d1/1.3.png"
@@ -1023,17 +1020,80 @@ export const droneParts = [
 
 export const insideKits = [
   {
-    id: "kit-maint-01",
-    name: "Maintenance Toolkit",
-    category: "Support",
-    image: kitImg,
-    price: "$350.00",
+    id: "kit-dot-01",
+    name: "Drone on Table (DOT) – The Ultimate Real-World Drone Training & Testing Platform",
+    category: "UAV Training",
+    image:
+      "https://www.dronacharyatech.com/wp-content/uploads/2026/03/Camera-Kit-3-in-1-camera-T12-1-324x324.jpg",
+    price: "Get a Quote",
     specs: [
-      ["Tools", "24 Precision Tools"],
-      ["Case", "Waterproof IP67"],
-      ["Weight", "3.2 kg"],
-      ["Warranty", "Lifetime"],
-    ],
+      ["Type", "Drone Training Platform"],
+      ["Use Case", "Real-World Drone Testing"],
+      ["Category", "UAV Learning"],
+      ["Availability", "Quote Based"],
+    ]
+  },
+
+  {
+    id: "kit-vikas-project-01",
+    name: "Vikas Project Kit – All in one UAV Development & Learning Platform",
+    category: "Development Kit",
+    image:
+      "https://www.dronacharyatech.com/wp-content/uploads/2026/01/Vikas-project-Kit-1-324x324.webp",
+    price: "₹69,000",
+    oldPrice: "₹70,000",
+    specs: [
+      ["Type", "UAV Development Kit"],
+      ["Learning", "Advanced UAV Projects"],
+      ["Platform", "All-in-One"],
+      ["Discount", "₹1,000 Off"],
+    ]
+  },
+
+  {
+    id: "kit-vikas-rd-01",
+    name: "Vikas R&D Kit – Complete UAV Research & Learning Platform",
+    category: "Research Kit",
+    image:
+      "https://www.dronacharyatech.com/wp-content/uploads/2025/03/Vikas-RD-Kit-1-324x324.webp",
+    price: "₹49,000",
+    oldPrice: "₹55,000",
+    specs: [
+      ["Type", "Research & Development Kit"],
+      ["Purpose", "UAV Research"],
+      ["Learning", "Drone Innovation"],
+      ["Discount", "₹6,000 Off"],
+    ]
+  },
+
+  {
+    id: "kit-vikas-camera-01",
+    name: "Vikas Camera Kit – Advanced UAV Imaging & Research Platform",
+    category: "Camera Kit",
+    image:
+      "https://www.dronacharyatech.com/wp-content/uploads/2025/03/Camera-Kit-A8-Mini-H12-Pro-1-324x324.jpg",
+    price: "₹50k onwards",
+    specs: [
+      ["Type", "UAV Imaging Kit"],
+      ["Feature", "Advanced Camera Support"],
+      ["Use Case", "Aerial Imaging & Research"],
+      ["Starting Price", "₹50,000"],
+    ]
+  },
+
+  {
+    id: "kit-vikas-starter-01",
+    name: "Vikas Starter Kit : Complete UAV Foundation for Learning & Innovation",
+    category: "Starter Kit",
+    image:
+      "https://www.dronacharyatech.com/wp-content/uploads/2026/03/Vikas-Starter-Kit-1-1-324x324.webp",
+    price: "₹19,320",
+    oldPrice: "₹23,000",
+    specs: [
+      ["Type", "Beginner UAV Kit"],
+      ["Purpose", "Learning & Innovation"],
+      ["Foundation", "Complete UAV Basics"],
+      ["Discount", "₹3,680 Off"],
+    ]
   },
 ];
-
