@@ -14,7 +14,7 @@ const Fleet = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-10 bg-tactical" />
-              <span className="label-mono text-tactical">▌ FLEET INVENTORY / 04 UNITS</span>
+              <span className="label-mono text-tactical">▌ FLEET INVENTORY </span>
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold max-w-2xl leading-tight">
               Mission-Ready Drone Fleet

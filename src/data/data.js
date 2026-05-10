@@ -57,77 +57,77 @@ export const drones = [
   {
     id: "raven-x1",
     serial: "UAV-RX1-048",
-    name: "Raven X1 Recon",
-    use: "Long-range surveillance",
+    name: "Tinywoop",
+    use: "Use for Training and surveillance.",
     image: d1_1,
     gallery: [d2_1, d3_1, d4_1, d5_1],
     model: model1,
     specs: [
-      ["Endurance", "48 min"],
-      ["Range", "12 km"],
-      ["Camera", "4K Thermal"],
-      ["Frame", "Carbon Fiber"],
-      ["Max Altitude", "5,000 m"],
+      ["Endurance", "12 min"],
+      ["Range", "1.5 km"],
+      ["Camera", "Moon Light Day 1080p"],
+      ["Size", "2.5 inches FPV"],
+      ["Max Altitude", "500 m"],
       ["Wind Resist", "12 m/s"],
     ],
-    missions: ["Border surveillance", "Recon mapping", "ISR operations"],
+    missions: ["Training", "Border surveillance"],
   },
 
   {
     id: "falcon-m4",
     serial: "UAV-FM4-112",
-    name: "ARC M 280",
+    name: "ARC MT 280",
     use: "Lightweight surveillance drone optimized for rapid deployment and stable observation.",
     image: d1_2,
     gallery: [d5_2, d3_2, d4_2, d2_2],
     model: model2,
     specs: [
-      ["Endurance", "42 min"],
-      ["Sensor", "LiDAR Ready"],
-      ["Stabilization", "RTK GPS"],
-      ["Frame", "Foldable Alloy"],
-      ["Payload", "1.8 kg"],
-      ["Deploy Time", "< 60 s"],
+      ["Endurance", "20 min"],
+      ["Sensor", "Surveillance 2K camera"],
+      ["Payload", "Payload dropping Mechanism"],
+      ["Frame", "Carbon Fiber"],
+      ["Weight", "1.5 kg"],
+      ["Range", "2 km"],
     ],
-    missions: ["Terrain mapping", "Battlefield survey", "Engineering ops"],
+    missions: ["Training", "Surveillance", "Payload Delivery"],
   },
 
   {
     id: "atlas-hl",
     serial: "UAV-AHL-301",
-    name: "Atlas HeavyLift",
-    use: "Payload and emergency delivery",
+    name: "Shadow Drop 10",
+    use: "For EW Environment , Antijam Surveillance and Grenade Drop",
     image: d1_3,
     gallery: [d4_3, d3_3, d5_3, d2_3],
     model: model3,
     specs: [
-      ["Payload", "4.5 kg"],
-      ["Battery", "Dual Hot-Swap"],
-      ["Routing", "Autonomous"],
-      ["Protocol", "Emergency Land"],
-      ["Endurance", "32 min"],
-      ["Range", "8 km"],
+      ["Payload", "800 g"],
+      ["Battery", "20 min"],
+      ["MTOW", "2 kg"],
+      ["Speed", "100 km/h"],
+      ["Size", "10 inch FPV"],
+      ["Range", "5 km"],
     ],
-    missions: ["Logistics drop", "Medical delivery", "Field resupply"],
+    missions: ["EW Environment", "KamiKaze", "Surveillance"],
   },
 
   {
     id: "viper-a7",
     serial: "UAV-VA7-207",
-    name: "Viper A7 Patrol",
-    use: "Border and perimeter patrol",
+    name: "Beetle 5",
+    use: "Training and Surveillance.",
     image: d1_4,
     gallery: [d2_4, d3_4, d4_4, d5_4, d6_4],
     model: model4,
     specs: [
-      ["Vision", "Night / IR"],
-      ["AI Tracking", "Active"],
-      ["Mode", "Silent Flight"],
-      ["Rating", "IP54"],
-      ["Endurance", "38 min"],
-      ["Range", "9 km"],
+      ["Size", "5 inch FPV"],
+      ["Weight", "750 g"],
+      ["Speed", "100 km/h"],
+      ["Category", "Analog/ Digital"],
+      ["Endurance", "15 min"],
+      ["Range", "5 km"],
     ],
-    missions: ["Perimeter patrol", "Covert observation", "Anti-intrusion"],
+    missions: ["Training and Surveillance"],
   },
 
   {
@@ -135,21 +135,23 @@ export const drones = [
     serial: "UAV-SE5-509",
     name: "ARC MT 480AI",
     use: "AI Tactical Multirotor UAV designed for ISR missions with modular payload capability.",
-    image: d3_5,
-    gallery: [d1_5, d3_5, d2_5, d4_5, d5_5, d6_5],
+    image: d6_5,
+    gallery: [d6_5, d1_5, d3_5, d2_5, d4_5, d5_5,],
     model: model5,
     specs: [
-      ["Speed", "120 km/h"],
+      ["Speed", "108 km/h"],
       ["Flight Mode", "Autonomous AI"],
-      ["Camera", "8K Zoom"],
-      ["Armor", "Reinforced Composite"],
+      ["Camera", "Day / Night 2K Thermal"],
+      ["Altitude", "15000 ft"],
       ["Endurance", "40 min"],
       ["Range", "15 km"],
     ],
     missions: [
-      "Rapid response",
       "Combat surveillance",
+      "Rapid response",
       "High-speed recon",
+      "Survey & Mapping",
+      "AI Target Tracking"
     ],
   },
 ];
@@ -220,7 +222,6 @@ export const droneParts = [
     "name": "Hobbywing X8 G2 Motor with 30x11S Folding Propeller",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2026/03/Screenshot_16-10-2025_123113_www.hobbywing.com_-1-300x300.webp",
-    "price": "₹15,999.00",
     "originalPrice": "₹17,500.00",
     "specs": [
       ["Type", "Motor + Propeller Combo"],
@@ -231,55 +232,51 @@ export const droneParts = [
   },
   {
     "id": "nozzle-10221",
-    "name": "Aerosol Nozzle Max – Model 8820 For Agriculture Drones by Bharat Skytech",
+    "name": "Aerosol Nozzle Max – Model 8820 For Agriculture Drones by Arcanum Space",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/08/1-2.png",
-    "price": "₹7,100.00",
     "originalPrice": "₹10,200.00",
     "specs": [
       ["Type", "Aerosol Nozzle"],
       ["Model", "8820 Max"],
-      ["Brand", "Bharat Skytech"],
+      ["Brand", "Arcanum Space"],
       ["GST", "Exclusive"]
     ]
   },
   {
     "id": "nozzle-10218",
-    "name": "Folding Aerosol Nozzle – Model 4820 For Agriculture Drones by Bharat Skytech",
+    "name": "Folding Aerosol Nozzle – Model 4820 For Agriculture Drones by Arcanum Space",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/08/4820.png",
-    "price": "₹5,999.00",
     "specs": [
       ["Type", "Folding Aerosol Nozzle"],
       ["Model", "4820"],
-      ["Brand", "Bharat Skytech"],
+      ["Brand", "Arcanum Space"],
       ["GST", "Exclusive"]
     ]
   },
   {
     "id": "nozzle-10210",
-    "name": "Folding Aerosol Nozzle Pro – Model 5820 For Agriculture Drones by Bharat Skytech",
+    "name": "Folding Aerosol Nozzle Pro – Model 5820 For Agriculture Drones by Arcanum Space",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/08/1-1.png",
-    "price": "₹6,500.00",
     "specs": [
       ["Type", "Folding Aerosol Nozzle Pro"],
       ["Model", "5820"],
-      ["Brand", "Bharat Skytech"],
+      ["Brand", "Arcanum Space"],
       ["GST", "Exclusive"]
     ]
   },
   {
     "id": "nozzle-10186",
-    "name": "Aerosol Nozzle – Model 4810 For Agriculture Drones by Bharat Skytech",
+    "name": "Aerosol Nozzle – Model 4810 For Agriculture Drones by Arcanum Space",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/08/1.png",
-    "price": "₹5,999.00",
     "originalPrice": "₹8,999.00",
     "specs": [
       ["Type", "Aerosol Nozzle"],
       ["Model", "4810"],
-      ["Brand", "Bharat Skytech"],
+      ["Brand", "Arcanum Space"],
       ["GST", "Exclusive"]
     ]
   },
@@ -288,7 +285,6 @@ export const droneParts = [
     "name": "Hobbywing X11 Plus 4314 Propellers Only with Hub – CW for Agriculture Drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/07/5.png",
-    "price": "₹4,999.00",
     "originalPrice": "₹6,800.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
@@ -302,7 +298,6 @@ export const droneParts = [
     "name": "Hobbywing X11 Plus 4314 Propellers Only with Hub – CCW for Agriculture Drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/07/1.png",
-    "price": "₹6,000.00",
     "originalPrice": "₹7,200.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
@@ -316,7 +311,6 @@ export const droneParts = [
     "name": "Hobbywing 9L Centrifugal Nozzle Spray for UAV Drones at Best Price",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/07/hobbywing-9L.png",
-    "price": "₹7,999.00",
     "originalPrice": "₹10,200.00",
     "specs": [
       ["Type", "Centrifugal Nozzle Spray"],
@@ -330,7 +324,6 @@ export const droneParts = [
     "name": "Hobbywing X11 Plus CCW Motor Combo with 4314 Propellers Combo for Drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/06/hobbywing-x11-plus.png",
-    "price": "₹23,999.00",
     "originalPrice": "₹32,999.00",
     "specs": [
       ["Type", "Motor + Propeller Combo"],
@@ -344,7 +337,6 @@ export const droneParts = [
     "name": "Hobbywing X11 Plus CW Motor Combo with 4314 Propellers Combo for Drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/06/hobbywing-x11-plus.png",
-    "price": "₹23,999.00",
     "originalPrice": "₹32,999.00",
     "specs": [
       ["Type", "Motor + Propeller Combo"],
@@ -358,7 +350,6 @@ export const droneParts = [
     "name": "Hobbywing X9 Plus 36190 Propellers Only with Hub – CW for Agriculture drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/04/1.png",
-    "price": "₹4,110.00",
     "originalPrice": "₹5,200.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
@@ -372,7 +363,6 @@ export const droneParts = [
     "name": "Hobbywing X9 Plus 36190 Propellers Only with Hub – CCW for Agriculture drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/04/1.png",
-    "price": "₹4,110.00",
     "originalPrice": "₹5,200.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
@@ -386,7 +376,6 @@ export const droneParts = [
     "name": "Hobbywing X9 3411 Propellers Only with Hub – CCW for Agriculture drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/03/1.png",
-    "price": "₹3,020.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
       ["Model", "X9 3411"],
@@ -399,7 +388,6 @@ export const droneParts = [
     "name": "Hobbywing X9 3411 Propellers Only with Hub – CW for Agriculture drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/03/1.png",
-    "price": "₹3,020.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
       ["Model", "X9 3411"],
@@ -412,7 +400,6 @@ export const droneParts = [
     "name": "Hobbywing X9 Plus X Rotor Motor with CCW Propeller Combo For Drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/12/x9-plus.png",
-    "price": "₹17,800.00",
     "originalPrice": "₹21,700.00",
     "specs": [
       ["Type", "Motor + Propeller Combo"],
@@ -426,7 +413,6 @@ export const droneParts = [
     "name": "Hobbywing X8 100KV D40 Motor with 3011 CW Propeller Combo",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/X8桨叶.jpg",
-    "price": "₹14,999.00",
     "originalPrice": "₹17,498.00",
     "specs": [
       ["Type", "Motor + Propeller Combo"],
@@ -440,7 +426,6 @@ export const droneParts = [
     "name": "Hobbywing X6 Plus 150KV D30 Motor with 2480 CCW Propeller Combo",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/X6-PLUS-6218-150K-1.jpg",
-    "price": "₹9,000.00",
     "originalPrice": "₹10,700.00",
     "specs": [
       ["Type", "Motor + Propeller Combo"],
@@ -454,7 +439,6 @@ export const droneParts = [
     "name": "Hobbywing Brushless Water Pump Combo – Pump 8L | Brushless 10A 14S V1 HW",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/02/hobbywing-8l.png",
-    "price": "₹6,250.00",
     "originalPrice": "₹12,999.00",
     "specs": [
       ["Type", "Brushless Water Pump Combo"],
@@ -468,7 +452,6 @@ export const droneParts = [
     "name": "Hobbywing X8 3011 Propellers Only with Hub – CW for Agriculture drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/11/1-2.png",
-    "price": "₹2,199.00",
     "originalPrice": "₹2,800.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
@@ -482,7 +465,6 @@ export const droneParts = [
     "name": "Hobbywing XRotor X8 Motor Only- CW Agriculture Drones Components",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/11/1-6.png",
-    "price": "₹15,350.00",
     "originalPrice": "₹17,800.00",
     "specs": [
       ["Type", "Motor Only"],
@@ -496,7 +478,6 @@ export const droneParts = [
     "name": "Hobbywing XRotor X6 Plus Motor Only- CW for Agriculture Drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/11/4-2.png",
-    "price": "₹8,950.00",
     "originalPrice": "₹9,900.00",
     "specs": [
       ["Type", "Motor Only"],
@@ -510,7 +491,6 @@ export const droneParts = [
     "name": "Hobbywing X6 plus 2480 Propellers Only with Hub – CW for Agriculture drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/11/1-3.png",
-    "price": "₹1,365.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
       ["Model", "X6 Plus 2480"],
@@ -523,7 +503,6 @@ export const droneParts = [
     "name": "Hobbywing X9 Plus X Rotor Motor with CW Propeller Combo For Drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/12/x9-plus.png",
-    "price": "₹17,800.00",
     "originalPrice": "₹21,700.00",
     "specs": [
       ["Type", "Motor + Propeller Combo"],
@@ -537,7 +516,6 @@ export const droneParts = [
     "name": "Hobbywing XRotor X8 Motor Only- CCW Agriculture Drones Components",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/11/1-6.png",
-    "price": "₹15,350.00",
     "originalPrice": "₹17,800.00",
     "specs": [
       ["Type", "Motor Only"],
@@ -551,7 +529,6 @@ export const droneParts = [
     "name": "Hobbywing XRotor X6 Plus Motor Only- CCW for Agriculture Drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/11/1615376-02-300x300.jpg",
-    "price": "₹8,950.00",
     "originalPrice": "₹10,700.00",
     "specs": [
       ["Type", "Motor Only"],
@@ -564,8 +541,7 @@ export const droneParts = [
     "id": "prop-6722",
     "name": "Hobbywing X6 plus 2480 Propellers Only with Hub – CCW for drones",
     "category": "Propulsion",
-    "image": "https://bharatskytech.com/wp-content/uploads/2024/11/1-3.png",
-    "price": "₹1,365.00",
+    "image": "https://bharatskytech.com/wp-content/uploads/2024/11/1-3.png",   
     "originalPrice": "₹2,200.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
@@ -579,7 +555,6 @@ export const droneParts = [
     "name": "Hobbywing X8 3011 Propellers Only with Hub – CCW for agriculture drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/11/1-2.png",
-    "price": "₹2,199.00",
     "originalPrice": "₹2,800.00",
     "specs": [
       ["Type", "Propellers Only with Hub"],
@@ -593,7 +568,6 @@ export const droneParts = [
     "name": "T Motor A6 Modular Agriculture Propulsion System for agriculture drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/07/A6.jpg",
-    "price": "₹12,600.00",
     "specs": [
       ["Type", "Modular Propulsion System"],
       ["Model", "A6"],
@@ -606,7 +580,6 @@ export const droneParts = [
     "name": "T Motor A8 Modular Agriculture Propulsion System for agriculture drones",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/07/A82.jpg",
-    "price": "₹15,480.00",
     "specs": [
       ["Type", "Modular Propulsion System"],
       ["Model", "A8"],
@@ -619,7 +592,6 @@ export const droneParts = [
     "name": "Hobbywing X8 100KV D40 Motor with 3011 CCW Propeller Combo",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/X8桨叶.jpg",
-    "price": "₹14,999.00",
     "originalPrice": "₹17,498.00",
     "specs": [
       ["Type", "Motor + Propeller Combo"],
@@ -633,7 +605,6 @@ export const droneParts = [
     "name": "Hobbywing X6 Plus 150KV D30 Motor with 2480 CW Propeller Combo",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/X6-PLUS-6218-150K-1.jpg",
-    "price": "₹9,000.00",
     "originalPrice": "₹10,700.00",
     "specs": [
       ["Type", "Motor + Propeller Combo"],
@@ -647,7 +618,6 @@ export const droneParts = [
     "name": "Hobbywing Water Pump 5L Brushless – Agriculture Drones Components",
     "category": "Propulsion",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/5L-水泵.jpg",
-    "price": "₹5,000.00",
     "originalPrice": "₹7,218.00",
     "specs": [
       ["Type", "Brushless Water Pump"],
@@ -661,7 +631,6 @@ export const droneParts = [
     "name": "Herewin 12S 44.4V 16000mAh Smart-5P LiPo Battery Pack for Drones Battery",
     "category": "Battery & Charger",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/02/20230203-BIA_3765-300x300.jpg",
-    "price": "₹20,999.00",
     "specs": [
       ["Type", "LiPo Battery Pack"],
       ["Cells", "12S 44.4V"],
@@ -675,7 +644,6 @@ export const droneParts = [
     "name": "Herewin 6S 22.2V 16000mAh 20C LiPo Battery Pack for Drones Batteries",
     "category": "Battery & Charger",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/02/Herewin-16000-battery-300x300.jpg",
-    "price": "₹14,999.00",
     "originalPrice": "₹16,999.00",
     "specs": [
       ["Type", "LiPo Battery Pack"],
@@ -690,7 +658,6 @@ export const droneParts = [
     "name": "Herewin 6S 22.2V 22000mAh 25C Lipo Battery for Agriculture Drone Batteries",
     "category": "Battery & Charger",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/02/9-300x300.jpg",
-    "price": "₹11,999.00",
     "originalPrice": "₹25,700.00",
     "specs": [
       ["Type", "LiPo Battery Pack"],
@@ -705,7 +672,6 @@ export const droneParts = [
     "name": "Tattu TA1000 G-Tech Dual-Channel Charger 25A*2 1000W For 1S-7S Drone Battery",
     "category": "Battery & Charger",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/02/3.png",
-    "price": "₹26,999.00",
     "specs": [
       ["Type", "Dual-Channel Charger"],
       ["Power", "1000W"],
@@ -719,7 +685,6 @@ export const droneParts = [
     "name": "SKYRC PC1080 Dual Channel Charger for Agriculture Drone Batteries",
     "category": "Battery & Charger",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/12/SKYRC-PC1080-Dual-Channel-LiPo-Battery-Charger-5-300x300.jpg",
-    "price": "₹17,500.00",
     "originalPrice": "₹28,700.00",
     "specs": [
       ["Type", "Dual Channel Charger"],
@@ -733,7 +698,6 @@ export const droneParts = [
     "name": "Tattu 22.2V 25C 6S 22000mAh GTech Lipo Battery for Agriculture Drones",
     "category": "Battery & Charger",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/5-1.png",
-    "price": "₹14,500.00",
     "originalPrice": "₹22,298.00",
     "specs": [
       ["Type", "GTech LiPo Battery"],
@@ -748,7 +712,6 @@ export const droneParts = [
     "name": "Jiyi K-3A Pro Flight Controller Kit for Agriculture Drones at Best Price",
     "category": "Flight Controller & Radar",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/02/jiyi-k-3apro.png",
-    "price": "₹29,990.00",
     "originalPrice": "₹37,200.00",
     "specs": [
       ["Type", "Flight Controller Kit"],
@@ -762,7 +725,6 @@ export const droneParts = [
     "name": "Jiyi Obstacle Avoidance Radar Back (UAV-R21-B) Rear Radar for Agriculture drones",
     "category": "Flight Controller & Radar",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/07/1-4.png",
-    "price": "₹15,299.00",
     "originalPrice": "₹18,698.00",
     "specs": [
       ["Type", "Obstacle Avoidance Radar"],
@@ -776,7 +738,6 @@ export const droneParts = [
     "name": "Jiyi Obstacle Avoidance Radar Front (UAV-R21-F) Forward Radar for Agriculture drones",
     "category": "Flight Controller & Radar",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/07/1-4.png",
-    "price": "₹15,299.00",
     "originalPrice": "₹18,698.00",
     "specs": [
       ["Type", "Obstacle Avoidance Radar"],
@@ -790,7 +751,6 @@ export const droneParts = [
     "name": "Jiyi Terrain Simulating following Radar – Agriculture Drones Components",
     "category": "Flight Controller & Radar",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/07/5-4.png",
-    "price": "₹14,999.00",
     "originalPrice": "₹18,698.00",
     "specs": [
       ["Type", "Terrain Following Radar"],
@@ -804,7 +764,6 @@ export const droneParts = [
     "name": "VK V9 Flight Controller with GPS Flight Control System for Agriculture Drones",
     "category": "Flight Controller & Radar",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/07/v9-300x300.jpg",
-    "price": "₹36,900.00",
     "specs": [
       ["Type", "Flight Controller"],
       ["Model", "V9"],
@@ -818,7 +777,6 @@ export const droneParts = [
     "name": "Jiyi K++V2 Flight Controller for Agriculture Drone Kit with GPS, Remote LED and PSU Original",
     "category": "Flight Controller & Radar",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/07/Kv2-2.jpg",
-    "price": "₹30,499.00",
     "originalPrice": "₹35,700.00",
     "specs": [
       ["Type", "Flight Controller Kit"],
@@ -832,7 +790,6 @@ export const droneParts = [
     "name": "Skydroid G12 Remote Controller for Agriculture Drones",
     "category": "Remote Controller",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/09/skydroid-g12-remote-controller-with-24ghz-58ghz-1-300x300.webp",
-    "price": "₹40,500.00",
     "originalPrice": "₹42,000.00",
     "specs": [
       ["Type", "Remote Controller"],
@@ -847,7 +804,6 @@ export const droneParts = [
     "name": "SIYI MK15E Mini HD Handheld Agriculture Smart Controller Long Range FPV Combo",
     "category": "Remote Controller",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/06/1.png",
-    "price": "₹42,500.00",
     "originalPrice": "₹63,907.00",
     "specs": [
       ["Type", "Smart Controller Combo"],
@@ -862,7 +818,6 @@ export const droneParts = [
     "name": "Skydroid T12 Remote Controller without camera- Long Range Drone Transmitter",
     "category": "Remote Controller",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/04/skydroid-t12-.png",
-    "price": "₹17,500.00",
     "originalPrice": "₹18,790.00",
     "specs": [
       ["Type", "Remote Controller"],
@@ -877,7 +832,6 @@ export const droneParts = [
     "name": "Skydroid H12 Transmitter Remote Controller for Agriculture Drones",
     "category": "Remote Controller",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/04/Skydroid-H12-Transmitter-Remote-Controller-for-Agriculture-Drones.png",
-    "price": "₹27,500.00",
     "originalPrice": "₹31,900.00",
     "specs": [
       ["Type", "Transmitter Remote Controller"],
@@ -891,7 +845,6 @@ export const droneParts = [
     "name": "Siyi UniRC 7 Pro New Era Handheld Ground Station for agriculture drones",
     "category": "Remote Controller",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/11/siyi-uni-7-1.png",
-    "price": "₹88,000.00",
     "originalPrice": "₹99,699.00",
     "specs": [
       ["Type", "Handheld Ground Station"],
@@ -905,7 +858,6 @@ export const droneParts = [
     "name": "Siyi UniRC 7 New Era Handheld Ground Station for agriculture drones",
     "category": "Remote Controller",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/11/uni-rc-7-3.png",
-    "price": "₹64,999.00",
     "originalPrice": "₹78,699.00",
     "specs": [
       ["Type", "Handheld Ground Station"],
@@ -919,7 +871,6 @@ export const droneParts = [
     "name": "Skydroid T12 Agriculture Transmitter RC with R12 Receiver & Camera (Combo)",
     "category": "Remote Controller",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/T-12.jpg",
-    "price": "₹17,500.00",
     "originalPrice": "₹21,298.00",
     "specs": [
       ["Type", "Transmitter RC Combo"],
@@ -933,7 +884,6 @@ export const droneParts = [
     "name": "Siyi MK15 Mini HD Handheld Transmitter FPV RC Controller Combo for Agri Drone",
     "category": "Remote Controller",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/MK15-AG-1-1.jpg",
-    "price": "₹37,375.00",
     "originalPrice": "₹42,100.00",
     "specs": [
       ["Type", "Handheld Transmitter Combo"],
@@ -947,7 +897,6 @@ export const droneParts = [
     "name": "Siyi MK 32 Agriculture Handheld Ground Station Smart Transmitter And RC Controller",
     "category": "Remote Controller",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/MK32-1-1.jpg",
-    "price": "₹51,106.00",
     "originalPrice": "₹56,300.00",
     "specs": [
       ["Type", "Ground Station Smart Transmitter"],
@@ -961,7 +910,6 @@ export const droneParts = [
     "name": "SIYI MK15 IP67 FPV Camera \"A\" Waterproof for Agriculture Drones",
     "category": "Payload & Camera",
     "image": "https://bharatskytech.com/wp-content/uploads/2025/04/SIYI-MK15-IP67-FPV-Camera-A.png",
-    "price": "₹4,200.00",
     "originalPrice": "₹6,500.00",
     "specs": [
       ["Type", "FPV Camera"],
@@ -976,7 +924,6 @@ export const droneParts = [
     "name": "SIYI AI Tracking Module 4T Computing Power Human Vehicle for ag drones",
     "category": "Payload & Camera",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/SIYI-AI-Tracking-Gen-2-2.jpg",
-    "price": "₹30,299.00",
     "originalPrice": "₹40,699.00",
     "specs": [
       ["Type", "AI Tracking Module"],
@@ -991,7 +938,6 @@ export const droneParts = [
     "name": "SIYI A8 mini 4K 8MP Ultra HD 6X Digital Zoom Gimbal Camera for Ag Drones",
     "category": "Payload & Camera",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/06/A8-mini-1_1.jpg",
-    "price": "₹24,500.00",
     "originalPrice": "₹26,498.00",
     "specs": [
       ["Type", "Gimbal Camera"],
@@ -1006,7 +952,6 @@ export const droneParts = [
     "name": "SIYI A2 mini Ultra Wide Angle FPV Gimbal Single Axis Camera Sensor for Ag Drones",
     "category": "Payload & Camera",
     "image": "https://bharatskytech.com/wp-content/uploads/2024/05/1-4.jpg",
-    "price": "₹8,599.00",
     "originalPrice": "₹11,298.00",
     "specs": [
       ["Type", "Single Axis Gimbal Camera"],
@@ -1046,7 +991,6 @@ export const insideKits = [
       ["Type", "UAV Development Kit"],
       ["Learning", "Advanced UAV Projects"],
       ["Platform", "All-in-One"],
-      ["Discount", "₹1,000 Off"],
     ]
   },
 
@@ -1062,7 +1006,6 @@ export const insideKits = [
       ["Type", "Research & Development Kit"],
       ["Purpose", "UAV Research"],
       ["Learning", "Drone Innovation"],
-      ["Discount", "₹6,000 Off"],
     ]
   },
 
@@ -1077,7 +1020,6 @@ export const insideKits = [
       ["Type", "UAV Imaging Kit"],
       ["Feature", "Advanced Camera Support"],
       ["Use Case", "Aerial Imaging & Research"],
-      ["Starting Price", "₹50,000"],
     ]
   },
 
@@ -1093,7 +1035,6 @@ export const insideKits = [
       ["Type", "Beginner UAV Kit"],
       ["Purpose", "Learning & Innovation"],
       ["Foundation", "Complete UAV Basics"],
-      ["Discount", "₹3,680 Off"],
     ]
   },
 ];

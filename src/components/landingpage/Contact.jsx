@@ -82,10 +82,9 @@ const Contact = () => {
 
             <div className="mt-8 space-y-5 border-t border-border pt-6">
               {[
-                ["EMAIL", "operations@droneops.com"],
-                ["PHONE", "+91 98765 43210"],
-                ["LOCATION", "New Delhi, India"],
-                ["AVAILABILITY", "Mon–Sat / 0900–1800 IST"],
+                ["EMAIL", "sales@arcanumspace.com  info@arcanumspace.com"],
+                ["PHONE", "+91 8004369347"],
+                ["LOCATION", "AH-1101, ANTRIKSH HEIGHTS, SECTOR 84, GURUGRAM, HARYANA"],
               ].map(([k, v]) => (
                 <div key={k} className="flex items-start gap-4 min-w-0">
                   <div className="label-mono text-[10px] w-24 shrink-0 pt-1">
@@ -106,7 +105,7 @@ const Contact = () => {
                 </div>
 
                 <div className="text-tactical font-mono text-sm">
-                  AES-256 / TLS 1.3 ACTIVE
+                  Command the Unseen
                 </div>
               </div>
             </div>
@@ -119,12 +118,12 @@ const Contact = () => {
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-border pb-3 mb-2 gap-3">
               <span className="label-mono text-[10px]">
-                ▌ BRIEFING FORM / 06 FIELDS
+                ▌ BRIEFING FORM
               </span>
 
-              <span className="label-mono text-tactical text-[10px]">
+              {/* <span className="label-mono text-tactical text-[10px]">
                 FORM ID: BRF-2026
-              </span>
+              </span> */}
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -145,12 +144,13 @@ const Contact = () => {
                 required
                 className="w-full bg-charcoal border border-border px-4 py-3 text-sm font-mono focus:outline-none focus:border-tactical"
               >
-                <option>Surveillance</option>
-                <option>Mapping</option>
-                <option>Inspection</option>
+                <option>Survey & Mapping</option>
+                <option>Surveillance & Inspection</option>
                 <option>Payload Delivery</option>
                 <option>Search & Rescue</option>
                 <option>Custom Requirement</option>
+                <option>Agriculture</option>
+                <option>Components</option>
               </select>
             </div>
 

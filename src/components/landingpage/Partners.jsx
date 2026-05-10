@@ -1,10 +1,14 @@
 const partners = [
-  "DEFENSE LABS",
-  "AERO COMMAND",
-  "SKYNETICS",
-  "TACTICAL OPS",
-  "FIELD INTEL",
-  "RAPTOR SYSTEMS",
+  "BharatSkyTech",
+  "DronacharyaTech",
+  "Parity InfoTech",
+  "Drobonation",
+  "Gorkha Rifles",
+  "Armoured Corps",
+  "Officers Training Academy",
+  "Quetzalcoatl",
+  "46 Armoured Regiment",
+  "10 Sikh"
 ];
 
 const Partners = () => {

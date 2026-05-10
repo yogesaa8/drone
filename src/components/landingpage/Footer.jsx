@@ -25,7 +25,7 @@ const cols = [
   },
   {
     t: "Contact",
-    items: ["operations@droneops.com", "+91 98765 43210", "New Delhi, India"],
+    items: ["sales@arcanumspace.com", "+91 8004369347", "AH-1101, ANTRIKSH HEIGHTS, SECTOR 84, GURUGRAM, HARYANA"],
   },
 ];
 
@@ -147,8 +147,8 @@ const Footer = () => {
 
         <div className="mt-10 pt-5 border-t border-border">
           <div className="flex flex-col items-center gap-4 text-center">
-            <div className="label-mono text-[9px] leading-relaxed max-w-60">
-              © 2026 DRONEOPS SYSTEMS — ALL RIGHTS RESERVED
+            <div className="label-mono text-[9px] leading-relaxed max-w-100">
+              © 2026 Arcanum Space. All rights reserved
             </div>
           </div>
         </div>

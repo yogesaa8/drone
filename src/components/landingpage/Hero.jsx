@@ -4,7 +4,7 @@ import { FloatUpText } from "../animations/Antigravity";
 const stats = [
   ["FLIGHT ENDURANCE", "48+ MIN"],
   ["RANGE", "12 KM"],
-  ["PAYLOAD", "4.5 KG"],
+  ["PAYLOAD", "10 KG"],
   ["LIVE FEED", "4K THERMAL"],
 ];
 
@@ -37,7 +37,7 @@ const Hero = () => {
       </div>
 
       {/* Corner HUD elements */}
-      <div className="absolute top-24 left-6 lg:left-10 label-mono text-[10px] space-y-1 hidden md:block">
+      {/* <div className="absolute top-24 left-6 lg:left-10 label-mono text-[10px] space-y-1 hidden md:block">
         <div className="flex items-center gap-2">
           <span className="w-1 h-1 bg-tactical animate-hud-pulse" />
           <span>LAT 28.7041° N</span>
@@ -49,9 +49,9 @@ const Hero = () => {
         <div>
           MODE: <span className="text-amber-hud">RECON</span>
         </div>
-      </div>
+      </div> */}
 
-      <div className="absolute top-24 right-6 lg:right-10 label-mono text-[10px] text-right space-y-1 hidden md:block">
+      {/* <div className="absolute top-24 right-6 lg:right-10 label-mono text-[10px] text-right space-y-1 hidden md:block">
         <div>FEED ID: 04-XR-219</div>
         <div>ALT: 1,240 M</div>
         <div>
@@ -61,7 +61,7 @@ const Hero = () => {
           <span>TARGET LOCK</span>
           <span className="w-2 h-2 border border-warning animate-hud-pulse" />
         </div>
-      </div>
+      </div> */}
 
       {/* Target reticle decoration */}
       {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 hidden lg:block pointer-events-none opacity-20">

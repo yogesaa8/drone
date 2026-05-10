@@ -11,7 +11,7 @@ const combinedData = [
         techIcon: "◎"
     },
     {
-        mission: "Border Monitoring",
+        mission: "Survey & Mapping",
         missionDesc: "Continuous perimeter watch with AI intrusion detection.",
         tech: "4K Thermal Imaging",
         techDesc: "Dual-spectrum optics for heat-signature feeds.",

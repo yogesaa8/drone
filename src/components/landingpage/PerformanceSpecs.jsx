@@ -1,7 +1,7 @@
 import { FloatUpText } from "../animations/Antigravity";
 
 const stats = [
-    { value: "12", unit: "km", label: "Max Control Range" },
+    { value: "15", unit: "km", label: "Max Control Range" },
     { value: "45", unit: "min", label: "Flight Endurance" },
     { value: "4K", unit: "", label: "Thermal Resolution" },
     { value: "<1", unit: "s", label: "Target Lock Response" },
@@ -9,14 +9,14 @@ const stats = [
     { value: "AES-256", unit: "", label: "Encryption Standard" },
 ];
 
-const specs = [
-    { label: "Wingspan", value: "1.2 m" },
-    { label: "Max Speed", value: "72 km/h" },
-    { label: "Takeoff Weight", value: "3.8 kg" },
-    { label: "Operating Temp", value: "-20° to 50°C" },
-    { label: "Payload Capacity", value: "800 g" },
-    { label: "Frequency Band", value: "2.4 / 5.8 GHz" },
-];
+// const specs = [
+//     { label: "Wingspan", value: "1.2 m" },
+//     { label: "Max Speed", value: "72 km/h" },
+//     { label: "Takeoff Weight", value: "3.8 kg" },
+//     { label: "Operating Temp", value: "-20° to 50°C" },
+//     { label: "Payload Capacity", value: "800 g" },
+//     { label: "Frequency Band", value: "2.4 / 5.8 GHz" },
+// ];
 
 const PerformanceSpecs = () => {
     return (
@@ -70,14 +70,14 @@ const PerformanceSpecs = () => {
                 </FloatUpText>
 
                 {/* ── Divider ── */}
-                <div className="flex items-center gap-4 my-2">
+                {/* <div className="flex items-center gap-4 my-2">
                     <div className="flex-1 h-px bg-border" />
                     <span className="text-tactical/40 text-xs">◆</span>
                     <div className="flex-1 h-px bg-border" />
-                </div>
+                </div> */}
 
                 {/* ── Detailed Spec Table ── */}
-                <FloatUpText delay={0.2}>
+                {/* <FloatUpText delay={0.2}>
                     <div className="mt-14">
                         <div className="flex items-center gap-2 mb-6">
                             <span className="w-2 h-2 bg-tactical rotate-45" />
@@ -105,7 +105,7 @@ const PerformanceSpecs = () => {
                             ))}
                         </div>
                     </div>
-                </FloatUpText>
+                </FloatUpText> */}
 
             </div>
         </section>

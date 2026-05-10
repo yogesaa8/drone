@@ -4,6 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { IoIosSunny } from "react-icons/io";
 import { AiFillMoon } from "react-icons/ai";
+import logo from "../../assets/logo.png"
 
 const links = [
   { to: "/", label: "Home" },
@@ -76,10 +77,11 @@ const Header = () => {
           onClick={closeMenu}
           className="flex items-center gap-3 group"
         >
-          <div className="w-8 h-8 border border-tactical relative flex items-center justify-center">
-            <div className="w-2 h-2 bg-tactical animate-hud-pulse" />
+          <div className="w-10 h-10 relative flex items-center justify-center">
+          <img src={logo} alt="Arcanum Space Logo" />
+            {/* <div className="w-2 h-2 bg-tactical animate-hud-pulse" />
             <span className="absolute -top-px -left-px w-1.5 h-1.5 border-t border-l border-tactical" />
-            <span className="absolute -bottom-px -right-px w-1.5 h-1.5 border-b border-r border-tactical" />
+            <span className="absolute -bottom-px -right-px w-1.5 h-1.5 border-b border-r border-tactical" /> */}
           </div>
 
           <div className="flex flex-col leading-none">
