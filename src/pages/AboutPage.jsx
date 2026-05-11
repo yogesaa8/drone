@@ -5,38 +5,38 @@ import { FloatUpText } from "../components/animations/Antigravity";
 
 const capabilities = [
   [
-    "Defense Drone Systems",
-    "Advanced UAV platforms engineered for surveillance, reconnaissance, border security, and tactical field intelligence operations.",
+    "Who We Are",
+    "A UAV technology company focused on mission-ready platforms for training, surveillance, ISR, rapid response, and field operations.",
   ],
   [
-    "Agriculture Automation",
-    "Smart agricultural drone solutions for spraying, mapping, crop analysis, and precision farming workflows.",
+    "What We Build",
+    "Drone systems such as Tinywoop, ARC MT 280, Shadow Drop 10, Beetle 5, and ARC MT 480AI for practical operational workflows.",
   ],
   [
-    "Mission Control Infrastructure",
-    "Secure ground-control systems with encrypted telemetry, thermal feeds, live monitoring, and remote coordination.",
+    "Engineering Approach",
+    "Airframe design, payload integration, flight tuning, documentation, and operator usability are developed as one connected system.",
   ],
   [
-    "Training & Deployment",
-    "Operator training, maintenance support, repair infrastructure, and on-site deployment assistance across India.",
+    "Field Testing & Deployment",
+    "Platforms are validated through flight trials, configuration checks, payload testing, and deployment planning for real conditions.",
   ],
   [
-    "Indigenous Manufacturing",
-    "Built under the vision of Atmanirbhar Bharat with a strong focus on Make in India innovation and engineering excellence.",
+    "AI-Assisted Workflows",
+    "We support AI-enabled drone operations for mapping, ISR support, object tracking, data capture, and faster mission decisions.",
   ],
   [
-    "Research & Innovation",
-    "Continuous R&D in aerospace engineering, payload optimization, endurance systems, and autonomous flight technologies.",
+    "Operational Support",
+    "Teams are supported with pilot training, system configuration, maintenance guidance, and deployment-ready documentation.",
   ],
 ];
 
 const metrics = [
-  ["2025", "Established in Gurgaon, India"],
-  ["04+", "Mission-ready UAV platforms"],
-  ["12 KM", "Encrypted long-range control"],
-  ["48 MIN", "Maximum flight endurance"],
-  ["24/7", "Operational planning support"],
-  ["100%", "Focused on indigenous innovation"],
+  ["05", "Operational UAV platforms"],
+  ["ISR", "Surveillance workflow focus"],
+  ["AI", "Assisted drone capability"],
+  ["FPV", "Training and field systems"],
+  ["MOD", "Payload-ready architecture"],
+  ["FIELD", "Deployment support model"],
 ];
 
 const AboutPage = () => {
@@ -52,7 +52,6 @@ const AboutPage = () => {
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-            
             <FloatUpText>
               <div>
                 <div className="flex items-center gap-3 mb-5">
@@ -64,22 +63,20 @@ const AboutPage = () => {
                 </div>
 
                 <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-                  Building the future of indigenous drone technology in India.
+                  Engineering mission-ready UAV systems for real-world operations.
                 </h1>
 
                 <p className="mt-6 text-muted-foreground leading-relaxed max-w-2xl">
-                  Arcanumspace Private Limited is a next-generation drone
-                  technology company established in August 2025 and
-                  headquartered in Gurgaon, India. We specialize in advanced
-                  UAV systems for defense, surveillance, agriculture, and
-                  industrial applications.
+                  We design, test, and deploy advanced drone platforms for
+                  training, surveillance, ISR, rapid response, and field-ready
+                  operational workflows.
                 </p>
 
                 <p className="mt-5 text-muted-foreground leading-relaxed max-w-2xl">
-                  Operating at the intersection of aerospace engineering,
-                  tactical defense systems, and agricultural automation, we are
-                  committed to delivering reliable, scalable, and mission-ready
-                  drone platforms built for India’s evolving operational needs.
+                  Arcanumspace combines product engineering, payload
+                  integration, flight validation, and operator support to build
+                  UAV systems that are reliable, configurable, and practical
+                  for demanding environments.
                 </p>
               </div>
             </FloatUpText>
@@ -121,7 +118,6 @@ const AboutPage = () => {
       {/* About Company */}
       <section className="py-24 lg:py-32 border-t border-border bg-charcoal/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-8 bg-tactical" />
@@ -132,38 +128,35 @@ const AboutPage = () => {
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Engineering drones that empower defense, agriculture, and national growth.
+              Built around product engineering, field discipline, and operational readiness.
             </h2>
 
             <div className="mt-8 space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                Arcanumspace is driven by the vision of strengthening India’s
-                technological self-reliance through innovation-led UAV
-                development. Our defense-focused systems are designed for
-                surveillance, security operations, and tactical intelligence,
-                while our agricultural drone ecosystem supports farmers and
-                drone entrepreneurs with affordable and efficient solutions.
+                Arcanumspace builds UAV systems for organizations that need
+                dependable aerial capability without unnecessary complexity.
+                Our work spans airframe selection, electronics integration,
+                payload configuration, flight tuning, and deployment planning.
               </p>
 
               <p>
-                From product development and pilot training to service,
-                maintenance, and repair infrastructure, we are building a
-                complete drone ecosystem that delivers long-term value and
-                dependable support to organizations across India.
+                Our platforms support training, surveillance, ISR workflows,
+                rapid response, mapping, modular payload missions, and
+                AI-assisted drone operations. Each system is shaped around
+                stable flight, quick launch readiness, field durability, and
+                clear operator control.
               </p>
 
               <p>
-                Through strategic collaborations with government agencies,
-                private institutions, and industry leaders, Arcanumspace
-                continues to expand its capabilities in aerospace innovation,
-                autonomous systems, and operational deployment technologies.
+                We work with teams from concept to deployment: defining mission
+                requirements, configuring platforms, validating performance,
+                preparing documentation, and supporting operator training.
               </p>
 
               <p>
-                Our mission is to promote sustainable and technology-driven
-                practices that enhance national security, improve agricultural
-                productivity, and create new opportunities within India’s drone
-                sector.
+                The result is a focused UAV ecosystem designed for practical
+                readiness, repeatable field performance, and long-term
+                operational confidence.
               </p>
             </div>
           </div>
@@ -173,7 +166,6 @@ const AboutPage = () => {
       {/* Capabilities */}
       <section className="py-24 lg:py-32 border-t border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-8 bg-tactical" />
@@ -184,7 +176,7 @@ const AboutPage = () => {
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Designed for reliability in the most demanding environments.
+              Focused capabilities for reliable UAV deployment.
             </h2>
           </div>
 
@@ -214,46 +206,44 @@ const AboutPage = () => {
       {/* Vision Section */}
       <section className="py-24 lg:py-32 border-t border-border bg-charcoal/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          
           <div className="grid lg:grid-cols-2 gap-10 items-start">
-            
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="h-px w-8 bg-tactical" />
 
                 <span className="label-mono text-tactical">
-                  OUR MISSION
+                  WHY CHOOSE US
                 </span>
               </div>
 
               <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight">
-                Advancing India’s UAV ecosystem through innovation and self-reliance.
+                Practical UAV systems backed by engineering discipline and field support.
               </h2>
             </div>
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                At Arcanumspace, we don’t just build drones — we build
-                intelligent aerial solutions that empower defense operations,
-                support Indian farmers, and create opportunities for the next
-                generation of drone professionals.
+                We do not treat a drone as only an aircraft. We treat it as a
+                complete operational system: platform, payload, communications,
+                training, maintenance, documentation, and deployment workflow.
               </p>
 
               <p>
-                Every platform we develop reflects our commitment to Make in
-                India innovation, engineering excellence, and field-ready
-                operational performance.
+                From compact FPV training platforms to AI-assisted tactical
+                multirotor UAVs, every configuration is built with usability,
+                reliability, and mission adaptability at the center.
               </p>
 
               <div className="border border-border bg-charcoal p-6 corner-frame">
                 <div className="label-mono text-tactical text-[10px] mb-3">
-                  ▌ ATMANIRBHAR BHARAT INITIATIVE
+                  FIELD-READY UAV DELIVERY
                 </div>
 
                 <p className="text-sm leading-relaxed">
-                  We contribute towards Atmanirbhar Bharat through innovation,
-                  engineering excellence, and mission-ready UAV platforms
-                  designed and developed in India.
+                  Arcanumspace supports teams with platform selection,
+                  configuration, flight validation, pilot training, and
+                  deployment planning so UAV capability can move from lab
+                  readiness to real-world use.
                 </p>
               </div>
             </div>

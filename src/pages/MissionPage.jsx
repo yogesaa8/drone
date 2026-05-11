@@ -4,70 +4,70 @@ import { FloatUpText } from "../components/animations/Antigravity";
 
 const missionPillars = [
   {
-    title: "AI-Powered Intelligence",
-    desc: "Advanced artificial intelligence systems enabling autonomous navigation, obstacle detection, adaptive flight control, and mission optimization.",
+    title: "Our Mission",
+    desc: "To make advanced UAV capability accessible, reliable, and field-ready for teams operating in real environments.",
   },
   {
-    title: "Secure Communication",
-    desc: "Encrypted telemetry and interference-resistant communication systems for reliable command, control, and mission-critical data transfer.",
+    title: "Operational Focus",
+    desc: "We support surveillance, ISR, mapping, rapid response, training, payload operations, and AI-assisted drone workflows.",
   },
   {
-    title: "Rapid Deployment",
-    desc: "Mission-ready UAV platforms engineered for fast deployment, operational flexibility, and field adaptability.",
+    title: "Training & Readiness",
+    desc: "Pilot training, familiarization, checklists, and deployment guidance help teams operate UAV systems with confidence.",
   },
   {
-    title: "Modular Architecture",
-    desc: "Flexible drone ecosystems supporting interchangeable payloads, sensors, and mission modules for multiple operational scenarios.",
+    title: "Technology Direction",
+    desc: "Our roadmap focuses on modular airframes, secure control workflows, payload flexibility, autonomy, and AI-enabled field intelligence.",
   },
   {
-    title: "Indigenous Engineering",
-    desc: "Designed, developed, and manufactured in India with complete focus on quality, reliability, and national technological self-reliance.",
+    title: "Partner Ecosystem",
+    desc: "We collaborate with operators, institutions, suppliers, and field teams to align UAV capability with practical mission needs.",
   },
   {
-    title: "Field Reliability",
-    desc: "Built with precision avionics, energy-efficient propulsion systems, and rigorous real-world testing for dependable operations.",
+    title: "Field Support",
+    desc: "Configuration support, validation, maintenance guidance, and documentation keep UAV operations repeatable after delivery.",
   },
 ];
 
 const timeline = [
   [
     "01",
-    "Mission Briefing",
-    "Operational requirements, terrain analysis, payload needs, and flight objectives are assessed in detail.",
+    "Mission Requirement",
+    "Operational goals, terrain, endurance needs, payload expectations, and operator readiness are assessed before configuration.",
   ],
   [
     "02",
-    "System Configuration",
-    "Drone platform, AI modules, communication systems, and payload architecture are configured for the mission.",
+    "Platform Configuration",
+    "The UAV platform, sensors, payload modules, control workflow, and training plan are aligned to the intended use case.",
   ],
   [
     "03",
     "Testing & Validation",
-    "Flight endurance, telemetry stability, autonomous controls, and recovery protocols are validated under real-world conditions.",
+    "Flight stability, range behavior, payload handling, telemetry, recovery checks, and documentation are reviewed before handoff.",
   ],
   [
     "04",
-    "Deployment",
-    "Mission-ready systems are deployed with operator training, support infrastructure, and operational handoff.",
+    "Deployment Readiness",
+    "Teams receive practical guidance, operating notes, and support inputs for field deployment and repeatable UAV operation.",
   ],
 ];
 
 const technologies = [
   [
-    "Artificial Intelligence",
-    "AI-assisted flight systems with intelligent navigation, obstacle avoidance, autonomous routing, and adaptive mission control.",
+    "ISR Workflow Support",
+    "Drone systems configured for surveillance, observation, mapping, documentation, and rapid data capture in operational environments.",
   ],
   [
-    "Encrypted Telemetry",
-    "Secure communication protocols ensuring protected and interference-resistant connectivity between aerial systems and ground control.",
+    "AI-Enabled Operations",
+    "AI-assisted workflows support object tracking, route planning, mapping intelligence, and faster review of aerial information.",
   ],
   [
     "Modular Payload Systems",
-    "Interchangeable surveillance, mapping, thermal, spraying, and reconnaissance payloads for rapid mission customization.",
+    "Flexible payload integration allows UAV platforms to adapt for training, surveillance, mapping, imaging, and field-specific tasks.",
   ],
   [
-    "Energy Efficient Engineering",
-    "Optimized propulsion systems and lightweight materials delivering extended endurance and improved payload efficiency.",
+    "Reliable Flight Engineering",
+    "Airframe selection, power systems, control tuning, and validation practices are focused on stable, repeatable field performance.",
   ],
 ];
 
@@ -78,13 +78,11 @@ const MissionPage = () => {
 
   return (
     <div className="pt-16 min-h-screen">
-      
       {/* Hero Section */}
       <section className="relative py-24 lg:py-32">
         <AnimatedGrid />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-          
           <FloatUpText>
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-5">
@@ -96,21 +94,20 @@ const MissionPage = () => {
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-                Building intelligent UAV systems for defense, agriculture, and national advancement.
+                To make advanced UAV capability accessible, reliable, and field-ready.
               </h1>
 
               <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
-                At Arcanumspace, technology is the foundation of everything we
-                build. We integrate advanced artificial intelligence, secure
-                communication systems, and indigenous engineering to create
-                reliable, mission-ready drone platforms for modern operational
-                environments.
+                Our mission is to support teams with dependable drone systems,
+                practical training workflows, and mission-focused UAV
+                technology built for real operational environments.
               </p>
 
               <p className="mt-5 text-muted-foreground leading-relaxed">
-                Our mission is to empower defense forces, farmers, industries,
-                and drone entrepreneurs with scalable aerial systems that
-                combine intelligence, adaptability, security, and performance.
+                Arcanumspace works across UAV training, surveillance, ISR,
+                payload systems, field support, and AI-enabled operations to
+                help organizations deploy aerial capability with clarity and
+                confidence.
               </p>
             </div>
           </FloatUpText>
@@ -123,7 +120,6 @@ const MissionPage = () => {
                 delay={index * 0.08}
               >
                 <article className="bg-charcoal p-8 h-full zero-g-hover min-w-0">
-                  
                   <div className="font-display text-5xl font-bold text-tactical/30 mb-6">
                     {String(index + 1).padStart(2, "0")}
                   </div>
@@ -145,25 +141,24 @@ const MissionPage = () => {
       {/* Technology Section */}
       <section className="py-24 lg:py-32 border-y border-border bg-charcoal/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          
           <div className="mb-14 max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-8 bg-tactical" />
 
               <span className="label-mono text-tactical">
-                CORE TECHNOLOGY
+                TECHNOLOGY DIRECTION
               </span>
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Advanced engineering designed for real-world operational demands.
+              Reliable UAV technology shaped by operational requirements.
             </h2>
 
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Our UAV systems leverage AI-powered autonomy, secure telemetry,
-              modular payload ecosystems, and indigenous manufacturing to
-              deliver dependable performance in high-risk and mission-critical
-              environments.
+              We develop drone platforms around field usability, stable flight,
+              modular payloads, data capture, operator training, and
+              AI-assisted workflows that improve mission awareness without
+              overcomplicating the system.
             </p>
           </div>
 
@@ -190,18 +185,17 @@ const MissionPage = () => {
       {/* Mission Workflow */}
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-8 bg-tactical" />
 
               <span className="label-mono text-tactical">
-                MISSION PROTOCOL
+                OPERATIONAL FOCUS
               </span>
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              From operational requirement to field deployment.
+              From mission requirement to deployment readiness.
             </h2>
           </div>
 
@@ -228,57 +222,54 @@ const MissionPage = () => {
         </div>
       </section>
 
-      {/* Indigenous Innovation */}
+      {/* Partner Ecosystem */}
       <section className="py-24 lg:py-32 border-t border-border bg-charcoal/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="h-px w-8 bg-tactical" />
 
                 <span className="label-mono text-tactical">
-                  INDIGENOUS INNOVATION
+                  PARTNER ECOSYSTEM
                 </span>
               </div>
 
               <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-                Built in India for the future of Indian drone technology.
+                Building UAV readiness through practical collaboration.
               </h2>
             </div>
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                Indigenous manufacturing lies at the core of our engineering
-                philosophy. By designing, developing, and producing our UAV
-                systems in India, we maintain complete control over quality,
-                operational security, and platform reliability.
+                Reliable UAV operations require more than a capable aircraft.
+                They require trained operators, clear procedures, appropriate
+                payloads, responsive support, and systems that fit the mission
+                rather than forcing the mission to fit the system.
               </p>
 
               <p>
-                Our in-house research, testing, and production infrastructure
-                supports continuous innovation in autonomous systems, aerospace
-                engineering, and tactical aerial technologies while aligning
-                with the national “Make in India” initiative.
+                We work with customers, training partners, technology vendors,
+                and field teams to refine platform configurations, improve
+                operator readiness, and keep UAV deployment practical at scale.
               </p>
 
               <p>
-                Every platform undergoes extensive testing under real-world
-                operational conditions to ensure consistent endurance, payload
-                stability, and mission reliability across demanding environments.
+                Our direction is steady: strengthen surveillance capability,
+                expand training access, improve ISR workflows, and deliver
+                drone systems that teams can trust in demanding field use.
               </p>
 
               <div className="border border-border bg-charcoal p-6 corner-frame">
                 <div className="label-mono text-tactical text-[10px] mb-3">
-                  ▌ ATMANIRBHAR BHARAT VISION
+                  TRAINING & READINESS
                 </div>
 
                 <p className="text-sm leading-relaxed">
-                  Through innovation, engineering excellence, and field-ready
-                  UAV systems, Arcanumspace contributes toward strengthening
-                  India’s technological self-reliance and next-generation drone
-                  ecosystem.
+                  Arcanumspace supports UAV readiness through system
+                  configuration, pilot training, deployment planning, field
+                  validation, and practical documentation for repeatable
+                  operations.
                 </p>
               </div>
             </div>

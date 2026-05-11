@@ -1,35 +1,55 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import g1 from "../assets/gallary/gallery1.jpg";
-import g2 from "../assets/gallary/gallery2.jpg";
-import g4 from "../assets/gallary/gallery4.jpg";
+
+import d1_1 from "../assets/d1/1.1.png";
+import d1_2 from "../assets/d2/2.png";
+import d1_3 from "../assets/d3/3.png";
+import d1_4 from "../assets/d4/4.png";
+import d6_5 from "../assets/d5/5.5.png";
+
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
 
 const posts = [
   {
-    slug: "next-gen-lidar-integration-in-falcon-m4",
-    tag: "Tech Report",
+    slug: "tinywoop-training-surveillance-uav",
+    tag: "Training UAV",
     date: "05 May 2026",
-    title: "Next-gen LiDAR integration in Falcon M4",
-    desc: "Field notes on lightweight LiDAR payloads, RTK stabilization, and faster mapping handoff.",
-    image: g2,
+    title: "Tinywoop: Compact FPV drone for training and close surveillance",
+    desc: "A small 2.5-inch FPV platform designed for pilot training, indoor drills, and short-range surveillance workflows.",
+    image: d1_1,
   },
   {
-    slug: "thermal-patrol-patterns-for-perimeter-monitoring",
+    slug: "arc-mt-280-rapid-surveillance-drone",
     tag: "Field Ops",
-    date: "28 Apr 2026",
-    title: "Thermal patrol patterns for perimeter monitoring",
-    desc: "How night operations combine thermal feeds, AI tracking, and redundant operator alerts.",
-    image: g1,
+    date: "01 May 2026",
+    title: "ARC MT 280: Lightweight surveillance drone for rapid deployment",
+    desc: "A carbon-fiber UAV built for stable observation, training missions, and controlled payload delivery scenarios.",
+    image: d1_2,
   },
   {
-    slug: "building-a-clean-uav-deployment-checklist",
-    tag: "Command Desk",
+    slug: "shadow-drop-10-ew-surveillance-platform",
+    tag: "Tactical UAV",
+    date: "28 Apr 2026",
+    title: "Shadow Drop 10: EW-ready FPV platform for tactical surveillance",
+    desc: "A 10-inch FPV drone engineered for anti-jam environments, high-speed response, and mission-focused field operations.",
+    image: d1_3,
+  },
+  {
+    slug: "beetle-5-fpv-training-surveillance-drone",
+    tag: "FPV System",
+    date: "22 Apr 2026",
+    title: "Beetle 5: Fast FPV drone for training and surveillance",
+    desc: "A compact 5-inch FPV platform with strong speed, range, and analog/digital flexibility for field practice.",
+    image: d1_4,
+  },
+  {
+    slug: "arc-mt-480ai-ai-tactical-multirotor-uav",
+    tag: "AI ISR",
     date: "16 Apr 2026",
-    title: "Building a clean UAV deployment checklist",
-    desc: "A practical readiness sequence for batteries, payloads, telemetry, and recovery planning.",
-    image: g4,
+    title: "ARC MT 480AI: AI tactical multirotor UAV for ISR missions",
+    desc: "A long-range AI-enabled multirotor designed for ISR, rapid response, high-speed recon, and AI target tracking.",
+    image: d6_5,
   },
 ];
 
@@ -42,20 +62,25 @@ const BlogPage = () => {
     <div className="pt-16 min-h-screen">
       <section className="relative py-24 lg:py-32">
         <AnimatedGrid />
+
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <FloatUpText>
             <div className="mb-14 max-w-3xl">
               <div className="flex items-center gap-3 mb-4">
                 <span className="h-px w-8 bg-tactical" />
-                <span className="label-mono text-tactical">INTEL BRIEFINGS</span>
+                <span className="label-mono text-tactical">
+                  UAV INTEL BRIEFINGS
+                </span>
                 <span className="h-px w-8 bg-tactical" />
               </div>
+
               <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight">
-                Field intel, system updates, and mission notes.
+                Drone insights, mission notes, and system briefings.
               </h1>
+
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                Updates from UAV testing, deployment planning, payload development, and operational
-                workflows used by DroneOps teams.
+                Explore our UAV platforms built for training, surveillance, ISR,
+                rapid response, and field-ready deployment workflows.
               </p>
             </div>
           </FloatUpText>
@@ -75,11 +100,14 @@ const BlogPage = () => {
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent" />
                   <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
+
                   <div className="absolute top-3 left-3 label-mono text-[10px] bg-background/80 px-2 py-1 pointer-events-none">
                     {post.tag}
                   </div>
+
                   <div className="absolute top-3 right-3 label-mono text-[10px] text-tactical bg-background/80 px-2 py-1 pointer-events-none">
                     LOG {String(index + 1).padStart(2, "0")}
                   </div>
@@ -89,9 +117,11 @@ const BlogPage = () => {
                   <div className="label-mono text-tactical text-[10px] mb-3">
                     {post.date}
                   </div>
+
                   <h2 className="font-display text-xl font-bold leading-tight mb-3 group-hover:text-tactical transition-colors break-words">
                     {post.title}
                   </h2>
+
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {post.desc}
                   </p>
