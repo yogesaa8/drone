@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import heroImg from "../assets/hero-drone.jpg";
+import heroImg from "../assets/about_page.png";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
 
