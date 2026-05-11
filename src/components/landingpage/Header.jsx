@@ -9,6 +9,7 @@ import logo from "../../assets/logo.png"
 const links = [
   { to: "/", label: "Home" },
   { to: "/products", label: "Products" },
+  { to: "/parts-kits", label: "Parts & Kits" },
   { to: "/about", label: "About" },
   { to: "/mission", label: "Mission" },
   { to: "/blog", label: "Blog" },

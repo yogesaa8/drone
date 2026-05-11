@@ -8,6 +8,7 @@ import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import DroneDetailsPage from "./pages/DroneDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
+import PartsKitsPage from "./pages/PartsKitsPage";
 import BlogPostPage from "./pages/BlogPostPage";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/parts-kits" element={<PartsKitsPage />} />
             <Route path="/drone/:id" element={<DroneDetailsPage />} />
             <Route path="*" element={<LandingPage />} />
           </Routes>

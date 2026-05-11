@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { FiMaximize2, FiX } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
-import { drones, droneParts, insideKits } from "../data/data";
+import { drones } from "../data/data";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 
-const ProductCard = ({ item, type, onClick, onZoom }) => {
+export const ProductCard = ({ item, type, onClick, onZoom }) => {
   const actionTo = type === "drone" ? `/drone/${item.id}` : "/contact";
   const canZoom = Boolean(onZoom);
 
@@ -122,8 +122,7 @@ const ProductsPage = () => {
           Advanced Equipment
         </h1>
         <p className="text-muted-foreground max-w-2xl text-lg">
-          Browse our complete range of tactical UAVs, precision-engineered
-          components, and ready-to-deploy mission kits.
+          Browse our complete range of tactical UAVs.
         </p>
       </div>
 
@@ -143,48 +142,6 @@ const ProductsPage = () => {
                 item={d}
                 type="drone"
                 onClick={() => navigate("/drone/" + d.id)}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* 2. Drone Parts Section */}
-        <section>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
-            <h2 className="font-display text-3xl font-bold">
-              02 / Precision Parts
-            </h2>
-            <div className="h-px flex-1 bg-border" />
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {droneParts.map((p) => (
-              <ProductCard
-                key={p.id}
-                item={p}
-                type="component"
-                onClick={() => navigate("/contact")}
-                onZoom={setZoomedItem}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* 3. Inside Kit Section */}
-        <section>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
-            <h2 className="font-display text-3xl font-bold">
-              03 / Mission Kits
-            </h2>
-            <div className="h-px flex-1 bg-border" />
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {insideKits.map((k) => (
-              <ProductCard
-                key={k.id}
-                item={k}
-                type="kit"
-                onClick={() => navigate("/contact")}
-                onZoom={setZoomedItem}
               />
             ))}
           </div>
