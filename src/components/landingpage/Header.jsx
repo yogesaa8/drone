@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
-import { IoMenu } from "react-icons/io5";
+import { IoChevronDown, IoMenu } from "react-icons/io5";
 import { IoIosSunny } from "react-icons/io";
 import { AiFillMoon } from "react-icons/ai";
 import logo from "../../assets/logo.png"
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/products", label: "Products" },
-  { to: "/parts-kits", label: "Parts & Kits" },
   { to: "/about", label: "About" },
   { to: "/mission", label: "Mission" },
   { to: "/blog", label: "Blog" },
+];
+
+const defenceLinks = [
+  { to: "/products", label: "Products" },
+  { to: "/parts-kits", label: "Parts & Kit" },
+  { to: "/lab", label: "Lab" },
 ];
 
 const navClass = ({ isActive }) =>
@@ -21,8 +25,12 @@ const navClass = ({ isActive }) =>
   }`;
 
 const Header = () => {
+  const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const defenceActive = defenceLinks.some(
+    (link) => pathname === link.to || pathname.startsWith(`${link.to}/`)
+  );
   const [theme, setTheme] = useState(() => {
     const storedTheme = localStorage.getItem("theme");
 
@@ -96,7 +104,50 @@ const Header = () => {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) => (
+          <NavLink
+            to="/"
+            className={(state) => `${navClass(state)} text-xs py-2`}
+          >
+            Home
+          </NavLink>
+
+          <div className="group relative">
+            <NavLink
+              to="/products"
+              className={() =>
+                `font-mono tracking-widest uppercase transition-colors text-xs py-2 flex items-center gap-1.5 ${
+                  defenceActive
+                    ? "text-tactical"
+                    : "text-muted-foreground hover:text-tactical"
+                }`
+              }
+            >
+              Defence
+              <IoChevronDown className="text-sm transition-transform group-hover:rotate-180" />
+            </NavLink>
+
+            <div className="invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div className="border border-border bg-background/95 backdrop-blur-md shadow-xl">
+                {defenceLinks.map((l) => (
+                  <NavLink
+                    key={l.to}
+                    to={l.to}
+                    className={({ isActive }) =>
+                      `block px-4 py-3 font-mono text-xs uppercase tracking-widest transition-colors ${
+                        isActive
+                          ? "bg-tactical/10 text-tactical"
+                          : "text-muted-foreground hover:bg-charcoal hover:text-tactical"
+                      }`
+                    }
+                  >
+                    {l.label}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {links.slice(1).map((l) => (
             <NavLink
               key={l.to}
               to={l.to}
@@ -155,7 +206,35 @@ const Header = () => {
       {open && (
         <div className="lg:hidden bg-background border-t border-border max-h-[calc(100vh-4rem)] overflow-y-auto">
           <nav className="px-6 py-6 flex flex-col gap-4">
-            {links.map((l) => (
+            <NavLink
+              to="/"
+              onClick={closeMenu}
+              className={(state) => `${navClass(state)} text-sm`}
+            >
+              Home
+            </NavLink>
+
+            <div className="border-y border-border py-4">
+              <div className="mb-3 flex items-center justify-between font-mono text-sm uppercase tracking-widest text-foreground">
+                <span>Defence</span>
+                <IoChevronDown className="text-base text-tactical" />
+              </div>
+
+              <div className="flex flex-col gap-3 pl-4">
+                {defenceLinks.map((l) => (
+                  <NavLink
+                    key={l.to}
+                    to={l.to}
+                    onClick={closeMenu}
+                    className={(state) => `${navClass(state)} text-xs`}
+                  >
+                    {l.label}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+
+            {links.slice(1).map((l) => (
               <NavLink
                 key={l.to}
                 to={l.to}

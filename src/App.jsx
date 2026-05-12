@@ -10,6 +10,7 @@ import DroneDetailsPage from "./pages/DroneDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
 import PartsKitsPage from "./pages/PartsKitsPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import LabPage from "./pages/LabPage";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/parts-kits" element={<PartsKitsPage />} />
+            <Route path="/lab" element={<LabPage />} />
             <Route path="/drone/:id" element={<DroneDetailsPage />} />
             <Route path="*" element={<LandingPage />} />
           </Routes>
