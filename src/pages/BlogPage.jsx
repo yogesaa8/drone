@@ -1,55 +1,58 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import d1_1 from "../assets/d1/1.1.png";
-import d1_2 from "../assets/d2/2.png";
-import d1_3 from "../assets/d3/3.png";
-import d1_4 from "../assets/d4/4.png";
-import d6_5 from "../assets/d5/5.5.png";
+import b1 from "../assets/blog/b1.png";
+import b2 from "../assets/blog/b2.png";
+import b3 from "../assets/blog/b3.png";
+import b4 from "../assets/blog/b4.png";
+import b5 from "../assets/blog/b5.png";
 
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
 
 const posts = [
   {
-    slug: "tinywoop-training-surveillance-uav",
-    tag: "Training UAV",
+    slug: "make-in-india-uav-ecosystem",
+    tag: "Industry Intel",
     date: "05 May 2026",
-    title: "Tinywoop: Compact FPV drone for training and close surveillance",
-    desc: "A small 2.5-inch FPV platform designed for pilot training, indoor drills, and short-range surveillance workflows.",
-    image: d1_1,
+    title:
+      "The Strategic Shift: Why 'Make in India' UAV Ecosystems Are Non-Negotiable",
+    desc: "Analyzing the critical need for localized drone manufacturing and R&D labs to reduce foreign dependency in defense procurement.",
+    image: b1,
   },
   {
-    slug: "arc-mt-280-rapid-surveillance-drone",
-    tag: "Field Ops",
+    slug: "electronic-warfare-ew-uav-survival",
+    tag: "Tech Analysis",
     date: "01 May 2026",
-    title: "ARC MT 280: Lightweight surveillance drone for rapid deployment",
-    desc: "A carbon-fiber UAV built for stable observation, training missions, and controlled payload delivery scenarios.",
-    image: d1_2,
+    title: "Operating in the Gray Zone: Electronic Warfare and UAV Survival",
+    desc: "How modern combat zones are saturated with jamming signals, and why anti-jam protocols are the true test of a tactical drone.",
+    image: b2,
   },
   {
-    slug: "shadow-drop-10-ew-surveillance-platform",
-    tag: "Tactical UAV",
-    date: "28 Apr 2026",
-    title: "Shadow Drop 10: EW-ready FPV platform for tactical surveillance",
-    desc: "A 10-inch FPV drone engineered for anti-jam environments, high-speed response, and mission-focused field operations.",
-    image: d1_3,
-  },
-  {
-    slug: "beetle-5-fpv-training-surveillance-drone",
-    tag: "FPV System",
-    date: "22 Apr 2026",
-    title: "Beetle 5: Fast FPV drone for training and surveillance",
-    desc: "A compact 5-inch FPV platform with strong speed, range, and analog/digital flexibility for field practice.",
-    image: d1_4,
-  },
-  {
-    slug: "arc-mt-480ai-ai-tactical-multirotor-uav",
+    slug: "ai-target-tracking-isr-missions",
     tag: "AI ISR",
+    date: "28 Apr 2026",
+    title: "Beyond Human Limits: Autonomous AI in Combat ISR",
+    desc: "Exploring how artificial intelligence is transforming Intelligence, Surveillance, and Reconnaissance from manual piloting to autonomous tracking.",
+    image: b5,
+  },
+  {
+    slug: "fpv-pilot-training-doctrine",
+    tag: "Training Doctrine",
+    date: "22 Apr 2026",
+    title:
+      "Building the Operator: Why FPV Training Doctrines Define Mission Success",
+    desc: "Why advanced hardware is useless without rigorous, structured FPV pilot training protocols for frontline deployment.",
+    image: b4,
+  },
+  {
+    slug: "last-mile-uav-logistics-supply",
+    tag: "Field Logistics",
     date: "16 Apr 2026",
-    title: "ARC MT 480AI: AI tactical multirotor UAV for ISR missions",
-    desc: "A long-range AI-enabled multirotor designed for ISR, rapid response, high-speed recon, and AI target tracking.",
-    image: d6_5,
+    title:
+      "Last-Mile Resupply: Utilizing UAVs for Forward Deployment Logistics",
+    desc: "How payload-dropping multirotors are solving the 'last mile' problem in combat zones where traditional supply lines are compromised.",
+    image: b3,
   },
 ];
 
@@ -85,7 +88,7 @@ const BlogPage = () => {
             </div>
           </FloatUpText>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px">
             {posts.map((post, index) => (
               <article
                 key={post.title}
@@ -101,7 +104,7 @@ const BlogPage = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent" />
+                  <div className="absolute inset-0 from-charcoal via-transparent to-transparent" />
                   <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
 
                   <div className="absolute top-3 left-3 label-mono text-[10px] bg-background/80 px-2 py-1 pointer-events-none">
