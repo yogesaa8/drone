@@ -121,7 +121,7 @@ const BlogPage = () => {
                     {post.date}
                   </div>
 
-                  <h2 className="font-display text-xl font-bold leading-tight mb-3 group-hover:text-tactical transition-colors break-words">
+                  <h2 className="font-display text-xl font-bold leading-tight mb-3 group-hover:text-tactical transition-colors wrap-break-word">
                     {post.title}
                   </h2>
 
