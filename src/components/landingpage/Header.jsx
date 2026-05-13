@@ -98,7 +98,7 @@ const Header = () => {
               ARCANUM
             </span>
             <span className="label-mono text-[9px] mt-0.5">
-              TACTICAL UAV SYS
+              Space
             </span>
           </div>
         </Link>
