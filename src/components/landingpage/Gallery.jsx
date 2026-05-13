@@ -33,7 +33,7 @@ const Gallery = () => {
         </div>
 
         <div className="relative corner-frame border border-border bg-charcoal overflow-hidden">
-          <div className="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden">
+          <div className="relative aspect-16/10 sm:aspect-video overflow-hidden">
             {gallery.map((g, idx) => (
               <img
                 key={idx}
@@ -47,11 +47,11 @@ const Gallery = () => {
             ))}
 
             {/* overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent" />
             <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
 
             {/* top labels */}
-            <div className="absolute top-2 left-2 sm:top-4 sm:left-4 label-mono text-[8px] sm:text-[10px] bg-background/70 px-2 py-1 rounded-sm">
+            <div className="hidden md:block absolute top-2 left-2 sm:top-4 sm:left-4 label-mono text-[8px] sm:text-[10px] bg-background/70 px-2 py-1 rounded-sm">
               FRAME {String(i + 1).padStart(2, "0")} /{" "}
               {String(gallery.length).padStart(2, "0")}
             </div>

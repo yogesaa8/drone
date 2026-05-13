@@ -86,7 +86,7 @@ const Fleet = () => {
         <div className="mt-16 flex justify-center">
           <button 
             onClick={() => navigate("/products")}
-            className="btn-tactical !px-12 !py-4 text-lg flex items-center gap-4 group"
+            className="btn-tactical md:px-12! py-4! text-lg flex items-center gap-4 group"
           >
             <span>VIEW ALL PRODUCTS</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
