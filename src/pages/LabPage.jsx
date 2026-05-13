@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
+
 import hero from "../assets/lab/hero.png";
 import droneLab from "../assets/lab/droneLab.png";
 import groundSupport from "../assets/lab/groundSupport.png";
@@ -12,17 +13,13 @@ import fixedwingkit from "../assets/lab/fixedwingkit.png";
 import logisticsdronekit from "../assets/lab/logisticsdronekit.png";
 import quadcopterkit from "../assets/lab/quadcopterkit.png";
 import fpvdronekit from "../assets/lab/fpvdronekit.png";
-
-const DUMMY_IMAGE =
-  "https://images.unsplash.com/photo-1524851823820-22796f95efec?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+import ProductsPage from "./ProductsPage";
 
 const dummyImages = {
   hero: hero,
   droneLab: droneLab,
   engineering: engineering,
   infrastructure: infrastructure,
-  platforms: DUMMY_IMAGE,
-  aiPlatforms: DUMMY_IMAGE,
   buildProcess: buildProcess,
   quadcopterkit: quadcopterkit,
   fpvdronekit: fpvdronekit,
@@ -31,7 +28,6 @@ const dummyImages = {
   groundSupport: groundSupport,
   studyMaterials: studyMaterial,
 };
-
 
 const labCapabilities = [
   [
@@ -157,102 +153,6 @@ const infrastructureItems = [
     "Drone Repair Tools",
     "Field repair, maintenance, and operational readiness.",
   ],
-];
-
-const dronePlatforms = [
-  {
-    name: "Tinywoop",
-    type: "FPV Training / Surveillance FPV Platform",
-    image: dummyImages.platforms,
-    description:
-      "A compact FPV drone built for entry-level pilot development, indoor and outdoor tactical training, and close-range observation missions.",
-    specs: [
-      ["Endurance", "12 min"],
-      ["Range", "1.5 km"],
-      ["Camera", "Action Camera Mount"],
-      ["Size", "2.5-inch FPV"],
-      ["Max Altitude", "500 m"],
-      ["Wind Resist", "12 m/s"],
-    ],
-    tags: ["Pilot Training", "Border Surveillance"],
-  },
-  {
-    name: "ARC MT 280",
-    type: "Surveillance / Payload Platform",
-    image: dummyImages.platforms,
-    description:
-      "A lightweight tactical multi-rotor optimized for stable surveillance, rapid deployment, and precision payload support in field training.",
-    specs: [
-      ["Endurance", "20 min"],
-      ["Sensor", "Surveillance 2K Camera"],
-      ["Payload", "Payload Dropping Mechanism"],
-      ["Frame", "Carbon Fiber"],
-      ["Weight", "1.5 kg"],
-      ["Range", "2 km"],
-    ],
-    tags: ["Training", "Surveillance", "Payload Delivery"],
-  },
-  {
-    name: "Shadow Drop 10",
-    type: "EW-Ready Anti-Drone FPV Platform",
-    image: dummyImages.platforms,
-    description:
-      "A mission-oriented FPV drone configured for contested environments, tactical precision, payload operations, and short-range surveillance.",
-    specs: [
-      ["Payload", "800 g"],
-      ["Battery Endurance", "20 min"],
-      ["Speed", "100 km/h"],
-      ["Size", "10-inch FPV"],
-      ["Range", "5 km"],
-    ],
-    tags: ["EW Environment", "Surveillance", "Kamikaze Drone"],
-  },
-  {
-    name: "Beetle 5",
-    type: "FPV Training & Surveillance Platform",
-    image: dummyImages.aiPlatforms,
-    description:
-      "A high-agility FPV drone built for pilot familiarization, close-range surveillance, compact reconnaissance, and mission-ready training.",
-    specs: [
-      ["Size", "5-inch FPV"],
-      ["Weight", "750 g"],
-      ["Speed", "100 km/h"],
-      ["Category", "Analog / Digital"],
-      ["Endurance", "15 min"],
-      ["Range", "5 km"],
-    ],
-    tags: ["Training", "Surveillance"],
-  },
-  {
-    name: "ARC MT 480AI",
-    type: "AI Tactical Multi-Rotor Platform",
-    image: dummyImages.aiPlatforms,
-    description:
-      "An AI-enabled multirotor designed for autonomous flight, day/night surveillance, payload integration, and tactical mission versatility.",
-    specs: [
-      ["Speed", "108 km/h"],
-      ["Flight Mode", "Autonomous AI"],
-      ["Camera", "Day / Night 2K Thermal"],
-      ["Altitude", "1500 ft"],
-      ["Endurance", "40 min"],
-      ["Range", "15 km"],
-    ],
-    tags: ["Combat Surveillance", "Rapid Response", "Target Tracking"],
-  },
-  {
-    name: "Soccer",
-    type: "Training Drone",
-    image: dummyImages.aiPlatforms,
-    description:
-      "An enclosed training drone designed for safe indoor and outdoor practice with protective cage support for beginner pilot development.",
-    specs: [
-      ["Range", "1 km"],
-      ["Endurance", "12 min"],
-      ["Size", "3.5 inch"],
-      ["Weight", "250 g"],
-    ],
-    tags: ["Training"],
-  },
 ];
 
 const buildSteps = [
@@ -734,8 +634,7 @@ const LabPage = () => {
               description="Versatile indigenous UAV platforms engineered for defence training, surveillance readiness, tactical support, and rapid field deployment."
             />
 
-            <div className="grid lg:grid-cols-2 gap-px bg-border border border-border">
-              {dronePlatforms.map((drone) => (
+            {/* {dronePlatforms.map((drone) => (
                 <article
                   key={drone.name}
                   className="bg-charcoal p-6 zero-g-hover"
@@ -786,8 +685,8 @@ const LabPage = () => {
                     </div>
                   </div>
                 </article>
-              ))}
-            </div>
+              ))} */}
+            <ProductsPage />
           </div>
         </FloatUpText>
 
@@ -1006,6 +905,46 @@ const LabPage = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </FloatUpText>
+
+        <FloatUpText delay={0.3}>
+          <div className="mt-10 flex justify-center">
+            <div className="w-32 sm:w-40 md:w-44 border border-border bg-background/70 p-2 shadow-lg">
+              <svg
+                viewBox="0 0 300 200"
+                className="w-full h-auto block"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="India Flag"
+              >
+                <rect width="300" height="200" fill="#ffffff" />
+                <rect width="300" height="66.67" y="0" fill="#FF9933" />
+                <rect width="300" height="66.67" y="133.33" fill="#138808" />
+
+                <g transform="translate(150 100)">
+                  <circle
+                    r="22"
+                    fill="none"
+                    stroke="#000080"
+                    strokeWidth="2.5"
+                  />
+                  {Array.from({ length: 24 }).map((_, index) => (
+                    <line
+                      key={index}
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="-22"
+                      stroke="#000080"
+                      strokeWidth="1"
+                      transform={`rotate(${index * 15})`}
+                      strokeLinecap="round"
+                    />
+                  ))}
+                  <circle r="3" fill="#000080" />
+                </g>
+              </svg>
             </div>
           </div>
         </FloatUpText>
