@@ -14,9 +14,9 @@ const links = [
 ];
 
 const defenceLinks = [
-  { to: "/products", label: "Products" },
-  { to: "/parts-kits", label: "Parts & Kit" },
-  { to: "/lab", label: "Lab" },
+  { to: "/products", label: "Drones" },
+  { to: "/parts-kits", label: "Components" },
+  { to: "/lab", label: "Defence Lab" },
 ];
 
 const navClass = ({ isActive }) =>
