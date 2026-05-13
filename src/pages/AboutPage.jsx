@@ -58,7 +58,7 @@ const AboutPage = () => {
                   <span className="h-px w-8 bg-tactical" />
 
                   <span className="label-mono text-tactical">
-                    ARCANUMSPACE / COMPANY PROFILE
+                    Arcanumspace / Company Profile
                   </span>
                 </div>
 

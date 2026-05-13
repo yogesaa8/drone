@@ -1,24 +1,37 @@
 import { useEffect } from "react";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
+import hero from "../assets/lab/hero.png";
+import droneLab from "../assets/lab/droneLab.png";
+import groundSupport from "../assets/lab/groundSupport.png";
+import studyMaterial from "../assets/lab/studyMaterials.png";
+import infrastructure from "../assets/lab/infrastructure.png";
+import engineering from "../assets/lab/engineering.png";
+import buildProcess from "../assets/lab/buildProcess.png";
+import fixedwingkit from "../assets/lab/fixedwingkit.png";
+import logisticsdronekit from "../assets/lab/logisticsdronekit.png";
+import quadcopterkit from "../assets/lab/quadcopterkit.png";
+import fpvdronekit from "../assets/lab/fpvdronekit.png";
 
 const DUMMY_IMAGE =
   "https://images.unsplash.com/photo-1524851823820-22796f95efec?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 const dummyImages = {
-  hero: DUMMY_IMAGE,
-  droneLab: DUMMY_IMAGE,
-  engineering: DUMMY_IMAGE,
-  infrastructure: DUMMY_IMAGE,
+  hero: hero,
+  droneLab: droneLab,
+  engineering: engineering,
+  infrastructure: infrastructure,
   platforms: DUMMY_IMAGE,
   aiPlatforms: DUMMY_IMAGE,
-  buildProcess: DUMMY_IMAGE,
-  whyChoose: DUMMY_IMAGE,
-  assemblyKits: DUMMY_IMAGE,
-  trainingKits: DUMMY_IMAGE,
-  groundSupport: DUMMY_IMAGE,
-  studyMaterials: DUMMY_IMAGE,
+  buildProcess: buildProcess,
+  quadcopterkit: quadcopterkit,
+  fpvdronekit: fpvdronekit,
+  fixedwingkit: fixedwingkit,
+  logisticsdronekit: logisticsdronekit,
+  groundSupport: groundSupport,
+  studyMaterials: studyMaterial,
 };
+
 
 const labCapabilities = [
   [
@@ -310,7 +323,7 @@ const whyChoose = [
 const assemblyKits = [
   {
     name: "Quadcopter Kit",
-    image: dummyImages.assemblyKits,
+    image: dummyImages.quadcopterkit,
     description:
       "A versatile quad-rotor UAV platform for hands-on assembly, repair, testing, and pilot skill development.",
     points: [
@@ -323,7 +336,7 @@ const assemblyKits = [
   },
   {
     name: "FPV Drone Kit",
-    image: dummyImages.assemblyKits,
+    image: dummyImages.fpvdronekit,
     description:
       "A high-performance FPV kit designed for hands-on learning, racing-style control, tactical familiarization, and repair practice.",
     points: [
@@ -336,7 +349,7 @@ const assemblyKits = [
   },
   {
     name: "Fixed Wing Drone Kit",
-    image: dummyImages.trainingKits,
+    image: dummyImages.fixedwingkit,
     description:
       "A hands-on fixed-wing learning platform built for stable flight, mapping payloads, and endurance-oriented UAV training.",
     points: [
@@ -349,7 +362,7 @@ const assemblyKits = [
   },
   {
     name: "Logistics Drone Kit",
-    image: dummyImages.trainingKits,
+    image: dummyImages.logisticsdronekit,
     description:
       "A payload delivery platform for institutions seeking practical logistics, waypoint navigation, and field mission training.",
     points: [
@@ -461,7 +474,7 @@ const LabPage = () => {
               </h1>
 
               <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
-                Arcanum Space provides complete turnkey Defence Drone Lab Setup
+                Arcanumspace provides complete turnkey Defence Drone Lab Setup
                 solutions for defence organisations, military training
                 institutions, academic campuses, and industrial innovation
                 centres.
@@ -631,31 +644,38 @@ const LabPage = () => {
               description="We bridge the gap between academic learning, defence readiness, and industrial execution through turnkey labs that empower institutions to shape the future of aerial intelligence."
             />
 
-            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-start">
+            {/* Image Top */}
+            <div className="w-full">
               <DummyImage
                 src={dummyImages.engineering}
                 alt="Engineering Indigenous Aerial Intelligence"
-                className="aspect-4/3"
+                className="w-full h-[260px] sm:h-[340px] lg:h-[430px] object-cover"
               />
-
-              <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">
-                {engineeringZones.map(([title, desc], index) => (
-                  <article key={title} className="bg-charcoal p-6 zero-g-hover">
-                    <div className="label-mono text-tactical text-[10px] mb-4">
-                      ZONE {String(index + 1).padStart(2, "0")}
-                    </div>
-                    <h3 className="font-display text-xl font-semibold mb-3">
-                      {title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {desc}
-                    </p>
-                  </article>
-                ))}
-              </div>
             </div>
 
-            <div className="mt-8 border border-border bg-charcoal/70 p-6">
+            {/* 6 Points Bottom - 3 in one row */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+              {engineeringZones.map(([title, desc], index) => (
+                <article
+                  key={title}
+                  className="bg-charcoal p-5 sm:p-6 zero-g-hover"
+                >
+                  <div className="label-mono text-tactical text-[10px] mb-4">
+                    ZONE {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  <h3 className="font-display text-lg sm:text-xl font-semibold mb-3">
+                    {title}
+                  </h3>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {desc}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-8 border border-border bg-charcoal/70 p-5 sm:p-6">
               <div className="label-mono text-tactical uppercase text-xs mb-4">
                 Workflow Sequence
               </div>
@@ -807,32 +827,26 @@ const LabPage = () => {
           <div className="mt-20">
             <SectionHeader
               kicker="Why Choose Us"
-              title="Why Institutions Choose ArcanumSpace"
+              title="Why Institutions Choose Arcanumspace"
               description="We combine indigenous technology with operational expertise to deliver turnkey drone lab solutions that transform institutions into centres of aerial innovation."
             />
 
-            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-start">
-              <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">
-                {whyChoose.map(([title, desc], index) => (
-                  <article key={title} className="bg-charcoal p-6 zero-g-hover">
-                    <div className="label-mono text-tactical text-[10px] mb-4">
-                      VALUE {String(index + 1).padStart(2, "0")}
-                    </div>
-                    <h3 className="font-display text-xl font-semibold mb-3">
-                      {title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {desc}
-                    </p>
-                  </article>
-                ))}
-              </div>
+            <div className="grid gap-px bg-border border border-border sm:grid-cols-2 lg:grid-cols-4">
+              {whyChoose.map(([title, desc], index) => (
+                <article key={title} className="bg-charcoal p-6 zero-g-hover">
+                  <div className="label-mono text-tactical text-[10px] mb-4">
+                    VALUE {String(index + 1).padStart(2, "0")}
+                  </div>
 
-              <DummyImage
-                src={dummyImages.whyChoose}
-                alt="Why Institutions Choose ArcanumSpace"
-                className="aspect-4/3"
-              />
+                  <h3 className="font-display text-xl font-semibold mb-3">
+                    {title}
+                  </h3>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {desc}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
         </FloatUpText>

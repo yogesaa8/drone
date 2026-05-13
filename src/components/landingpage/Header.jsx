@@ -4,7 +4,6 @@ import { IoMdClose } from "react-icons/io";
 import { IoChevronDown, IoMenu } from "react-icons/io5";
 import { IoIosSunny } from "react-icons/io";
 import { AiFillMoon } from "react-icons/ai";
-import logo from "../../assets/logo.png"
 
 const links = [
   { to: "/", label: "Home" },
@@ -87,7 +86,7 @@ const Header = () => {
           className="flex items-center gap-3 group"
         >
           <div className="w-10 h-10 relative flex items-center justify-center">
-          <img src={logo} alt="Arcanum Space Logo" />
+          <img src="/favicon.svg" alt="Arcanumspace Logo" />
             {/* <div className="w-2 h-2 bg-tactical animate-hud-pulse" />
             <span className="absolute -top-px -left-px w-1.5 h-1.5 border-t border-l border-tactical" />
             <span className="absolute -bottom-px -right-px w-1.5 h-1.5 border-b border-r border-tactical" /> */}
@@ -95,10 +94,7 @@ const Header = () => {
 
           <div className="flex flex-col leading-none">
             <span className="font-display text-base font-bold tracking-widest">
-              ARCANUM
-            </span>
-            <span className="label-mono text-[9px] mt-0.5">
-              Space
+              Arcanumspace
             </span>
           </div>
         </Link>

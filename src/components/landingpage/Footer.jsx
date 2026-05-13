@@ -79,7 +79,7 @@ const Footer = () => {
               </div>
 
               <span className="font-display text-base sm:text-lg font-bold tracking-widest break-words">
-                Arcanum Space
+                Arcanumspace
               </span>
             </div>
 
@@ -154,7 +154,7 @@ const Footer = () => {
         <div className="mt-8 sm:mt-10 pt-5 border-t border-border">
           <div className="flex flex-col items-center gap-4 text-center">
             <div className="label-mono text-[9px] sm:text-[10px] leading-relaxed max-w-full">
-              © 2026 Arcanum Space. All rights reserved
+              © 2026 Arcanumspace. All rights reserved
             </div>
           </div>
         </div>
