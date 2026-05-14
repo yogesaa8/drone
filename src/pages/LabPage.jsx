@@ -348,7 +348,7 @@ const DummyImage = ({ src, alt, className = "" }) => (
   <div
     className={`relative bg-charcoal border border-border overflow-hidden zero-g-hover ${className}`}
   >
-    <img src={src} alt={alt} className="w-full h-full object-cover block" />
+    <img src={src} alt={alt} className="w-full h-full object-contain block" />
   </div>
 );
 
@@ -867,7 +867,7 @@ const LabPage = () => {
                     <DummyImage
                       src={kit.image}
                       alt={kit.name}
-                      className="w-full h-auto object-cover"
+                      className="w-full h-auto  object-contain"
                     />
 
                     <div>
