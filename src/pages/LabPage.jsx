@@ -417,7 +417,7 @@ export const ProductCard = ({ item, type, onClick, onZoom }) => {
         <Link
           to={actionTo}
           onClick={(event) => event.stopPropagation()}
-          className="mt-6 w-full btn-ghost justify-between !py-3"
+          className="mt-6 w-full btn-ghost justify-between py-3!"
         >
           <span>
             {type === "drone" ? "View Details" : "Request Configuration"}
@@ -758,7 +758,7 @@ const LabPage = () => {
 
               {zoomedItem && (
                 <div
-                  className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 p-4 md:p-8"
+                  className="fixed inset-0 z-100 flex items-center justify-center bg-background/95 p-4 md:p-8"
                   role="dialog"
                   aria-modal="true"
                   aria-label={`${zoomedItem.name} image preview`}
