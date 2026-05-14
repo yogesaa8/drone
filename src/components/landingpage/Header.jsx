@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 import { IoChevronDown, IoMenu } from "react-icons/io5";
@@ -28,9 +28,13 @@ const Header = () => {
   const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [defenceDropdownOpen, setDefenceDropdownOpen] = useState(false);
+  const defenceMenuRef = useRef(null);
+
   const defenceActive = defenceLinks.some(
-    (link) => pathname === link.to || pathname.startsWith(`${link.to}/`)
+    (link) => pathname === link.to || pathname.startsWith(`${link.to}/`),
   );
+
   const [theme, setTheme] = useState(() => {
     const storedTheme = localStorage.getItem("theme");
 
@@ -49,6 +53,29 @@ const Header = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setDefenceDropdownOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        defenceMenuRef.current &&
+        !defenceMenuRef.current.contains(e.target)
+      ) {
+        setDefenceDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
 
   const toggleTheme = () => {
@@ -70,6 +97,20 @@ const Header = () => {
 
   const closeMenu = () => {
     setOpen(false);
+    setDefenceDropdownOpen(false);
+  };
+
+  const toggleDefenceDropdown = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    setDefenceDropdownOpen((prev) => {
+      if (prev) {
+        e.currentTarget.blur();
+      }
+
+      return !prev;
+    });
   };
 
   return (
@@ -87,7 +128,7 @@ const Header = () => {
           className="flex items-center gap-3 group"
         >
           <div className="w-10 h-10 relative flex items-center justify-center">
-          <img src={logo} alt="Arcanumspace Logo" />
+            <img src={logo} alt="Arcanumspace Logo" />
             {/* <div className="w-2 h-2 bg-tactical animate-hud-pulse" />
             <span className="absolute -top-px -left-px w-1.5 h-1.5 border-t border-l border-tactical" />
             <span className="absolute -bottom-px -right-px w-1.5 h-1.5 border-b border-r border-tactical" /> */}
@@ -108,9 +149,12 @@ const Header = () => {
             Home
           </NavLink>
 
-          <div className="group relative">
+          <div ref={defenceMenuRef} className="group relative">
             <NavLink
               to="/products"
+              onClick={toggleDefenceDropdown}
+              aria-haspopup="true"
+              aria-expanded={defenceDropdownOpen}
               className={() =>
                 `font-mono tracking-widest uppercase transition-colors text-xs py-2 flex items-center gap-1.5 ${
                   defenceActive
@@ -120,15 +164,26 @@ const Header = () => {
               }
             >
               Defence
-              <IoChevronDown className="text-sm transition-transform group-hover:rotate-180" />
+              <IoChevronDown
+                className={`text-sm transition-transform group-hover:rotate-180 ${
+                  defenceDropdownOpen ? "rotate-180" : ""
+                }`}
+              />
             </NavLink>
 
-            <div className="invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <div
+              className={`absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 ${
+                defenceDropdownOpen
+                  ? "visible opacity-100"
+                  : "invisible opacity-0"
+              }`}
+            >
               <div className="border border-border bg-background/95 backdrop-blur-md shadow-xl">
                 {defenceLinks.map((l) => (
                   <NavLink
                     key={l.to}
                     to={l.to}
+                    onClick={() => setDefenceDropdownOpen(false)}
                     className={({ isActive }) =>
                       `block px-4 py-3 font-mono text-xs uppercase tracking-widest transition-colors ${
                         isActive
@@ -161,7 +216,9 @@ const Header = () => {
             type="button"
             onClick={toggleTheme}
             className="flex items-center gap-2 cursor-pointer group"
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+            aria-label={`Switch to ${
+              theme === "light" ? "dark" : "light"
+            } mode`}
           >
             <div className="text-xl transition-transform duration-300 group-hover:rotate-12">
               {theme === "light" ? (
@@ -176,7 +233,7 @@ const Header = () => {
             </span>
           </button>
 
-          <Link to="/contact" className="btn-tactical !px-4 !py-2.5">
+          <Link to="/contact" className="btn-tactical px-4! py-2.5!">
             Request Demo
           </Link>
         </div>

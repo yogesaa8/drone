@@ -33,14 +33,14 @@ const Fleet = () => {
               className="group bg-charcoal flex flex-col cursor-pointer relative min-w-0"
               onClick={() => navigate("/drone/" + d.id)}
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-background">
+              <div className="relative aspect-4/3 overflow-hidden bg-background">
                 <img
                   src={d.image}
                   alt={d.name}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-charcoal/60 via-transparent to-transparent" />
                 <div className="absolute top-3 left-3 label-mono text-[10px] bg-background/70 px-2 py-1">
                   UNIT {String(i + 1).padStart(2, "0")}
                 </div>
@@ -53,7 +53,7 @@ const Fleet = () => {
                 <div className="label-mono text-tactical text-[10px] mb-2">
                   {d.use.toUpperCase()}
                 </div>
-                <h3 className="font-display text-xl font-bold leading-tight break-words">
+                <h3 className="font-display text-xl font-bold leading-tight wrap-break-word">
                   {d.name}
                 </h3>
 
@@ -61,7 +61,7 @@ const Fleet = () => {
                   {d.specs.slice(0, 4).map(([k, v]) => (
                     <div key={k} className="border-l border-tactical/40 pl-2 min-w-0">
                       <div className="label-mono text-[9px]">{k}</div>
-                      <div className="text-sm font-semibold mt-0.5 break-words">
+                      <div className="text-sm font-semibold mt-0.5 wrap-break-word">
                         {v}
                       </div>
                     </div>
@@ -69,7 +69,7 @@ const Fleet = () => {
                 </div>
 
                 <button
-                  className="mt-6 w-full btn-ghost justify-between !py-3"
+                  className="mt-6 w-full btn-ghost justify-between py-3!"
                   onClick={(e) => {
                     e.stopPropagation();
                     navigate("/drone/" + d.id);
