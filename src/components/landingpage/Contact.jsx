@@ -81,21 +81,52 @@ const Contact = () => {
             </p>
 
             <div className="mt-8 space-y-5 border-t border-border pt-6">
-              {[
-                ["EMAIL", "sales@arcanumspace.com  info@arcanumspace.com"],
-                ["PHONE", "+91 8004369347"],
-                ["LOCATION", "AH-1101, ANTRIKSH HEIGHTS, SECTOR 84, GURUGRAM, HARYANA"],
-              ].map(([k, v]) => (
-                <div key={k} className="flex items-start gap-4 min-w-0">
-                  <div className="label-mono text-[10px] w-24 shrink-0 pt-1">
-                    {k}
-                  </div>
-
-                  <div className="font-display font-semibold break-words">
-                    {v}
-                  </div>
+              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 min-w-0">
+                <div className="label-mono text-[10px] sm:w-24 shrink-0 pt-1">
+                  EMAIL
                 </div>
-              ))}
+
+                <div className="font-display font-semibold min-w-0 space-y-1">
+                  <a
+                    href="mailto:sales@arcanumspace.com"
+                    className="block break-all hover:text-tactical transition-colors"
+                  >
+                    sales@arcanumspace.com
+                  </a>
+
+                  <a
+                    href="mailto:info@arcanumspace.com"
+                    className="block break-all hover:text-tactical transition-colors"
+                  >
+                    info@arcanumspace.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 min-w-0">
+                <div className="label-mono text-[10px] sm:w-24 shrink-0 pt-1">
+                  PHONE
+                </div>
+
+                <div className="font-display font-semibold min-w-0">
+                  <a
+                    href="tel:+918004369347"
+                    className="break-all hover:text-tactical transition-colors"
+                  >
+                    +91 8004369347
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 min-w-0">
+                <div className="label-mono text-[10px] sm:w-24 shrink-0 pt-1">
+                  LOCATION
+                </div>
+
+                <div className="font-display font-semibold min-w-0 wrap-break-word">
+                  AH-1101, ANTRIKSH HEIGHTS, SECTOR 84, GURUGRAM, HARYANA
+                </div>
+              </div>
             </div>
 
             <div className="mt-auto pt-8">
@@ -117,9 +148,7 @@ const Contact = () => {
             className="lg:col-span-3 bg-background p-6 sm:p-8 lg:p-10 space-y-5"
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-border pb-3 mb-2 gap-3">
-              <span className="label-mono text-[10px]">
-                ▌ BRIEFING FORM
-              </span>
+              <span className="label-mono text-[10px]">▌ BRIEFING FORM</span>
 
               {/* <span className="label-mono text-tactical text-[10px]">
                 FORM ID: BRF-2026
@@ -169,7 +198,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className="btn-tactical w-full justify-center !py-4 disabled:opacity-50"
+              className="btn-tactical w-full justify-center py-4! disabled:opacity-50"
             >
               {loading ? "Transmitting..." : "Submit Inquiry →"}
             </button>

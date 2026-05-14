@@ -12,6 +12,7 @@ import ProductsPage from "./pages/ProductsPage";
 import PartsKitsPage from "./pages/PartsKitsPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import LabPage from "./pages/LabPage";
+import whatsappContact from "./assets/whatsapp-contact.svg";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -45,6 +46,20 @@ const App = () => {
           </Routes>
         </main>
         <Footer />
+
+        <a
+          href="https://wa.me/918004369347"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat on WhatsApp"
+          className="fixed left-4 bottom-4 z-50 rounded-full bg-[#25D366] p-3 shadow-2xl transition duration-200 ease-out hover:scale-105"
+        >
+          <img
+            src={whatsappContact}
+            alt="WhatsApp contact"
+            className="h-10 w-10"
+          />
+        </a>
       </div>
     </BrowserRouter>
   );
