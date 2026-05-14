@@ -47,7 +47,7 @@ const Gallery = () => {
             ))}
 
             {/* overlays */}
-            <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-background via-background/0 to-transparent" />
             <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
 
             {/* top labels */}
@@ -56,10 +56,10 @@ const Gallery = () => {
               {String(gallery.length).padStart(2, "0")}
             </div>
 
-            <div className="absolute top-2 right-2 sm:top-4 sm:right-4 label-mono text-[8px] sm:text-[10px] text-tactical bg-background/70 px-2 py-1 rounded-sm flex items-center gap-1 sm:gap-2">
+            {/* <div className="absolute top-2 right-2 sm:top-4 sm:right-4 label-mono text-[8px] sm:text-[10px] text-tactical bg-background/70 px-2 py-1 rounded-sm flex items-center gap-1 sm:gap-2">
               <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-tactical animate-hud-pulse rounded-full" />
               <span className="hidden sm:inline">ARCHIVED FEED</span>
-            </div>
+            </div> */}
 
             {/* caption */}
             <div className="absolute bottom-0 inset-x-0 p-3 sm:p-6 lg:p-10">
