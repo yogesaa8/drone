@@ -40,7 +40,7 @@ const Gallery = () => {
                 src={g.src}
                 alt={g.caption}
                 loading="lazy"
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
                   idx === i ? "opacity-100" : "opacity-0"
                 }`}
               />

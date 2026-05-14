@@ -59,7 +59,7 @@ import g5 from "../assets/gallary/5.png";
 import g6 from "../assets/gallary/6.png";
 import g7 from "../assets/gallary/7.png";
 import g8 from "../assets/gallary/8.png";
-import g9 from "../assets/gallary/9.png";
+// import g9 from "../assets/gallary/9.png";
 import g10 from "../assets/gallary/10.png";
 
 
@@ -280,19 +280,18 @@ export const drones = [
   }
 ];
 
-
 export const gallery = [
-  { src: g1, caption: "Mountain Recon — Sector 7-A" },
-  { src: g2, caption: "Industrial Inspection - Refinery 04" },
-  { src: g3, caption: "Desert Surveillance - Grid 19N" },
-  { src: g4, caption: "Command Operations - TOC Alpha" },
-  { src: g5, caption: "Pad Standby - Forward Operating Base" },
+  { src: g1, caption: "Advanced Drone Assembly & Testing Facility" },
+  { src: g2, caption: "High-Altitude Drone Field Deployment" },
+  { src: g3, caption: "FPV Drone Simulation & Operator Training" },
+  { src: g4, caption: "Tactical Drone Operations & Field Training" },
+  { src: g5, caption: "Integrated Drone Research & Repair Lab" },
 
-  { src: g6, caption: "Night Patrol — Border Zone Echo" },
-  { src: g7, caption: "Aerial Mapping — Canyon Ridge" },
-  { src: g8, caption: "Rapid Deployment — Hangar Delta" },
-  { src: g9, caption: "Tactical Sweep — Urban Sector 12" },
-  { src: g10, caption: "Drone Calibration — Control Bay 3" }
+  { src: g6, caption: "Advanced Drone Systems, Digitally Connected" },
+  { src: g7, caption: "Mission-Ready Tactical Drone Deployment" },
+  { src: g8, caption: "Kamikaze Drone for Precision Tactical Missions" },
+  // { src: g9, caption: "Tactical Sweep — Urban Sector 12" },
+  { src: g10, caption: "Complete Drone Fleet for Multi-Mission Applications" }
 ];
 
 export const droneParts = [
