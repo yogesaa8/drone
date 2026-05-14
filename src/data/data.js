@@ -51,7 +51,7 @@ import kit5 from "../assets/kit/Vikas-Starter-Kit-1-1-324x324.webp"
 
 
 // gallery
-import g1 from "../assets/gallary/1.png";
+import g1 from "../assets/gallary/1.jpg";
 import g2 from "../assets/gallary/2.png";
 import g3 from "../assets/gallary/3.png";
 import g4 from "../assets/gallary/4.png";
