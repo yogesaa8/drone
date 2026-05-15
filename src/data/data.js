@@ -5,6 +5,7 @@ import beetle5 from "../assets/model/beetle5.glb"
 import arc_mt480ai from "../assets/model/arc_mt480ai.glb"
 import soccer from "../assets/model/soccer.glb"
 import chimeraX from "../assets/model/chimeraX.glb"
+import agroSprayX from "../assets/model/agroSprayX.glb"
 
 
 // Drone images
@@ -40,6 +41,14 @@ import chimeraX1 from "../assets/drone/chimeraX1.png"
 import chimeraX2 from "../assets/drone/chimeraX2.png"
 import chimeraX3 from "../assets/drone/chimeraX3.png"
 import chimeraX4 from "../assets/drone/chimeraX4.png"
+import agri1 from "../assets/drone/agri1.png"
+import agri2 from "../assets/drone/agri2.png"
+import agri3 from "../assets/drone/agri3.png"
+import agri4 from "../assets/drone/agri4.png"
+
+
+
+
 
 
 // kit 
@@ -267,17 +276,40 @@ export const drones = [
       "Building Clearance Support",
       "Counter-Insurgency Operations",
     ],
+  },
+  {
+    id: "agro-spray-x6",
+    serial: "UAV-ASX6-601",
+    name: "AGRO SPRAY X6",
+    use: "Precision Agriculture, Crop Spraying & Field Surveillance.",
+    image: agri1,
+    gallery: [agri1, agri2, agri3, agri4],
+    model: agroSprayX,
 
-    // features: [
-    //   "Air-to-ground transition capability",
-    //   "Silent tactical rolling mode",
-    //   "Low-profile reconnaissance",
-    //   "Real-time HD low-latency feed",
-    //   "Thermal day/night operations",
-    //   "Gimbal stabilized EO/IR payload",
-    //   "Indoor corridor navigation",
-    //   "Multi-floor surveillance",
-    // ],
+    specs: [
+      ["Platform Type", "Heavy-Lift Agricultural Hexacopter"],
+      ["Propulsion", "6-Rotor Electric UAV System"],
+      ["Payload", "Liquid Spray Tank / Agricultural Payload"],
+      ["Application", "Crop Spraying / Fertilizer / Pesticide Distribution"],
+      ["Navigation", "GPS / GNSS Assisted Position Hold"],
+      ["Control Modes", "Autonomous / Semi-Autonomous / Manual"],
+      ["Frame Type", "Carbon-Fiber Extended Arm Structure"],
+      ["Landing Gear", "High-Clearance Skid Landing System"],
+      ["Operation Area", "Farms, Fields & Large Agricultural Zones"],
+    ],
+
+    missions: [
+      "Precision Crop Spraying",
+      "Pesticide Distribution",
+      "Fertilizer Spraying",
+      "Large Field Coverage",
+      "Agricultural Mapping Support",
+      "Crop Health Monitoring",
+      "Smart Farming Operations",
+      "Irrigation Zone Inspection",
+      "Plantation Surveillance",
+      "Rural Field Operations",
+    ],
   }
 ];
 

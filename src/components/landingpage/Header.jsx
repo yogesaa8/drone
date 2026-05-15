@@ -17,6 +17,7 @@ const defenceLinks = [
   { to: "/products", label: "Drones" },
   { to: "/parts-kits", label: "Components" },
   { to: "/lab", label: "Defence Lab" },
+  { to: "/agriculture", label: "Agriculture" },
 ];
 
 const navClass = ({ isActive }) =>
@@ -56,7 +57,11 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    setDefenceDropdownOpen(false);
+    const timeoutId = window.setTimeout(() => {
+      setDefenceDropdownOpen(false);
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
   }, [pathname]);
 
   useEffect(() => {

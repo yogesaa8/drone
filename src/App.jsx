@@ -12,6 +12,7 @@ import ProductsPage from "./pages/ProductsPage";
 import PartsKitsPage from "./pages/PartsKitsPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import LabPage from "./pages/LabPage";
+import AgriculturePage from "./pages/AgriculturePage";
 import whatsappContact from "./assets/whatsapp-contact.svg";
 
 const ScrollToTop = () => {
@@ -41,6 +42,7 @@ const App = () => {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/parts-kits" element={<PartsKitsPage />} />
             <Route path="/lab" element={<LabPage />} />
+            <Route path="/agriculture" element={<AgriculturePage />} />
             <Route path="/drone/:id" element={<DroneDetailsPage />} />
             <Route path="*" element={<LandingPage />} />
           </Routes>
