@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { AnimatedGrid } from "../animations/AnimatedGrid";
+// import { AnimatedGrid } from "../animations/AnimatedGrid";
 import toast from "react-hot-toast";
+import worldMap from "../../assets/world-map.png";
 
 function Label({ children }) {
   return <div className="label-mono text-[10px] mb-2">{children}</div>;
@@ -57,12 +58,166 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32">
-      <AnimatedGrid />
+    // <section id="contact" className="relative py-24 lg:py-32">
+    //   <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+    //     <div className="grid grid-cols-1 lg:grid-cols-5 gap-px bg-border border border-border">
+    //       <aside className="lg:col-span-2 bg-charcoal p-6 sm:p-8 lg:p-10 flex flex-col">
+    //         <div className="flex items-center gap-2 mb-6">
+    //           <span className="w-1.5 h-1.5 bg-tactical animate-hud-pulse" />
+    //           <span className="label-mono text-tactical text-[10px]">
+    //             SECURE INQUIRY CHANNEL
+    //           </span>
+    //         </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+    //         <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
+    //           Request Mission Consultation
+    //         </h2>
+
+    //         <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
+    //           Tell us about your operational requirement and our team will help
+    //           configure the right UAV system.
+    //         </p>
+
+    //         <div className="mt-8 space-y-5 border-t border-border pt-6">
+    //           <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 min-w-0">
+    //             <div className="label-mono text-[10px] sm:w-24 shrink-0 pt-1">
+    //               EMAIL
+    //             </div>
+
+    //             <div className="font-display font-semibold min-w-0 space-y-1">
+    //               <a
+    //                 href="mailto:sales@arcanumspace.com"
+    //                 className="block break-all hover:text-tactical transition-colors"
+    //               >
+    //                 sales@arcanumspace.com
+    //               </a>
+
+    //               <a
+    //                 href="mailto:info@arcanumspace.com"
+    //                 className="block break-all hover:text-tactical transition-colors"
+    //               >
+    //                 info@arcanumspace.com
+    //               </a>
+    //             </div>
+    //           </div>
+
+    //           <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 min-w-0">
+    //             <div className="label-mono text-[10px] sm:w-24 shrink-0 pt-1">
+    //               PHONE
+    //             </div>
+
+    //             <div className="font-display font-semibold min-w-0">
+    //               <a
+    //                 href="tel:+918004369347"
+    //                 className="break-all hover:text-tactical transition-colors"
+    //               >
+    //                 +91 8004369347
+    //               </a>
+    //             </div>
+    //           </div>
+
+    //           <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 min-w-0">
+    //             <div className="label-mono text-[10px] sm:w-24 shrink-0 pt-1">
+    //               LOCATION
+    //             </div>
+
+    //             <div className="font-display font-semibold min-w-0 wrap-break-word">
+    //               AH-1101, ANTRIKSH HEIGHTS, SECTOR 84, GURUGRAM, HARYANA
+    //             </div>
+    //           </div>
+    //         </div>
+
+    //         <div className="mt-auto pt-8">
+    //           <div className="border border-border p-4 bg-background/60 corner-frame">
+    //             <div className="label-mono text-[10px] mb-1">
+    //               ▌ ENCRYPTION STATUS
+    //             </div>
+
+    //             <div className="text-tactical font-mono text-sm">
+    //               Command the Unseen
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </aside>
+
+    //       <form
+    //         onSubmit={onSubmit}
+    //         className="lg:col-span-3 bg-background p-6 sm:p-8 lg:p-10 space-y-5"
+    //       >
+    //         <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-border pb-3 mb-2 gap-3">
+    //           <span className="label-mono text-[10px]">▌ BRIEFING FORM</span>
+    //         </div>
+
+    //         <div className="grid sm:grid-cols-2 gap-4">
+    //           <Field label="Full Name" name="name" required />
+
+    //           <Field label="Organization" name="org" required />
+
+    //           <Field label="Email Address" name="email" type="email" required />
+
+    //           <Field label="Phone Number" name="phone" type="tel" />
+    //         </div>
+
+    //         <div>
+    //           <Label>Mission Type</Label>
+
+    //           <select
+    //             name="mission"
+    //             required
+    //             className="w-full bg-charcoal border border-border px-4 py-3 text-sm font-mono focus:outline-none focus:border-tactical"
+    //           >
+    //             <option>Survey & Mapping</option>
+    //             <option>Surveillance & Inspection</option>
+    //             <option>Payload Delivery</option>
+    //             <option>Search & Rescue</option>
+    //             <option>Custom Requirement</option>
+    //             <option>Agriculture</option>
+    //             <option>Components</option>
+    //             <option>Other</option>
+    //           </select>
+    //         </div>
+
+    //         <div>
+    //           <Label>Message</Label>
+
+    //           <textarea
+    //             name="message"
+    //             rows={5}
+    //             required
+    //             placeholder="Describe operational requirement, terrain, and timeline..."
+    //             className="w-full bg-charcoal border border-border px-4 py-3 text-sm focus:outline-none focus:border-tactical resize-none"
+    //           />
+    //         </div>
+
+    //         <button
+    //           type="submit"
+    //           disabled={loading}
+    //           className="btn-tactical w-full justify-center py-4! disabled:opacity-50"
+    //         >
+    //           {loading ? "Transmitting..." : "Submit Inquiry →"}
+    //         </button>
+    //       </form>
+    //     </div>
+    //   </div>
+    // </section>
+    <section id="contact" className="relative overflow-hidden py-24 lg:py-32">
+      {/* <AnimatedGrid /> */}
+
+      {/* World Map Background - outside grid */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <img
+          src={worldMap}
+          alt=""
+          aria-hidden="true"
+          className="absolute left-1/2 top-10 w-[165%] max-w-none -translate-x-1/2 opacity-[100] sm:top-6 sm:w-[130%] md:w-[110%] lg:left-auto lg:right-[-10%] lg:top-1/2 lg:w-[78%] lg:-translate-y-1/2 lg:translate-x-0"
+        />
+
+        <div className="absolute inset-0 bg-linear-to-b from-background via-background/80 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,rgba(171,188,80,0.16),transparent_34%)]" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-px bg-border border border-border">
-          {/* Info */}
           <aside className="lg:col-span-2 bg-charcoal p-6 sm:p-8 lg:p-10 flex flex-col">
             <div className="flex items-center gap-2 mb-6">
               <span className="w-1.5 h-1.5 bg-tactical animate-hud-pulse" />
@@ -142,17 +297,12 @@ const Contact = () => {
             </div>
           </aside>
 
-          {/* Form */}
           <form
             onSubmit={onSubmit}
             className="lg:col-span-3 bg-background p-6 sm:p-8 lg:p-10 space-y-5"
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-border pb-3 mb-2 gap-3">
               <span className="label-mono text-[10px]">▌ BRIEFING FORM</span>
-
-              {/* <span className="label-mono text-tactical text-[10px]">
-                FORM ID: BRF-2026
-              </span> */}
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -180,6 +330,7 @@ const Contact = () => {
                 <option>Custom Requirement</option>
                 <option>Agriculture</option>
                 <option>Components</option>
+                <option>Other</option>
               </select>
             </div>
 
