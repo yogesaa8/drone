@@ -162,6 +162,23 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* image */}
+      <section className="py-16 lg:py-20 border-t border-border">
+        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+          <FloatUpText>
+            <div className="relative border border-border bg-charcoal corner-frame overflow-hidden">
+              <img
+                src={btmImg}
+                alt="Arcanumspace UAV operations"
+                className="w-full h-125 lg:h-150 object-cover object-center"
+              />
+
+              <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
+            </div>
+          </FloatUpText>
+        </div>
+      </section>
+
       {/* Capabilities */}
       <section className="py-24 lg:py-32 border-t border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -244,23 +261,6 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Bottom Image */}
-      <section className="py-16 lg:py-20 border-t border-border">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
-          <FloatUpText>
-            <div className="relative border border-border bg-charcoal corner-frame overflow-hidden">
-              <img
-                src={btmImg}
-                alt="Arcanumspace UAV operations"
-                className="w-full h-[500px] lg:h-[600px] object-cover object-center"
-              />
-
-              <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
-            </div>
-          </FloatUpText>
         </div>
       </section>
     </div>
