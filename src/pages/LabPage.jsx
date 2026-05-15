@@ -121,14 +121,38 @@ const engineeringZones = [
 ];
 
 const workflowSequence = [
-  "Ideate",
-  "Build",
-  "Integrate",
-  "Calibrate",
-  "Validate",
-  "Train",
-  "Test",
-  "Deploy",
+  {
+    title: "Ideate",
+    desc: "Define lab objectives, mission use-cases, training goals, and operational requirements.",
+  },
+  {
+    title: "Build",
+    desc: "Set up workbenches, tools, UAV kits, safety zones, and hands-on assembly infrastructure.",
+  },
+  {
+    title: "Integrate",
+    desc: "Connect airframes, avionics, payload systems, control links, and supporting lab equipment.",
+  },
+  {
+    title: "Calibrate",
+    desc: "Tune flight controllers, sensors, ESCs, radio systems, and platform-specific configurations.",
+  },
+  {
+    title: "Validate",
+    desc: "Verify stability, safety, payload readiness, system response, and mission workflow accuracy.",
+  },
+  {
+    title: "Train",
+    desc: "Deliver structured operator training for assembly, repair, simulation, piloting, and SOPs.",
+  },
+  {
+    title: "Test",
+    desc: "Run simulator drills, bench checks, controlled flights, and performance evaluation sessions.",
+  },
+  {
+    title: "Deploy",
+    desc: "Handover the complete lab ecosystem with documentation, support, and field-ready workflows.",
+  },
 ];
 
 const infrastructureItems = [
@@ -696,7 +720,7 @@ const LabPage = () => {
               </div>
             </div> */}
 
-            <div className="mt-8 relative overflow-hidden border border-border bg-charcoal/80 p-5 sm:p-6 lg:p-8">
+            <div className="mt-8 relative overflow-hidden border border-border bg-charcoal/70 p-5 sm:p-6 lg:p-8">
               <div className="absolute inset-0 hud-grid opacity-10 pointer-events-none" />
               <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-tactical/10 blur-3xl pointer-events-none" />
 
@@ -704,6 +728,7 @@ const LabPage = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-3">
                     <span className="h-px w-8 bg-tactical" />
+
                     <span className="label-mono text-tactical uppercase text-xs">
                       Workflow Sequence
                     </span>
@@ -720,37 +745,29 @@ const LabPage = () => {
               </div>
 
               <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
-                {workflowSequence.map((item, index) => (
-                  <div
-                    key={item}
-                    className="group relative overflow-hidden bg-background/70 p-5 min-h-[150px] zero-g-hover"
+                {workflowSequence.map((step, index) => (
+                  <article
+                    key={step.title}
+                    className="group relative overflow-hidden bg-background/70 p-5 min-h-[170px] zero-g-hover"
                   >
                     <div className="absolute inset-0 bg-linear-to-br from-tactical/0 via-transparent to-tactical/0 group-hover:from-tactical/10 group-hover:to-tactical/5 transition-all duration-500 pointer-events-none" />
 
-                    <div className="absolute right-4 top-4 label-mono text-[10px] text-tactical/40 group-hover:text-tactical transition-colors">
+                    <div className="absolute right-4 top-4 label-mono text-sm font-semibold text-tactical/35 group-hover:text-tactical transition-colors">
                       {String(index + 1).padStart(2, "0")}
                     </div>
 
-                    <div className="relative z-10 flex h-full flex-col justify-between">
-                      <div>
-                        <div className="mb-5 flex items-center gap-3">
-                          <span className="grid h-9 w-9 place-items-center border border-border bg-charcoal text-tactical group-hover:border-tactical transition-colors">
-                            {String(index + 1).padStart(2, "0")}
-                          </span>
+                    <div className="relative z-10 pr-10">
+                      <div className="mb-5 h-px w-12 bg-tactical/50 group-hover:w-20 group-hover:bg-tactical transition-all duration-500" />
 
-                          <span className="h-px flex-1 bg-linear-to-r from-tactical/50 to-transparent" />
-                        </div>
+                      <h4 className="font-display text-xl font-semibold group-hover:text-tactical transition-colors">
+                        {step.title}
+                      </h4>
 
-                        <h4 className="font-display text-xl font-semibold group-hover:text-tactical transition-colors">
-                          {item}
-                        </h4>
-                      </div>
-
-                      <div className="mt-6 label-mono text-[10px] uppercase text-muted-foreground">
-                        Phase / {String(index + 1).padStart(2, "0")}
-                      </div>
+                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                        {step.desc}
+                      </p>
                     </div>
-                  </div>
+                  </article>
                 ))}
               </div>
             </div>
@@ -994,7 +1011,7 @@ const LabPage = () => {
           </div>
         </FloatUpText>
 
-        <FloatUpText delay={0.2}>
+        {/* <FloatUpText delay={0.2}>
           <div className="mt-20 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-start">
             <DummyImage
               src={dummyImages.studyMaterials}
@@ -1024,6 +1041,56 @@ const LabPage = () => {
                   </article>
                 ))}
               </div>
+            </div>
+          </div>
+        </FloatUpText> */}
+
+        <FloatUpText delay={0.2}>
+          <div className="mt-20">
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-start">
+              <DummyImage
+                src={dummyImages.studyMaterials}
+                alt="Specialized Study Materials and Training"
+                className="w-full h-auto object-cover"
+              />
+
+              <div>
+                <SectionHeader
+                  kicker="Training Material"
+                  title="Specialized Study Materials & Training"
+                  description="Specialized study materials and structured training content for drone enthusiasts, trainees, institutions, and professionals."
+                />
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-px bg-border border border-border sm:grid-cols-2 lg:grid-cols-6">
+              {studyMaterials.map(([title, desc], index) => (
+                <article
+                  key={title}
+                  className={`bg-charcoal p-6 zero-g-hover min-w-0 sm:col-span-1 lg:col-span-2 ${
+                    studyMaterials.length === 5 && index >= 3
+                      ? "lg:col-span-3"
+                      : ""
+                  } ${
+                    studyMaterials.length % 2 !== 0 &&
+                    index === studyMaterials.length - 1
+                      ? "sm:col-span-2"
+                      : ""
+                  }`}
+                >
+                  <div className="label-mono text-tactical text-[10px] mb-3">
+                    MATERIAL {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  <h3 className="font-display text-xl font-semibold mb-3 break-words">
+                    {title}
+                  </h3>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {desc}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
         </FloatUpText>
