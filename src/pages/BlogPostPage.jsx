@@ -6,8 +6,7 @@ import b2 from "../assets/blog/b2.png";
 import b3 from "../assets/blog/b3.png";
 import b4 from "../assets/blog/b4.png";
 import b5 from "../assets/blog/b5.png";
-
-
+import b6 from "../assets/blog/b6.png";
 
 import { FloatUpText } from "../components/animations/Antigravity";
 
@@ -16,7 +15,8 @@ const posts = [
     slug: "make-in-india-uav-ecosystem",
     tag: "Industry Intel",
     date: "05 May 2026",
-    title: "The Strategic Shift: Why 'Make in India' UAV Ecosystems Are Non-Negotiable",
+    title:
+      "The Strategic Shift: Why 'Make in India' UAV Ecosystems Are Non-Negotiable",
     desc: "Analyzing the critical need for localized drone manufacturing and R&D labs to reduce foreign dependency in defense procurement.",
     image: b1,
     content: `
@@ -85,7 +85,8 @@ const posts = [
     slug: "fpv-pilot-training-doctrine",
     tag: "Training Doctrine",
     date: "22 Apr 2026",
-    title: "Building the Operator: Why FPV Training Doctrines Define Mission Success",
+    title:
+      "Building the Operator: Why FPV Training Doctrines Define Mission Success",
     desc: "Why advanced hardware is useless without rigorous, structured FPV pilot training protocols for frontline deployment.",
     image: b4,
     content: `
@@ -108,7 +109,8 @@ const posts = [
     slug: "last-mile-uav-logistics-supply",
     tag: "Field Logistics",
     date: "16 Apr 2026",
-    title: "Last-Mile Resupply: Utilizing UAVs for Forward Deployment Logistics",
+    title:
+      "Last-Mile Resupply: Utilizing UAVs for Forward Deployment Logistics",
     desc: "How payload-dropping multirotors are solving the 'last mile' problem in combat zones where traditional supply lines are compromised.",
     image: b3,
     content: `
@@ -126,6 +128,41 @@ const posts = [
       <h3>Conclusion</h3>
       <p>UAV logistics are not about replacing heavy transport aircraft or armored supply trucks; they are about sustaining frontline troops when traditional routes are cut off or too dangerous. Integrating autonomous payload-drop capabilities into standard infantry UAV fleets is rapidly becoming a fundamental requirement for modern, agile combat operations.</p>
     `,
+  },
+  {
+    slug: "kamikaze-drones-loitering-munitions-modern-warfare",
+    tag: "Defense Tech",
+    date: "12 May 2026",
+    title: "Kamikaze Drones: The Rise of Loitering Munitions in Modern Warfare",
+    desc: "A strategic look at how one-way UAV systems are changing battlefield surveillance, precision engagement, and counter-drone defense planning.",
+    image: b6,
+    content: `
+    <p>Kamikaze drones, also known as loitering munitions, represent one of the most significant shifts in modern unmanned warfare. Unlike traditional UAVs that return after completing surveillance or mapping missions, these systems are designed around a one-way operational profile. Their role is to observe, wait, identify a high-value opportunity, and then deliver precision impact when commanded or authorized through mission protocols.</p>
+
+    <h3>What Makes Loitering Munitions Different?</h3>
+    <p>The key difference between a conventional drone and a kamikaze drone is mission intent. A conventional ISR drone focuses on collecting intelligence and returning safely with data. A loitering munition combines surveillance, target observation, and terminal engagement into a single platform. This gives field commanders more flexibility because the system can remain in the air, monitor an area, and respond quickly when a time-sensitive target appears.</p>
+
+    <h3>Changing the Battlefield Timeline</h3>
+    <p>Modern combat environments move extremely fast. Vehicles, equipment, and mobile teams may remain visible for only a few minutes before changing location. Traditional strike workflows often require separate reconnaissance, target confirmation, command approval, and asset deployment. Loitering munitions compress this timeline by keeping the sensing platform closer to the operational area, reducing the delay between detection and action.</p>
+
+    <h3>Precision, Cost, and Tactical Flexibility</h3>
+    <p>One major reason these systems have gained attention is the balance between cost and tactical effect. Compared with larger aircraft or long-range missile systems, compact UAV-based loitering platforms can be cheaper, easier to deploy, and more adaptable for smaller units. Their precision-focused role allows forces to engage selected targets while reducing the need for large-scale firepower in every scenario.</p>
+
+    <h3>The Role of ISR Before Engagement</h3>
+    <p>Loitering munitions are not only strike systems; they are also intelligence tools. Their onboard cameras and sensors allow operators to observe movement patterns, verify target identity, and assess surrounding conditions before taking any action. This ISR capability is critical because responsible deployment depends on accurate identification, clear rules of engagement, and strong command oversight.</p>
+
+    <h3>Counter-Drone Defense Challenges</h3>
+    <p>The rise of kamikaze drones has also increased the importance of counter-UAV defense. Small aerial systems can be difficult to detect using traditional radar alone, especially when they fly low, move slowly, or operate in cluttered terrain. Effective defense requires layered protection, including visual detection, acoustic monitoring, RF awareness, electronic countermeasures, hardened positions, and rapid response procedures.</p>
+
+    <h3>Electronic Warfare and Signal Resilience</h3>
+    <p>Electronic warfare plays a major role in both the use and defense of loitering munitions. Communication links, navigation signals, and control channels can be disrupted in contested environments. This makes secure communication, navigation fallback planning, and resilient mission logic important factors in system reliability. At the same time, defenders increasingly rely on jamming, spoofing detection, and RF monitoring to reduce drone effectiveness.</p>
+
+    <h3>Ethical and Operational Responsibility</h3>
+    <p>Because loitering munitions sit at the intersection of surveillance and strike capability, their use demands strict operational discipline. Clear authorization chains, target verification, accountability, and compliance with applicable law are essential. The technology may improve speed and precision, but responsible human oversight remains central to safe and lawful deployment.</p>
+
+    <h3>Conclusion</h3>
+    <p>Kamikaze drones are reshaping how militaries think about precision engagement, battlefield awareness, and counter-drone defense. Their value is not only in impact capability, but in the way they combine observation, decision support, and rapid response into one compact aerial system. As UAV technology continues to evolve, the future battlefield will increasingly depend on how well forces can integrate these systems responsibly while also defending against them effectively.</p>
+  `,
   },
 ];
 

@@ -59,8 +59,9 @@ import g5 from "../assets/gallary/5.png";
 import g6 from "../assets/gallary/6.png";
 import g7 from "../assets/gallary/7.png";
 import g8 from "../assets/gallary/8.png";
-// import g9 from "../assets/gallary/9.png";
+import g9 from "../assets/gallary/9.jpg";
 import g10 from "../assets/gallary/10.png";
+import g11 from "../assets/gallary/11.jpg";
 
 
 // drone parts
@@ -290,8 +291,9 @@ export const gallery = [
   { src: g6, caption: "Advanced Drone Systems, Digitally Connected" },
   { src: g7, caption: "Mission-Ready Tactical Drone Deployment" },
   { src: g8, caption: "Kamikaze Drone for Precision Tactical Missions" },
-  // { src: g9, caption: "Tactical Sweep — Urban Sector 12" },
-  { src: g10, caption: "Complete Drone Fleet for Multi-Mission Applications" }
+  { src: g9, caption: "Advanced drone technology engineered for precision, performance, and challenging environments." },
+  { src: g10, caption: "Complete Drone Fleet for Multi-Mission Applications" },
+  { src: g11, caption: "Hands-on drone training and expert-led learning to build future-ready aviation skills." }
 ];
 
 export const droneParts = [

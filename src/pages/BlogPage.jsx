@@ -6,6 +6,7 @@ import b2 from "../assets/blog/b2.png";
 import b3 from "../assets/blog/b3.png";
 import b4 from "../assets/blog/b4.png";
 import b5 from "../assets/blog/b5.png";
+import b6 from "../assets/blog/b6.png";
 
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
@@ -53,6 +54,14 @@ const posts = [
       "Last-Mile Resupply: Utilizing UAVs for Forward Deployment Logistics",
     desc: "How payload-dropping multirotors are solving the 'last mile' problem in combat zones where traditional supply lines are compromised.",
     image: b3,
+  },
+  {
+    slug: "kamikaze-drones-loitering-munitions-modern-warfare",
+    tag: "Defense Tech",
+    date: "12 May 2026",
+    title: "Kamikaze Drones: The Rise of Loitering Munitions in Modern Warfare",
+    desc: "A strategic look at how one-way UAV systems are changing battlefield surveillance, precision engagement, and counter-drone defense planning.",
+    image: b6,
   },
 ];
 

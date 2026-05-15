@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
+import missionTrainingImage from "../assets/mission-training.png";
 
 const missionPillars = [
   {
@@ -79,52 +80,102 @@ const MissionPage = () => {
   return (
     <div className="pt-16 min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 lg:py-32">
+      <section className="relative py-20 lg:py-28 overflow-hidden">
         <AnimatedGrid />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-          <FloatUpText>
-            <div className="max-w-4xl">
-              <div className="flex items-center gap-3 mb-5">
-                <span className="h-px w-8 bg-tactical" />
+          <div className="grid lg:grid-cols-[1fr_520px] gap-12 xl:gap-16 items-center">
+            {/* Left Content */}
+            <FloatUpText>
+              <div className="max-w-4xl">
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="h-px w-8 bg-tactical" />
 
-                <span className="label-mono text-tactical">
-                  MISSION DIRECTIVE
-                </span>
+                  <span className="label-mono text-tactical">
+                    MISSION DIRECTIVE
+                  </span>
+                </div>
+
+                <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+                  To make advanced UAV capability accessible, reliable, and
+                  field-ready.
+                </h1>
+
+                <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
+                  Our mission is to support teams with dependable drone systems,
+                  practical training workflows, and mission-focused UAV
+                  technology built for real operational environments.
+                </p>
+
+                <p className="mt-5 text-muted-foreground leading-relaxed">
+                  Arcanumspace works across UAV training, surveillance, ISR,
+                  payload systems, field support, and AI-enabled operations to
+                  help organizations deploy aerial capability with clarity and
+                  confidence.
+                </p>
+
+                <div className="mt-8 grid sm:grid-cols-2 gap-px bg-border border border-border max-w-3xl">
+                  <div className="bg-charcoal p-5 corner-frame">
+                    <div className="label-mono text-tactical text-[10px] mb-2">
+                      FIELD TRAINING
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Practical UAV learning designed around real operational
+                      readiness.
+                    </p>
+                  </div>
+
+                  <div className="bg-charcoal p-5 corner-frame">
+                    <div className="label-mono text-tactical text-[10px] mb-2">
+                      DEPLOYMENT READY
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Systems, workflows, and support aligned for field use.
+                    </p>
+                  </div>
+                </div>
               </div>
+            </FloatUpText>
 
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-                To make advanced UAV capability accessible, reliable, and field-ready.
-              </h1>
+            {/* Right Portrait Image - Full Image Visible */}
+            <FloatUpText delay={0.1}>
+              <div className="relative w-full max-w-130 mx-auto lg:mx-0">
+                <div className="absolute -inset-4 border border-tactical/20 corner-frame" />
 
-              <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
-                Our mission is to support teams with dependable drone systems,
-                practical training workflows, and mission-focused UAV
-                technology built for real operational environments.
-              </p>
+                <div className="relative border border-border bg-charcoal p-3 corner-frame shadow-2xl overflow-hidden">
+                  <div className="relative aspect-1086/1448 w-full overflow-hidden bg-background/40">
+                    <img
+                      src={missionTrainingImage}
+                      alt="Arcanumspace UAV training and certification"
+                      className="w-full h-full object-contain object-center"
+                      loading="eager"
+                    />
+                  </div>
 
-              <p className="mt-5 text-muted-foreground leading-relaxed">
-                Arcanumspace works across UAV training, surveillance, ISR,
-                payload systems, field support, and AI-enabled operations to
-                help organizations deploy aerial capability with clarity and
-                confidence.
-              </p>
-            </div>
-          </FloatUpText>
+                  <div className="mt-3 border border-border bg-background/70 px-4 py-3 corner-frame">
+                    <div className="label-mono text-tactical text-[10px] mb-1">
+                      ARCANUMSPACE PRIVATE LIMITED
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      UAV training, pilot readiness, and mission-focused drone
+                      capability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </FloatUpText>
+          </div>
 
           {/* Mission Pillars */}
-          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+          <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             {missionPillars.map((pillar, index) => (
-              <FloatUpText
-                key={pillar.title}
-                delay={index * 0.08}
-              >
+              <FloatUpText key={pillar.title} delay={index * 0.08}>
                 <article className="bg-charcoal p-8 h-full zero-g-hover min-w-0">
                   <div className="font-display text-5xl font-bold text-tactical/30 mb-6">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
-                  <h2 className="font-display text-2xl font-semibold mb-3 break-words">
+                  <h2 className="font-display text-2xl font-semibold mb-3 wrap-break-word">
                     {pillar.title}
                   </h2>
 
@@ -164,12 +215,15 @@ const MissionPage = () => {
 
           <div className="grid md:grid-cols-2 gap-px bg-border border border-border">
             {technologies.map(([title, desc], index) => (
-              <article key={title} className="bg-charcoal p-8 zero-g-hover min-w-0">
+              <article
+                key={title}
+                className="bg-charcoal p-8 zero-g-hover min-w-0"
+              >
                 <div className="label-mono text-tactical text-[10px] mb-5">
                   SYSTEM {String(index + 1).padStart(2, "0")}
                 </div>
 
-                <h3 className="font-display text-2xl font-semibold mb-4 break-words">
+                <h3 className="font-display text-2xl font-semibold mb-4 wrap-break-word">
                   {title}
                 </h3>
 

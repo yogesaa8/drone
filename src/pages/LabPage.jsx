@@ -679,7 +679,7 @@ const LabPage = () => {
               ))}
             </div>
 
-            <div className="mt-8 border border-border bg-charcoal/70 p-5 sm:p-6">
+            {/* <div className="mt-8 border border-border bg-charcoal/70 p-5 sm:p-6">
               <div className="label-mono text-tactical uppercase text-xs mb-4">
                 Workflow Sequence
               </div>
@@ -692,6 +692,65 @@ const LabPage = () => {
                   >
                     {String(index + 1).padStart(2, "0")} / {item}
                   </span>
+                ))}
+              </div>
+            </div> */}
+
+            <div className="mt-8 relative overflow-hidden border border-border bg-charcoal/80 p-5 sm:p-6 lg:p-8">
+              <div className="absolute inset-0 hud-grid opacity-10 pointer-events-none" />
+              <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-tactical/10 blur-3xl pointer-events-none" />
+
+              <div className="relative z-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between mb-8">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="h-px w-8 bg-tactical" />
+                    <span className="label-mono text-tactical uppercase text-xs">
+                      Workflow Sequence
+                    </span>
+                  </div>
+
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold leading-tight">
+                    From idea to field-ready deployment.
+                  </h3>
+                </div>
+
+                <div className="label-mono text-[10px] uppercase text-muted-foreground border border-border bg-background/70 px-4 py-2">
+                  08 Step Lab Pipeline
+                </div>
+              </div>
+
+              <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+                {workflowSequence.map((item, index) => (
+                  <div
+                    key={item}
+                    className="group relative overflow-hidden bg-background/70 p-5 min-h-[150px] zero-g-hover"
+                  >
+                    <div className="absolute inset-0 bg-linear-to-br from-tactical/0 via-transparent to-tactical/0 group-hover:from-tactical/10 group-hover:to-tactical/5 transition-all duration-500 pointer-events-none" />
+
+                    <div className="absolute right-4 top-4 label-mono text-[10px] text-tactical/40 group-hover:text-tactical transition-colors">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+
+                    <div className="relative z-10 flex h-full flex-col justify-between">
+                      <div>
+                        <div className="mb-5 flex items-center gap-3">
+                          <span className="grid h-9 w-9 place-items-center border border-border bg-charcoal text-tactical group-hover:border-tactical transition-colors">
+                            {String(index + 1).padStart(2, "0")}
+                          </span>
+
+                          <span className="h-px flex-1 bg-linear-to-r from-tactical/50 to-transparent" />
+                        </div>
+
+                        <h4 className="font-display text-xl font-semibold group-hover:text-tactical transition-colors">
+                          {item}
+                        </h4>
+                      </div>
+
+                      <div className="mt-6 label-mono text-[10px] uppercase text-muted-foreground">
+                        Phase / {String(index + 1).padStart(2, "0")}
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

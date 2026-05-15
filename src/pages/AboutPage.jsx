@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import heroImg from "../assets/about_page.png";
+import btmImg from "../assets/about_page1.jpg";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
 
@@ -63,7 +64,8 @@ const AboutPage = () => {
                 </div>
 
                 <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-                  Engineering mission-ready UAV systems for real-world operations.
+                  Engineering mission-ready UAV systems for real-world
+                  operations.
                 </h1>
 
                 <p className="mt-6 text-muted-foreground leading-relaxed max-w-2xl">
@@ -75,8 +77,8 @@ const AboutPage = () => {
                 <p className="mt-5 text-muted-foreground leading-relaxed max-w-2xl">
                   Arcanumspace combines product engineering, payload
                   integration, flight validation, and operator support to build
-                  UAV systems that are reliable, configurable, and practical
-                  for demanding environments.
+                  UAV systems that are reliable, configurable, and practical for
+                  demanding environments.
                 </p>
               </div>
             </FloatUpText>
@@ -106,9 +108,7 @@ const AboutPage = () => {
                   {value}
                 </div>
 
-                <div className="label-mono text-[10px] mt-3">
-                  {label}
-                </div>
+                <div className="label-mono text-[10px] mt-3">{label}</div>
               </div>
             ))}
           </div>
@@ -122,21 +122,20 @@ const AboutPage = () => {
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-8 bg-tactical" />
 
-              <span className="label-mono text-tactical">
-                COMPANY OVERVIEW
-              </span>
+              <span className="label-mono text-tactical">COMPANY OVERVIEW</span>
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Built around product engineering, field discipline, and operational readiness.
+              Built around product engineering, field discipline, and
+              operational readiness.
             </h2>
 
             <div className="mt-8 space-y-6 text-muted-foreground leading-relaxed">
               <p>
                 Arcanumspace builds UAV systems for organizations that need
-                dependable aerial capability without unnecessary complexity.
-                Our work spans airframe selection, electronics integration,
-                payload configuration, flight tuning, and deployment planning.
+                dependable aerial capability without unnecessary complexity. Our
+                work spans airframe selection, electronics integration, payload
+                configuration, flight tuning, and deployment planning.
               </p>
 
               <p>
@@ -170,9 +169,7 @@ const AboutPage = () => {
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-8 bg-tactical" />
 
-              <span className="label-mono text-tactical">
-                CORE OPERATIONS
-              </span>
+              <span className="label-mono text-tactical">CORE OPERATIONS</span>
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
@@ -211,13 +208,12 @@ const AboutPage = () => {
               <div className="flex items-center gap-3 mb-4">
                 <span className="h-px w-8 bg-tactical" />
 
-                <span className="label-mono text-tactical">
-                  WHY CHOOSE US
-                </span>
+                <span className="label-mono text-tactical">WHY CHOOSE US</span>
               </div>
 
               <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight">
-                Practical UAV systems backed by engineering discipline and field support.
+                Practical UAV systems backed by engineering discipline and field
+                support.
               </h2>
             </div>
 
@@ -248,6 +244,23 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Bottom Image */}
+      <section className="py-16 lg:py-20 border-t border-border">
+        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+          <FloatUpText>
+            <div className="relative border border-border bg-charcoal corner-frame overflow-hidden">
+              <img
+                src={btmImg}
+                alt="Arcanumspace UAV operations"
+                className="w-full h-[500px] lg:h-[600px] object-cover object-center"
+              />
+
+              <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
+            </div>
+          </FloatUpText>
         </div>
       </section>
     </div>
