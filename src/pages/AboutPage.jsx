@@ -163,14 +163,14 @@ const AboutPage = () => {
       </section>
 
       {/* image */}
-      <section className="py-16 lg:py-20 border-t border-border">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+      <section className="py-10 sm:py-14 lg:py-20 border-t border-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
           <FloatUpText>
             <div className="relative border border-border bg-charcoal corner-frame overflow-hidden">
               <img
                 src={btmImg}
                 alt="Arcanumspace UAV operations"
-                className="w-full h-125 lg:h-150 object-cover object-center"
+                className="w-full h-65 sm:h-95 md:h-115 lg:h-150 object-contain lg:object-cover object-center"
               />
 
               <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
@@ -204,7 +204,7 @@ const AboutPage = () => {
                   CAPABILITY {String(index + 1).padStart(2, "0")}
                 </div>
 
-                <h3 className="font-display text-2xl font-semibold mb-3 break-words">
+                <h3 className="font-display text-2xl font-semibold mb-3 wrap-break-word">
                   {title}
                 </h3>
 
