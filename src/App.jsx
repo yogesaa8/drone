@@ -52,12 +52,12 @@ const App = () => {
           target="_blank"
           rel="noreferrer"
           aria-label="Chat on WhatsApp"
-          className="fixed left-4 bottom-4 z-50 rounded-full bg-[#25D366] p-3 shadow-2xl transition duration-200 ease-out hover:scale-105"
+          className="fixed left-3 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] z-50 rounded-full bg-[#25D366] p-2.5 shadow-2xl transition duration-200 ease-out hover:scale-105 sm:left-4 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))] sm:p-3"
         >
           <img
             src={whatsappContact}
             alt="WhatsApp contact"
-            className="h-10 w-10"
+            className="h-8 w-8 sm:h-10 sm:w-10"
           />
         </a>
       </div>
