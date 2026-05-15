@@ -34,44 +34,7 @@ const Hero = () => {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-x-0 h-px bg-linear-to-r from-transparent via-tactical/60 to-transparent animate-scanner" />
         </div>
-      </div>
-
-      {/* Corner HUD elements */}
-      {/* <div className="absolute top-24 left-6 lg:left-10 label-mono text-[10px] space-y-1 hidden md:block">
-        <div className="flex items-center gap-2">
-          <span className="w-1 h-1 bg-tactical animate-hud-pulse" />
-          <span>LAT 28.7041° N</span>
-        </div>
-        <div>LONG 77.1025° E</div>
-        <div>
-          SIGNAL: <span className="text-tactical">STABLE</span>
-        </div>
-        <div>
-          MODE: <span className="text-amber-hud">RECON</span>
-        </div>
-      </div> */}
-
-      {/* <div className="absolute top-24 right-6 lg:right-10 label-mono text-[10px] text-right space-y-1 hidden md:block">
-        <div>FEED ID: 04-XR-219</div>
-        <div>ALT: 1,240 M</div>
-        <div>
-          BAT: <span className="text-tactical">94%</span>
-        </div>
-        <div className="flex items-center gap-2 justify-end">
-          <span>TARGET LOCK</span>
-          <span className="w-2 h-2 border border-warning animate-hud-pulse" />
-        </div>
-      </div> */}
-
-      {/* Target reticle decoration */}
-      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 hidden lg:block pointer-events-none opacity-20">
-        <div className="w-full h-full animate-float-slow">
-          <div className="absolute inset-0 border border-tactical" />
-          <div className="absolute top-1/2 left-0 right-0 h-px bg-tactical" />
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-tactical" />
-          <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-3 h-3 border-t border-l border-tactical" />
-        </div>
-      </div> */}
+      </div>      
 
       {/* Hero content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-40 pb-32 min-h-screen flex flex-col justify-center">
