@@ -88,7 +88,7 @@ const AboutPage = () => {
                 <img
                   src={heroImg}
                   alt="Arcanumspace tactical drone platform"
-                  className="aspect-[4/3] w-full object-cover"
+                  className="aspect-4/3 w-full object-cover"
                 />
 
                 <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
