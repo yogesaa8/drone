@@ -1,34 +1,46 @@
 import { useEffect } from "react";
-import heroImg from "../assets/about_page.png";
-import btmImg from "../assets/about_page1.jpg";
+import heroImg from "../assets/about/about_page.png";
+import btmImg from "../assets/about/about_page1.jpg";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
+import capabilityImg1 from "../assets/about/WWA.jpg";
+import capabilityImg2 from "../assets/about/about_page.png";
+import capabilityImg3 from "../assets/about/EA.jpg";
+import capabilityImg4 from "../assets/about/AG.jpg";
+import capabilityImg5 from "../assets/about/AI.png";
+import capabilityImg6 from "../assets/about/OD.png";
 
 const capabilities = [
-  [
-    "Who We Are",
-    "A UAV technology company focused on mission-ready platforms for training, surveillance, ISR, rapid response, and field operations.",
-  ],
-  [
-    "What We Build",
-    "Drone systems such as Tinywoop, ARC MT 280, Shadow Drop 10, Beetle 5, and ARC MT 480AI for practical operational workflows.",
-  ],
-  [
-    "Engineering Approach",
-    "Airframe design, payload integration, flight tuning, documentation, and operator usability are developed as one connected system.",
-  ],
-  [
-    "Field Testing & Deployment",
-    "Platforms are validated through flight trials, configuration checks, payload testing, and deployment planning for real conditions.",
-  ],
-  [
-    "AI-Assisted Workflows",
-    "We support AI-enabled drone operations for mapping, ISR support, object tracking, data capture, and faster mission decisions.",
-  ],
-  [
-    "Operational Support",
-    "Teams are supported with pilot training, system configuration, maintenance guidance, and deployment-ready documentation.",
-  ],
+  {
+    title: "Who We Are",
+    desc: "A UAV technology company focused on mission-ready platforms for training, surveillance, ISR, rapid response, and field operations.",
+    image: capabilityImg1,
+  },
+  {
+    title: "What We Build",
+    desc: "Drone systems such as Tinywoop, ARC MT 280, Shadow Drop 10, Beetle 5, and ARC MT 480AI for practical operational workflows.",
+    image: capabilityImg2,
+  },
+  {
+    title: "Engineering Approach",
+    desc: "Airframe design, payload integration, flight tuning, documentation, and operator usability are developed as one connected system.",
+    image: capabilityImg3,
+  },
+  {
+    title: "Field Testing & Deployment",
+    desc: "Platforms are validated through flight trials, configuration checks, payload testing, and deployment planning for real conditions.",
+    image: capabilityImg4,
+  },
+  {
+    title: "AI-Assisted Workflows",
+    desc: "We support AI-enabled drone operations for mapping, ISR support, object tracking, data capture, and faster mission decisions.",
+    image: capabilityImg5,
+  },
+  {
+    title: "Operational Support",
+    desc: "Teams are supported with pilot training, system configuration, maintenance guidance, and deployment-ready documentation.",
+    image: capabilityImg6,
+  },
 ];
 
 const metrics = [
@@ -195,22 +207,33 @@ const AboutPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
-            {capabilities.map(([title, desc], index) => (
+            {capabilities.map(({ title, desc, image }, index) => (
               <article
                 key={title}
-                className="bg-charcoal p-8 zero-g-hover min-w-0"
+                className="group relative overflow-hidden bg-charcoal p-8 zero-g-hover min-w-0"
               >
-                <div className="label-mono text-tactical text-[10px] mb-5">
-                  CAPABILITY {String(index + 1).padStart(2, "0")}
+                <img
+                  src={image}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-80"
+                />
+
+                <div className="absolute inset-0 bg-charcoal/60 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
+
+                <div className="relative z-10">
+                  <div className="label-mono text-tactical text-[10px] mb-5">
+                    CAPABILITY {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  <h3 className="font-display text-2xl font-semibold mb-3 wrap-break-word">
+                    {title}
+                  </h3>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed transition-colors duration-300 group-hover:text-foreground">
+                    {desc}
+                  </p>
                 </div>
-
-                <h3 className="font-display text-2xl font-semibold mb-3 wrap-break-word">
-                  {title}
-                </h3>
-
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {desc}
-                </p>
               </article>
             ))}
           </div>

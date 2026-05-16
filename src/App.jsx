@@ -14,6 +14,7 @@ import BlogPostPage from "./pages/BlogPostPage";
 import LabPage from "./pages/LabPage";
 import AgriculturePage from "./pages/AgriculturePage";
 import whatsappContact from "./assets/whatsapp-contact.svg";
+import Carrier from "./pages/Carrier";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -44,6 +45,7 @@ const App = () => {
             <Route path="/lab" element={<LabPage />} />
             <Route path="/agriculture" element={<AgriculturePage />} />
             <Route path="/drone/:id" element={<DroneDetailsPage />} />
+            <Route path="/carrier" element={<Carrier />} />
             <Route path="*" element={<LandingPage />} />
           </Routes>
         </main>

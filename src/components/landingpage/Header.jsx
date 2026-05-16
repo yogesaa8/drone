@@ -168,7 +168,7 @@ const Header = () => {
                 }`
               }
             >
-              Defence
+              Products
               <IoChevronDown
                 className={`text-sm transition-transform group-hover:rotate-180 ${
                   defenceDropdownOpen ? "rotate-180" : ""
@@ -275,7 +275,7 @@ const Header = () => {
 
             <div className="border-y border-border py-4">
               <div className="mb-3 flex items-center justify-between font-mono text-sm uppercase tracking-widest text-foreground">
-                <span>Defence</span>
+                <span>Products</span>
                 <IoChevronDown className="text-base text-tactical" />
               </div>
 
