@@ -268,12 +268,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative border-t border-border bg-charcoal/40 overflow-hidden">
+    <footer className="relative bg-charcoal/40 overflow-hidden">
       <img
         src={footerWave}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover opacity-20 rounded-tl-[50px] rounded-tr-[50px]"
+        className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover opacity-20 "
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-10">
