@@ -7,6 +7,7 @@ import Armoured_Corps from "../../assets/logo/Armoured Corps.png";
 import Indian_Armoured from "../../assets/logo/Indian_Armoured.png";
 import Sikh_Regiment from "../../assets/logo/Sikh_Regiment.png";
 import Officers_Training_Academy from "../../assets/logo/OTA.jpg";
+import quet from "../../assets/logo/quet.png";
 
 const partners = [
   {
@@ -37,10 +38,10 @@ const partners = [
     name: "Officers Training Academy",
     logo: Officers_Training_Academy,
   },
-  // {
-  //   name: "Quetzalcoatl",
-  //   logo: null,
-  // },
+  {
+    name: "Quetzalcoatl",
+    logo: quet,
+  },
   {
     name: "46 Armoured Regiment",
     logo: Indian_Armoured,
