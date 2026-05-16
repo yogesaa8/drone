@@ -188,7 +188,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import footerWave from "../../assets/arcanumspace_green_wave_no_watermark.svg";
+import footerWave from "../../assets/foot_back.png";
 
 const cols = [
   {
@@ -303,7 +303,7 @@ const Footer = () => {
                 name="phone"
                 required
                 placeholder="Enter Mobile Number"
-                className="min-w-0 flex-1 bg-transparent px-3 py-3 text-sm focus:outline-none"
+                className="min-w-0 flex-1 bg-charcoal/40 px-3 py-3 text-sm focus:outline-none"
               />
 
               <input

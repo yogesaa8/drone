@@ -1,12 +1,12 @@
-import Hero from "../components/landingpage/Hero";
-import Partners from "../components/landingpage/Partners";
-import Fleet from "../components/landingpage/Fleet";
-import FAQ from "../components/landingpage/FAQ";
+import Hero from "../components/home/Hero";
+import Partners from "../components/home/Partners";
+import Fleet from "../components/home/Fleet";
+import FAQ from "../components/home/FAQ";
 import { ScrollDrift } from "../components/animations/Antigravity";
-import Process from "../components/landingpage/Process";
-import Gallery from "../components/landingpage/Gallery";
-import PerformanceSpecs from "../components/landingpage/PerformanceSpecs";
-import MissionTechGrid from "../components/landingpage/CombinedCapabilities";
+import Process from "../components/home/Process";
+import Gallery from "../components/home/Gallery";
+import PerformanceSpecs from "../components/home/PerformanceSpecs";
+import MissionTechGrid from "../components/home/CombinedCapabilities";
 
 const LandingPage = () => {
   return (

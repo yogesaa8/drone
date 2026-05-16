@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Contact from "../components/landingpage/Contact";
+import Contact from "../components/home/Contact";
 
 const ContactPage = () => {
   useEffect(() => {

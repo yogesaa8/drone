@@ -1,30 +1,9 @@
-import { useEffect } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import Header from "./components/landingpage/Header";
-import LandingPage from "./pages/LandingPage";
-import Footer from "./components/landingpage/Footer";
-import AboutPage from "./pages/AboutPage";
-import MissionPage from "./pages/MissionPage";
-import BlogPage from "./pages/BlogPage";
-import ContactPage from "./pages/ContactPage";
-import DroneDetailsPage from "./pages/DroneDetailsPage";
-import ProductsPage from "./pages/ProductsPage";
-import PartsKitsPage from "./pages/PartsKitsPage";
-import BlogPostPage from "./pages/BlogPostPage";
-import LabPage from "./pages/LabPage";
-import AgriculturePage from "./pages/AgriculturePage";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import ScrollToTop from "./components/common/ScrollToTop";
+import AppRoutes from "./routes/AppRoutes";
 import whatsappContact from "./assets/whatsapp-contact.svg";
-import Carrier from "./pages/Carrier";
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [pathname]);
-
-  return null;
-};
 
 const App = () => {
   return (
@@ -33,21 +12,7 @@ const App = () => {
       <div className="min-h-screen bg-background text-foreground flex flex-col overflow-x-hidden">
         <Header />
         <main className="grow">
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/mission" element={<MissionPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/:slug" element={<BlogPostPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/parts-kits" element={<PartsKitsPage />} />
-            <Route path="/lab" element={<LabPage />} />
-            <Route path="/agriculture" element={<AgriculturePage />} />
-            <Route path="/drone/:id" element={<DroneDetailsPage />} />
-            <Route path="/carrier" element={<Carrier />} />
-            <Route path="*" element={<LandingPage />} />
-          </Routes>
+          <AppRoutes />
         </main>
         <Footer />
 

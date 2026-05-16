@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
+import ProductCard from "../components/common/ProductCard";
 import { droneParts, insideKits } from "../data/data";
-import { ProductCard } from "./ProductsPage";
 
 const PartsKitsPage = () => {
   const navigate = useNavigate();

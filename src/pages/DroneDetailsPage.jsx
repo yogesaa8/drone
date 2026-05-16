@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { FiMaximize2, FiX } from "react-icons/fi";
 import { drones } from "../data/data";
-import DroneViewer from "../components/DroneViewer";
+import DroneViewer from "../components/viewers/DroneViewer";
 
 const DroneDetailsPage = () => {
   const { id } = useParams();
