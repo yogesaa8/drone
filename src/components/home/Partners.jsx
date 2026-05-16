@@ -2,6 +2,11 @@ import BharatSkyTech from "../../assets/logo/bharat1.png";
 import Drobonation from "../../assets/logo/DN1.png";
 import DronacharyaTech from "../../assets/logo/DC.png";
 import ParityInfoTech from "../../assets/logo/PT.png";
+import Gorkha_rifles from "../../assets/logo/Gorkha_rifles.svg";
+import Armoured_Corps from "../../assets/logo/Armoured Corps.png";
+import Indian_Armoured from "../../assets/logo/Indian_Armoured.png";
+import Sikh_Regiment from "../../assets/logo/Sikh_Regiment.png";
+import Officers_Training_Academy from "../../assets/logo/OTA.jpg";
 
 const partners = [
   {
@@ -20,6 +25,30 @@ const partners = [
     name: "Parity InfoTech",
     logo: ParityInfoTech,
   },
+  {
+    name: "Gorkha Rifles",
+    logo: Gorkha_rifles,
+  },
+  {
+    name: "Armoured Corps",
+    logo: Armoured_Corps,
+  },
+  {
+    name: "Officers Training Academy",
+    logo: Officers_Training_Academy,
+  },
+  // {
+  //   name: "Quetzalcoatl",
+  //   logo: null,
+  // },
+  {
+    name: "46 Armoured Regiment",
+    logo: Indian_Armoured,
+  },
+  {
+    name: "10 Sikh",
+    logo: Sikh_Regiment,
+  }
 ];
 
 const Partners = () => {
