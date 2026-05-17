@@ -1,14 +1,67 @@
-import { BrowserRouter } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, useLocation } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/common/ScrollToTop";
 import AppRoutes from "./routes/AppRoutes";
 import whatsappContact from "./assets/whatsapp-contact.svg";
 
+const applyAosToPage = () => {
+  const animatedElements = document.querySelectorAll(
+    "main > *, main section, main article"
+  );
+
+  animatedElements.forEach((element) => {
+    if (!element.hasAttribute("data-aos")) {
+      element.setAttribute("data-aos", "fade-up");
+    }
+
+    if (!element.hasAttribute("data-aos-duration")) {
+      element.setAttribute("data-aos-duration", "700");
+    }
+
+    if (!element.hasAttribute("data-aos-easing")) {
+      element.setAttribute("data-aos-easing", "ease-out-cubic");
+    }
+
+    if (!element.hasAttribute("data-aos-offset")) {
+      element.setAttribute("data-aos-offset", "80");
+    }
+  });
+};
+
+const AOSController = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+      offset: 80,
+      once: false,
+      mirror: false,
+    });
+  }, []);
+
+  useEffect(() => {
+    const refreshId = window.setTimeout(() => {
+      applyAosToPage();
+      AOS.refreshHard();
+    }, 80);
+
+    return () => window.clearTimeout(refreshId);
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <AOSController />
       <div className="min-h-screen bg-background text-foreground flex flex-col overflow-x-hidden">
         <Header />
         <main className="grow">

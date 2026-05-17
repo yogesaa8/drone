@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-// import heroImg from "../assets/about/about_page.png";
-import heroVdo from "../assets/about/about_page.mp4";
+import heroImg from "../assets/about/about_page.png";
 import btmImg from "../assets/about/about_page1.jpg";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
@@ -98,19 +97,12 @@ const AboutPage = () => {
 
             <FloatUpText delay={0.15}>
               <div className="relative border border-border bg-charcoal corner-frame overflow-hidden">
-                {/* <img
+                <img
                   src={heroImg}
                   alt="Arcanumspace tactical drone platform"
                   className="aspect-4/3 w-full object-cover"
-                /> */}
-                <video
-                  src={heroVdo}
-                  autoPlay
-                  loop
-                  muted
-                  className="aspect-4/3 w-full object-cover"
                 />
-
+              
                 <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
 
                 <div className="absolute bottom-4 left-4 label-mono text-[10px] bg-background/80 px-3 py-2">

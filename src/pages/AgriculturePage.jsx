@@ -4,6 +4,8 @@ import { FiArrowRight } from "react-icons/fi";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
 import { drones } from "../data/data";
+import heroVdo from "../assets/about/about_page.mp4";
+
 
 const agricultureDrone = drones.find((drone) => drone.id === "agro-spray-x6");
 
@@ -62,6 +64,22 @@ const SectionHeader = ({ kicker, title, description }) => (
 const AgricultureImage = ({ src, alt, className = "" }) => (
   <div className={`relative border border-border bg-charcoal overflow-hidden corner-frame ${className}`}>
     <img src={src} alt={alt} className="h-full w-full object-cover" />
+    <div className="absolute inset-0 hud-grid opacity-15 pointer-events-none" />
+  </div>
+);
+
+const AgricultureVideo = ({ src, className = "" }) => (
+  <div className={`relative border border-border bg-charcoal overflow-hidden corner-frame ${className}`}>
+    <video
+      src={src}
+      className="h-full w-full object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      aria-label="Agriculture drone video"
+    />
     <div className="absolute inset-0 hud-grid opacity-15 pointer-events-none" />
   </div>
 );
@@ -128,16 +146,13 @@ const AgriculturePage = () => {
               </div>
             </div>
 
-            {heroImage ? (
-              <div className="relative">
-                <div className="absolute -inset-4 border border-tactical/20" />
-                <AgricultureImage
-                  src={heroImage}
-                  alt="Agriculture drone for crop spraying"
-                  className="relative aspect-[4/3] w-full"
-                />
-              </div>
-            ) : null}
+            <div className="relative">
+              <div className="absolute -inset-4 border border-tactical/20" />
+              <AgricultureVideo
+                src={heroVdo}
+                className="relative aspect-4/3 w-full"
+              />
+            </div>
           </div>
         </FloatUpText>
 

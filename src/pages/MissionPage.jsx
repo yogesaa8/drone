@@ -2,6 +2,12 @@ import { useEffect } from "react";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
 import missionTrainingImage from "../assets/mission-training.png";
+import defenceSurveillanceImage from "../assets/mission/ds.png";
+import droneHabitatImage from "../assets/mission/DH.png";
+import agricultureImage from "../assets/mission/AG.jpg";
+import smartMappingImage from "../assets/mission/SM.png";
+import industrialInspectionImage from "../assets/mission/IDM.jpg";
+import searchRescueImage from "../assets/mission/SR.jpg";
 
 const missionPillars = [
   {
@@ -70,6 +76,81 @@ const technologies = [
     "Reliable Flight Engineering",
     "Airframe selection, power systems, control tuning, and validation practices are focused on stable, repeatable field performance.",
   ],
+];
+
+const useCases = [
+  {
+    title: "Police & Public Safety",
+    tag: "LAW ENFORCEMENT",
+    image: defenceSurveillanceImage,
+    desc: "Aerial overwatch for crowd monitoring, traffic response, incident documentation, and safer field coordination.",
+  },
+  {
+    title: "Wind Turbine Inspection",
+    tag: "ENERGY ASSETS",
+    image: industrialInspectionImage,
+    desc: "Close visual inspection of blades, towers, and hard-to-reach energy infrastructure without risky manual access.",
+  },
+  {
+    title: "Forest & Wildlife Monitoring",
+    tag: "ENVIRONMENT",
+    image: droneHabitatImage,
+    desc: "Rapid terrain observation for forest patrols, wildlife tracking, fire-risk review, and remote area assessment.",
+  },
+  {
+    title: "Agriculture & Crop Health",
+    tag: "SMART FARMING",
+    image: agricultureImage,
+    desc: "Crop spraying, field mapping, irrigation review, plantation checks, and precision agriculture workflows.",
+  },
+  {
+    title: "Search & Rescue",
+    tag: "EMERGENCY RESPONSE",
+    image: searchRescueImage,
+    desc: "Thermal-guided search, missing-person support, disaster assessment, and fast visibility over difficult terrain.",
+  },
+  {
+    title: "Survey & Mapping",
+    tag: "GEOSPATIAL",
+    image: smartMappingImage,
+    desc: "High-resolution aerial capture for land survey, construction planning, stockpile review, and GIS documentation.",
+  },
+  {
+    title: "Border & Perimeter Watch",
+    tag: "SECURITY",
+    image: defenceSurveillanceImage,
+    desc: "Persistent observation for restricted zones, perimeter alerts, route checks, and tactical reconnaissance.",
+  },
+  {
+    title: "Industrial Site Monitoring",
+    tag: "OPERATIONS",
+    image: industrialInspectionImage,
+    desc: "Plant, warehouse, pipeline, and infrastructure monitoring with faster inspection cycles and reduced ground risk.",
+  },
+  {
+    title: "Disaster Damage Assessment",
+    tag: "RAPID REVIEW",
+    image: searchRescueImage,
+    desc: "Fast post-event aerial review for flood zones, landslides, fire damage, blocked routes, and relief planning.",
+  },
+  {
+    title: "Construction Progress",
+    tag: "SITE INTELLIGENCE",
+    image: smartMappingImage,
+    desc: "Periodic aerial records for project tracking, site comparison, earthwork progress, and stakeholder reporting.",
+  },
+  {
+    title: "Roof & Solar Inspection",
+    tag: "ASSET CHECKS",
+    image: industrialInspectionImage,
+    desc: "Safer inspection of rooftops, solar arrays, elevated structures, and hard-to-access facility surfaces.",
+  },
+  {
+    title: "Logistics Route Review",
+    tag: "FIELD MOVEMENT",
+    image: droneHabitatImage,
+    desc: "Aerial route checks for remote access, delivery planning, terrain visibility, and field movement coordination.",
+  },
 ];
 
 const MissionPage = () => {
@@ -231,6 +312,73 @@ const MissionPage = () => {
                   {desc}
                 </p>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Drone Use Cases */}
+      <section className="relative overflow-hidden py-24 lg:py-32 border-t border-border">
+        <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-background via-background/80 to-background pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-end mb-14">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="h-px w-8 bg-tactical" />
+                <span className="label-mono text-tactical">
+                  DRONE USE CASES
+                </span>
+              </div>
+
+              <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+                Where drones create real operational advantage.
+              </h2>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed">
+              UAV systems are useful wherever teams need faster visibility,
+              safer inspection, better documentation, or rapid intelligence from
+              difficult locations.
+            </p>
+          </div>
+
+          <div className="grid grid-flow-dense md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+            {useCases.map((item, index) => (
+              <div
+                key={item.title}
+                className={`group relative min-h-90 overflow-hidden bg-charcoal ${
+                  index === 0 || index === 4 || index === 11 ? "lg:col-span-2" : ""
+                }`}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+
+                <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-background/10" />
+                <div className="absolute inset-0 hud-grid opacity-15" />
+
+                <div className="relative z-10 flex min-h-90 flex-col justify-end p-6 lg:p-8">
+                  <div className="mb-4 flex items-center gap-3">
+                    <span className="h-px w-8 bg-tactical" />
+                    <span className="label-mono text-tactical text-[10px]">
+                      {item.tag}
+                    </span>
+                  </div>
+
+                  <h3 className="font-display text-2xl lg:text-3xl font-bold leading-tight">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 max-w-xl text-sm text-muted-foreground leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
