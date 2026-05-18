@@ -8,31 +8,77 @@ import agricultureImage from "../assets/mission/AG.png";
 import smartMappingImage from "../assets/mission/SM.png";
 import industrialInspectionImage from "../assets/mission/IDM.png";
 import searchRescueImage from "../assets/mission/SR.png";
+import VerticalSlider from "../embla/VerticalSlider";
+
+// const missionPillars = [
+//   {
+//     title: "Our Mission",
+//     desc: "To make advanced UAV capability accessible, reliable, and field-ready for teams operating in real environments.",
+//   },
+//   {
+//     title: "Operational Focus",
+//     desc: "We support surveillance, ISR, mapping, rapid response, training, payload operations, and AI-assisted drone workflows.",
+//   },
+//   {
+//     title: "Training & Readiness",
+//     desc: "Pilot training, familiarization, checklists, and deployment guidance help teams operate UAV systems with confidence.",
+//   },
+//   {
+//     title: "Technology Direction",
+//     desc: "Our roadmap focuses on modular airframes, secure control workflows, payload flexibility, autonomy, and AI-enabled field intelligence.",
+//   },
+//   {
+//     title: "Partner Ecosystem",
+//     desc: "We collaborate with operators, institutions, suppliers, and field teams to align UAV capability with practical mission needs.",
+//   },
+//   {
+//     title: "Field Support",
+//     desc: "Configuration support, validation, maintenance guidance, and documentation keep UAV operations repeatable after delivery.",
+//   },
+// ];
 
 const missionPillars = [
   {
     title: "Our Mission",
     desc: "To make advanced UAV capability accessible, reliable, and field-ready for teams operating in real environments.",
+    glow: "rgba(132, 180, 60, 0.22)",
+    border: "rgba(132, 180, 60, 0.85)",
+    shadow: "rgba(132, 180, 60, 0.24)",
   },
   {
     title: "Operational Focus",
     desc: "We support surveillance, ISR, mapping, rapid response, training, payload operations, and AI-assisted drone workflows.",
+    glow: "rgba(90, 200, 255, 0.22)",
+    border: "rgba(90, 200, 255, 0.85)",
+    shadow: "rgba(90, 200, 255, 0.24)",
   },
   {
     title: "Training & Readiness",
     desc: "Pilot training, familiarization, checklists, and deployment guidance help teams operate UAV systems with confidence.",
+    glow: "rgba(186, 120, 255, 0.22)",
+    border: "rgba(186, 120, 255, 0.85)",
+    shadow: "rgba(186, 120, 255, 0.24)",
   },
   {
     title: "Technology Direction",
     desc: "Our roadmap focuses on modular airframes, secure control workflows, payload flexibility, autonomy, and AI-enabled field intelligence.",
+    glow: "rgba(255, 190, 90, 0.22)",
+    border: "rgba(255, 190, 90, 0.85)",
+    shadow: "rgba(255, 190, 90, 0.24)",
   },
   {
     title: "Partner Ecosystem",
     desc: "We collaborate with operators, institutions, suppliers, and field teams to align UAV capability with practical mission needs.",
+    glow: "rgba(80, 255, 180, 0.2)",
+    border: "rgba(80, 255, 180, 0.85)",
+    shadow: "rgba(80, 255, 180, 0.22)",
   },
   {
     title: "Field Support",
     desc: "Configuration support, validation, maintenance guidance, and documentation keep UAV operations repeatable after delivery.",
+    glow: "rgba(255, 120, 150, 0.2)",
+    border: "rgba(255, 120, 150, 0.85)",
+    shadow: "rgba(255, 120, 150, 0.22)",
   },
 ];
 
@@ -251,7 +297,7 @@ const MissionPage = () => {
 
           {/* Mission Pillars */}
           <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
-            {missionPillars.map((pillar, index) => (
+            {/* {missionPillars.map((pillar, index) => (
               <FloatUpText key={pillar.title} delay={index * 0.08}>
                 <article className="bg-charcoal p-8 h-full zero-g-hover min-w-0">
                   <div className="font-display text-5xl font-bold text-tactical/30 mb-6">
@@ -265,6 +311,101 @@ const MissionPage = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {pillar.desc}
                   </p>
+                </article>
+              </FloatUpText>
+            ))} */}
+
+            {missionPillars.map((pillar, index) => (
+              <FloatUpText key={pillar.title} delay={index * 0.08}>
+                <article
+                  className="group relative h-full min-w-0"
+                  style={{
+                    "--card-glow": pillar.glow,
+                    "--card-border": pillar.border,
+                    "--card-shadow": pillar.shadow,
+                  }}
+                >
+                  <div
+                    className="
+                  relative h-full overflow-hidden bg-charcoal p-8 zero-g-hover
+                  border border-border transition-all duration-500 ease-out
+                  group-hover:border-(--card-border)
+                  group-hover:shadow-[0_0_30px_var(--card-shadow)]
+                "
+                  >
+                    {/* Bottom Glow */}
+                    <div
+                      className="
+                    pointer-events-none absolute -left-24 -bottom-24 h-72 w-72 rounded-full
+                    opacity-0 blur-3xl transition-all duration-700 ease-out
+                    group-hover:opacity-100 group-hover:scale-125
+                  "
+                      style={{
+                        background: `radial-gradient(circle, ${pillar.glow} 0%, rgba(0,0,0,0) 68%)`,
+                      }}
+                    />
+
+                    {/* Soft Gradient Wash */}
+                    <div
+                      className="
+                    pointer-events-none absolute inset-0 opacity-0
+                    transition-opacity duration-700 group-hover:opacity-100
+                  "
+                      style={{
+                        background: `linear-gradient(135deg, transparent 8%, ${pillar.glow} 155%)`,
+                      }}
+                    />
+
+                    {/* HUD Grid */}
+                    <div
+                      className="
+                      pointer-events-none absolute inset-0 hud-grid opacity-0
+                      transition-opacity duration-700 group-hover:opacity-20
+                    "
+                    />
+
+                    {/* Corner Frame */}
+                    <div className="absolute left-0 top-0 h-4 w-4 border-l border-t border-tactical/50 transition-colors duration-500 group-hover:border-(--card-border)" />
+                    <div className="absolute right-0 top-0 h-4 w-4 border-r border-t border-tactical/50 transition-colors duration-500 group-hover:border-(--card-border)" />
+                    <div className="absolute left-0 bottom-0 h-4 w-4 border-l border-b border-tactical/50 transition-colors duration-500 group-hover:border-(--card-border)" />
+                    <div className="absolute right-0 bottom-0 h-4 w-4 border-r border-b border-tactical/50 transition-colors duration-500 group-hover:border-(--card-border)" />
+
+                    <div className="relative z-10 flex h-full flex-col">
+                      <div
+                        className="
+                      font-display text-5xl font-bold text-tactical/30 mb-6
+                      transition-colors duration-500
+                      group-hover:text-(--card-border)
+                    "
+                      >
+                        {String(index + 1).padStart(2, "0")}
+                      </div>
+
+                      <h2
+                        className="
+                        font-display text-2xl font-semibold mb-3 wrap-break-word
+                        transition-colors duration-500
+                        group-hover:text-(--card-border)
+                      "
+                      >
+                        {pillar.title}
+                      </h2>
+
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {pillar.desc}
+                      </p>
+
+                      <div className="mt-auto pt-6">
+                        <div
+                          className="
+                          h-px w-10 bg-tactical/50
+                          transition-all duration-500
+                          group-hover:w-20 group-hover:bg-(--card-border)
+                        "
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </article>
               </FloatUpText>
             ))}
@@ -544,6 +685,32 @@ const MissionPage = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* embla slider */}
+      <section className="border-t border-border bg-background">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 lg:pt-32">
+          <div className="mb-10 max-w-3xl">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="h-px w-8 bg-tactical" />
+
+              <span className="label-mono text-tactical">
+                PLATFORM SEQUENCE
+              </span>
+            </div>
+
+            <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+              Mission flow designed for focused UAV operations
+            </h2>
+
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              A streamlined view of the operational stages that connect product
+              engineering, validation, and deployment readiness.
+            </p>
+          </div>
+        </div>
+
+        <VerticalSlider />
       </section>
     </div>
   );
