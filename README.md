@@ -17,10 +17,11 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
   <!-- 
-  "Gorkha Rifles",
-  "Armoured Corps",
-  "Officers Training Academy",
-  "Quetzalcoatl",
-  "46 Armoured Regiment",
-  "10 Sikh"
+  1200 × 1080 px
+  Aspect ratio approx: 10:9
+
+
+  2000 × 900 px
+  Aspect ratio approx: 20:9
    -->
+
