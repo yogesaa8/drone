@@ -4,10 +4,10 @@ import { FloatUpText } from "../components/animations/Antigravity";
 import missionTrainingImage from "../assets/mission-training.png";
 import defenceSurveillanceImage from "../assets/mission/ds.png";
 import droneHabitatImage from "../assets/mission/DH.png";
-import agricultureImage from "../assets/mission/AG.jpg";
+import agricultureImage from "../assets/mission/AG.png";
 import smartMappingImage from "../assets/mission/SM.png";
-import industrialInspectionImage from "../assets/mission/IDM.jpg";
-import searchRescueImage from "../assets/mission/SR.jpg";
+import industrialInspectionImage from "../assets/mission/IDM.png";
+import searchRescueImage from "../assets/mission/SR.png";
 
 const missionPillars = [
   {

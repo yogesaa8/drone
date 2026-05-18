@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useParams, useNavigate } from "react-router-dom";
 import { FiMaximize2, FiX } from "react-icons/fi";
 import { drones } from "../data/data";
@@ -83,9 +84,9 @@ const DroneDetailsPage = () => {
                 VIEW {String(active + 1).padStart(2, "0")} /{" "}
                 {String(drone.gallery.length).padStart(2, "0")}
               </div>
-              <div className="absolute bottom-3 right-3 label-mono text-[10px] text-tactical bg-background/70 px-2 py-1">
+              {/* <div className="absolute bottom-3 right-3 label-mono text-[10px] text-tactical bg-background/70 px-2 py-1">
                 ● LIVE PREVIEW
-              </div>
+              </div> */}
             </div>
 
             <div className="grid grid-cols-4 gap-2 mt-3">
@@ -218,28 +219,30 @@ const DroneDetailsPage = () => {
         </div>
       </div>
 
-      {isPreviewOpen && (
-        <div
-          className="fixed inset-0 z-100 flex items-center justify-center bg-background/95 p-4 md:p-8"
-          role="dialog"
-          aria-modal="true"
-        >
-          <button
-            type="button"
-            onClick={() => setIsPreviewOpen(false)}
-            aria-label="Close fullscreen image"
-            title="Close"
-            className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center border border-border bg-charcoal text-foreground transition-colors hover:border-tactical hover:text-tactical md:right-8 md:top-8"
+      {isPreviewOpen &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/95 backdrop-blur-md p-4 md:p-8"
+            role="dialog"
+            aria-modal="true"
           >
-            <FiX size={22} />
-          </button>
-          <img
-            src={drone.gallery[active]}
-            alt={`${drone.name} fullscreen view ${active + 1}`}
-            className="max-h-full max-w-full object-contain"
-          />
-        </div>
-      )}
+            <button
+              type="button"
+              onClick={() => setIsPreviewOpen(false)}
+              aria-label="Close fullscreen image"
+              title="Close"
+              className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center border border-border bg-charcoal text-foreground transition-colors hover:border-tactical hover:text-tactical md:right-8 md:top-8"
+            >
+              <FiX size={22} />
+            </button>
+            <img
+              src={drone.gallery[active]}
+              alt={`${drone.name} fullscreen view ${active + 1}`}
+              className="max-h-[85vh] max-w-full object-contain"
+            />
+          </div>,
+          document.body
+        )}
     </div>
   );
 };

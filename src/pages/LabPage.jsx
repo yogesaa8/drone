@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
 
@@ -627,23 +628,6 @@ const LabPage = () => {
               ))}
             </div>
 
-            {/* <div className="mt-8 border border-border bg-charcoal/70 p-5 sm:p-6">
-              <div className="label-mono text-tactical uppercase text-xs mb-4">
-                Workflow Sequence
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                {workflowSequence.map((item, index) => (
-                  <span
-                    key={item}
-                    className="label-mono text-xs uppercase border border-border bg-background/70 px-4 py-2 text-muted-foreground"
-                  >
-                    {String(index + 1).padStart(2, "0")} / {item}
-                  </span>
-                ))}
-              </div>
-            </div> */}
-
             <div className="mt-8 relative overflow-hidden border border-border bg-charcoal/70 p-5 sm:p-6 lg:p-8">
               <div className="absolute inset-0 hud-grid opacity-10 pointer-events-none" />
               <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-tactical/10 blur-3xl pointer-events-none" />
@@ -653,7 +637,7 @@ const LabPage = () => {
                   <div className="flex items-center gap-3 mb-3">
                     <span className="h-px w-8 bg-tactical" />
 
-                    <span className="label-mono text-tactical uppercase text-xs">
+                    <span className="label-mono text-tactical uppercase text-[13px]">
                       Workflow Sequence
                     </span>
                   </div>
@@ -750,40 +734,43 @@ const LabPage = () => {
                         item={d}
                         type="drone"
                         onClick={() => navigate("/drone/" + d.id)}
+                        onZoom={setZoomedItem}
                       />
                     ))}
                   </div>
                 </section>
               </div>
 
-              {zoomedItem && (
-                <div
-                  className="fixed inset-0 z-100 flex items-center justify-center bg-background/95 p-4 md:p-8"
-                  role="dialog"
-                  aria-modal="true"
-                  aria-label={`${zoomedItem.name} image preview`}
-                  onClick={() => setZoomedItem(null)}
-                >
-                  <button
-                    type="button"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      setZoomedItem(null);
-                    }}
-                    aria-label="Close fullscreen image"
-                    title="Close"
-                    className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center border border-border bg-charcoal text-foreground transition-colors hover:border-tactical hover:text-tactical md:right-8 md:top-8"
+              {zoomedItem &&
+                createPortal(
+                  <div
+                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/95 backdrop-blur-md p-4 md:p-8"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label={`${zoomedItem.name} image preview`}
+                    onClick={() => setZoomedItem(null)}
                   >
-                    <FiX size={22} />
-                  </button>
-                  <img
-                    src={zoomedItem.image}
-                    alt={`${zoomedItem.name} fullscreen preview`}
-                    className="max-h-full max-w-full object-contain"
-                    onClick={(event) => event.stopPropagation()}
-                  />
-                </div>
-              )}
+                    <button
+                      type="button"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        setZoomedItem(null);
+                      }}
+                      aria-label="Close fullscreen image"
+                      title="Close"
+                      className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center border border-border bg-charcoal text-foreground transition-colors hover:border-tactical hover:text-tactical md:right-8 md:top-8"
+                    >
+                      <FiX size={22} />
+                    </button>
+                    <img
+                      src={zoomedItem.image}
+                      alt={`${zoomedItem.name} fullscreen preview`}
+                      className="max-h-[85vh] max-w-full object-contain"
+                      onClick={(event) => event.stopPropagation()}
+                    />
+                  </div>,
+                  document.body
+                )}
             </div>
             {/* <ProductsPage /> */}
           </div>

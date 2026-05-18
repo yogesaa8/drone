@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { FiX } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "../components/common/ProductCard";
@@ -66,40 +67,43 @@ const ProductsPage = () => {
                 item={d}
                 type="drone"
                 onClick={() => navigate("/drone/" + d.id)}
+                onZoom={setZoomedItem}
               />
             ))}
           </div>
         </section>
       </div>
 
-      {zoomedItem && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 p-4 md:p-8"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${zoomedItem.name} image preview`}
-          onClick={() => setZoomedItem(null)}
-        >
-          <button
-            type="button"
-            onClick={(event) => {
-              event.stopPropagation();
-              setZoomedItem(null);
-            }}
-            aria-label="Close fullscreen image"
-            title="Close"
-            className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center border border-border bg-charcoal text-foreground transition-colors hover:border-tactical hover:text-tactical md:right-8 md:top-8"
+      {zoomedItem &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/95 backdrop-blur-md p-4 md:p-8"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${zoomedItem.name} image preview`}
+            onClick={() => setZoomedItem(null)}
           >
-            <FiX size={22} />
-          </button>
-          <img
-            src={zoomedItem.image}
-            alt={`${zoomedItem.name} fullscreen preview`}
-            className="max-h-full max-w-full object-contain"
-            onClick={(event) => event.stopPropagation()}
-          />
-        </div>
-      )}
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                setZoomedItem(null);
+              }}
+              aria-label="Close fullscreen image"
+              title="Close"
+              className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center border border-border bg-charcoal text-foreground transition-colors hover:border-tactical hover:text-tactical md:right-8 md:top-8"
+            >
+              <FiX size={22} />
+            </button>
+            <img
+              src={zoomedItem.image}
+              alt={`${zoomedItem.name} fullscreen preview`}
+              className="max-h-[85vh] max-w-full object-contain"
+              onClick={(event) => event.stopPropagation()}
+            />
+          </div>,
+          document.body
+        )}
     </div>
   );
 };
