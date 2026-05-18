@@ -78,7 +78,7 @@ const MissionTechGrid = () => {
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Built for Critical Missions, Engineered for Precision.
+              Built for Critical Missions, Engineered for Precision
             </h2>
           </div>
         </FloatUpText>

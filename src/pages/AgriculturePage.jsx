@@ -108,7 +108,7 @@ const AgriculturePage = () => {
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6">
-                Precision agriculture drone systems for smart farming operations.
+                Precision agriculture drone systems for smart farming operations
               </h1>
 
               <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
@@ -187,7 +187,7 @@ const AgriculturePage = () => {
             <div>
               <SectionHeader
                 kicker="Field Capability"
-                title="Built for crop treatment, field intelligence, and repeatable farm operations."
+                title="Built for crop treatment, field intelligence, and repeatable farm operations"
                 description="The agriculture platform brings payload capacity, stable multirotor control, and field-ready workflow support into one practical UAV system for farms and agritech teams."
               />
 
@@ -239,7 +239,7 @@ const AgriculturePage = () => {
           <div className="mt-20">
             <SectionHeader
               kicker="Operation Flow"
-              title="A clear field workflow from survey to review."
+              title="A clear field workflow from survey to review"
               description="Agriculture drone deployment works best when field data, payload planning, operator control, and post-operation review are handled as one connected process."
             />
 
@@ -269,7 +269,7 @@ const AgriculturePage = () => {
                   Agriculture Drone Consultation
                 </div>
                 <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                  Configure a crop spraying workflow for your field requirement.
+                  Configure a crop spraying workflow for your field requirement
                 </h2>
                 <p className="mt-4 text-muted-foreground max-w-3xl leading-relaxed">
                   Share your crop type, field size, payload requirement, and

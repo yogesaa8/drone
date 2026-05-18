@@ -25,6 +25,7 @@ const Fleet = () => {
               <span className="label-mono text-tactical">
                 ▌ FLEET INVENTORY
               </span>
+              <span className="h-px w-10 bg-tactical" />
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold max-w-2xl leading-tight">
@@ -84,7 +85,7 @@ const Fleet = () => {
                     WebkitBoxOrient: "vertical",
                   }}
                 >
-                  {cleanText(d.name)}
+                  {cleanText(d.name).toUpperCase()}
                 </h3>
 
                 <div className="mt-4 grid grid-cols-2 gap-x-3 gap-y-5 min-h-[132px]">

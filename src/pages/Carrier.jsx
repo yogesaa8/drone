@@ -56,7 +56,7 @@ const Carrier = () => {
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl font-bold leading-tight">
-                Build field-ready UAV systems with Arcanumspace.
+                Build field-ready UAV systems with Arcanumspace
               </h1>
 
               <p className="mt-5 text-muted-foreground leading-relaxed">

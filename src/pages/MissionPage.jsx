@@ -153,6 +153,8 @@ const useCases = [
   },
 ];
 
+const wideCardIndexes = new Set([0, 4, 11]);
+
 const MissionPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -179,7 +181,7 @@ const MissionPage = () => {
 
                 <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
                   To make advanced UAV capability accessible, reliable, and
-                  field-ready.
+                  field-ready
                 </h1>
 
                 <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
@@ -221,7 +223,7 @@ const MissionPage = () => {
             {/* Right Portrait Image - Full Image Visible */}
             <FloatUpText delay={0.1}>
               <div className="relative w-full max-w-130 mx-auto lg:mx-0">
-                <div className="absolute -inset-4 border border-tactical/20 corner-frame" />
+                {/* <div className="absolute -inset-4 border border-tactical/20 corner-frame" /> */}
 
                 <div className="relative border border-border bg-charcoal p-3 corner-frame shadow-2xl overflow-hidden">
                   <div className="relative aspect-1086/1448 w-full overflow-hidden bg-background/40">
@@ -283,7 +285,7 @@ const MissionPage = () => {
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Reliable UAV technology shaped by operational requirements.
+              Reliable UAV technology shaped by operational requirements
             </h2>
 
             <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -333,7 +335,7 @@ const MissionPage = () => {
               </div>
 
               <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-                Where drones create real operational advantage.
+                Where drones create real operational advantage
               </h2>
             </div>
 
@@ -344,7 +346,7 @@ const MissionPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-flow-dense md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+          {/* <div className="grid grid-flow-dense md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             {useCases.map((item, index) => (
               <div
                 key={item.title}
@@ -380,6 +382,71 @@ const MissionPage = () => {
                 </div>
               </div>
             ))}
+          </div> */}
+          <div className="grid grid-flow-dense md:grid-cols-2 lg:grid-cols-3 auto-rows-fr items-stretch gap-px bg-border border border-border">
+            {useCases.map((item, index) => {
+              const isWide = wideCardIndexes.has(index);
+              const imageSrc = isWide && item.wideImage ? item.wideImage : item.image;
+
+              return (
+                <article
+                  key={item.title}
+                  className={`group relative min-h-[360px] overflow-hidden bg-charcoal ${isWide ? "lg:col-span-2" : ""
+                    }`}
+                >
+                  <img
+                    src={imageSrc}
+                    alt={item.title}
+                    className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+
+                  <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-background/10" />
+                  <div className="absolute inset-0 hud-grid opacity-15" />
+
+                  <div className="relative z-10 flex min-h-[360px] flex-col justify-end p-6 lg:p-8">
+                    <div className="w-full max-w-xl">
+                      <div className="mb-4 flex h-[18px] items-center gap-3">
+                        <span className="h-px w-8 shrink-0 bg-tactical" />
+
+                        <span
+                          className="label-mono text-tactical text-[10px] leading-none uppercase tracking-wider overflow-hidden break-words"
+                          style={{
+                            display: "-webkit-box",
+                            WebkitLineClamp: 1,
+                            WebkitBoxOrient: "vertical",
+                          }}
+                        >
+                          {item.tag}
+                        </span>
+                      </div>
+
+                      <h3
+                        className="font-display text-2xl lg:text-3xl font-bold leading-tight h-[76px] overflow-hidden break-words"
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                      >
+                        {item.title}
+                      </h3>
+
+                      <p
+                        className="mt-3 h-[66px] max-w-xl text-sm text-muted-foreground leading-relaxed overflow-hidden break-words transition-colors duration-300 group-hover:text-foreground"
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                      >
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -397,7 +464,7 @@ const MissionPage = () => {
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              From mission requirement to deployment readiness.
+              From mission requirement to deployment readiness
             </h2>
           </div>
 
@@ -438,7 +505,7 @@ const MissionPage = () => {
               </div>
 
               <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-                Building UAV readiness through practical collaboration.
+                Building UAV readiness through practical collaboration
               </h2>
             </div>
 

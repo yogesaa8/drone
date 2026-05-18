@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-x-0 h-px bg-linear-to-r from-transparent via-tactical/60 to-transparent animate-scanner" />
         </div>
-      </div>      
+      </div>
 
       {/* Hero content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-40 pb-32 min-h-screen flex flex-col justify-center">
@@ -45,6 +45,7 @@ const Hero = () => {
               <span className="label-mono text-tactical">
                 TACTICAL UAV PLATFORM / MISSION READY
               </span>
+              <span className="h-px w-10 bg-tactical" />
             </div>
           </FloatUpText>
 

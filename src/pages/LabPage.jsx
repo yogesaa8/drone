@@ -423,7 +423,7 @@ const LabPage = () => {
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6">
-                Building India’s Future Defence Drone Ecosystem.
+                Building India’s Future Defence Drone Ecosystem
               </h1>
 
               <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
@@ -1013,7 +1013,7 @@ const LabPage = () => {
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-5">
-              Transform your institution with a complete drone ecosystem.
+              Transform your institution with a complete drone ecosystem
             </h2>
 
             <p className="text-muted-foreground max-w-3xl mx-auto text-base sm:text-lg leading-relaxed mb-10">

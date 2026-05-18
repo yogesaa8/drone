@@ -21,6 +21,8 @@ const Gallery = () => {
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-10 bg-tactical" />
               <span className="label-mono text-tactical">▌ FIELD ARCHIVE</span>
+              <span className="h-px w-10 bg-tactical" />
+              
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
               Field Operations Gallery

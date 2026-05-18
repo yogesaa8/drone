@@ -140,7 +140,7 @@ export const drones = [
   {
     id: "tinywoop",
     serial: "UAV-RX1-048",
-    name: "Tinywhoop",
+    name: "TINYWHOOP",
     use: "Use for Training and surveillance.",
     image: tinywoop1,
     gallery: [tinywoop2, tinywoop3, tinywoop4, tinywoop5, tinywoop6],
@@ -176,7 +176,7 @@ export const drones = [
   {
     id: "shadow-drop-10",
     serial: "UAV-AHL-301",
-    name: "Shadow Drop 10",
+    name: "SHADOW DROP 10",
     use: "For EW Environment , Antijam Surveillance and Grenade Drop",
     image: shadow1,
     gallery: [shadow1, shadow2, shadow3, shadow4, shadow5],
@@ -194,7 +194,7 @@ export const drones = [
   {
     id: "beetle-5",
     serial: "UAV-VA7-207",
-    name: "Beetle 5",
+    name: "BEETLE 5",
     use: "Training and Surveillance.",
     image: beetle51,
     gallery: [beetle51, beetle52, beetle53, beetle54],
@@ -236,7 +236,7 @@ export const drones = [
   {
     id: "soccer",
     serial: "UAV-RX2-048",
-    name: "Soccer",
+    name: "SHOCCER",
     use: "Use for Protected Training & Maneuver Practice.",
     image: soccer1,
     gallery: [soccer2, soccer3, soccer4],

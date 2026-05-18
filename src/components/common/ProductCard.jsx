@@ -71,7 +71,7 @@ const ProductCard = ({ item, type, onClick, onZoom }) => {
             WebkitBoxOrient: "vertical",
           }}
         >
-          {cleanText(item.name)}
+          {type === "drone" ? cleanText(item.name).toUpperCase() : cleanText(item.name)}
         </h3>
 
         <div className="mt-4 grid grid-cols-2 gap-x-3 gap-y-5 min-h-33">

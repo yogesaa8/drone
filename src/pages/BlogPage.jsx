@@ -87,7 +87,7 @@ const BlogPage = () => {
               </div>
 
               <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight">
-                Drone insights, mission notes, and system briefings.
+                Drone insights, mission notes, and system briefings
               </h1>
 
               <p className="mt-6 text-muted-foreground leading-relaxed">

@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import heroImg from "../assets/about/about_page.png";
+import heroImg from "../assets/about/about_page_top.png";
 import btmImg from "../assets/about/about_page1.jpg";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
-import capabilityImg1 from "../assets/about/WWA.jpg";
+
+import capabilityImg1 from "../assets/about/WWA.png";
 import capabilityImg2 from "../assets/about/about_page.png";
-import capabilityImg3 from "../assets/about/EA.jpg";
-import capabilityImg4 from "../assets/about/AG.jpg";
+import capabilityImg3 from "../assets/about/EA.png";
+import capabilityImg4 from "../assets/about/AG.png";
 import capabilityImg5 from "../assets/about/AI.png";
 import capabilityImg6 from "../assets/about/OD.png";
 
@@ -77,7 +78,7 @@ const AboutPage = () => {
 
                 <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
                   Engineering mission-ready UAV systems for real-world
-                  operations.
+                  operations
                 </h1>
 
                 <p className="mt-6 text-muted-foreground leading-relaxed max-w-2xl">
@@ -139,7 +140,7 @@ const AboutPage = () => {
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
               Built around product engineering, field discipline, and
-              operational readiness.
+              operational readiness
             </h2>
 
             <div className="mt-8 space-y-6 text-muted-foreground leading-relaxed">
@@ -202,7 +203,7 @@ const AboutPage = () => {
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Focused capabilities for reliable UAV deployment.
+              Focused capabilities for reliable UAV deployment
             </h2>
           </div>
 
@@ -253,7 +254,7 @@ const AboutPage = () => {
 
               <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight">
                 Practical UAV systems backed by engineering discipline and field
-                support.
+                support
               </h2>
             </div>
 
