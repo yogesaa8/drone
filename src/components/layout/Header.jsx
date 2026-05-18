@@ -6,7 +6,6 @@ import { IoIosSunny } from "react-icons/io";
 import { AiFillMoon } from "react-icons/ai";
 import black_logo_v1 from "../../assets/logo.png";
 import white_logo_v2 from "../../assets/logov2.png";
-import { droneParts, drones, insideKits } from "../../data/data";
 
 const links = [
   { to: "/", label: "Home" },
@@ -16,54 +15,10 @@ const links = [
 ];
 
 const defenceLinks = [
-  { to: "/products", label: "Drones" },
+  { to: "/products", label: "Drone" },
   { to: "/parts-kits", label: "Components" },
   { to: "/lab", label: "Defence Lab" },
   { to: "/agriculture", label: "Agriculture" },
-];
-
-const agricultureDrone = drones.find((drone) => drone.id === "agro-spray-x6");
-
-const agricultureMenuItems = agricultureDrone
-  ? [
-      agricultureDrone,
-      {
-        ...agricultureDrone,
-        id: `${agricultureDrone.id}-field-system`,
-        name: "Agriculture Drone System",
-        image: agricultureDrone.gallery?.[1] || agricultureDrone.image,
-      },
-    ]
-  : [];
-
-const productMenuSections = [
-  {
-    title: "Drones",
-    to: "/products",
-    items: drones
-      .filter((drone) => drone.id !== "agro-spray-x6")
-      .slice(0, 2)
-      .map((drone) => ({ ...drone, to: `/drone/${drone.id}` })),
-  },
-  {
-    title: "Components",
-    to: "/parts-kits",
-    items: droneParts
-      .slice(0, 2)
-      .map((part) => ({ ...part, to: "/parts-kits" })),
-  },
-  {
-    title: "Defence Lab",
-    to: "/lab",
-    items: insideKits.slice(0, 1).map((kit) => ({ ...kit, to: "/lab" })),
-  },
-  {
-    title: "Agriculture",
-    to: "/agriculture",
-    items: agricultureMenuItems
-      .slice(0, 1)
-      .map((item) => ({ ...item, to: "/agriculture" })),
-  },
 ];
 
 const navClass = ({ isActive }) =>
@@ -197,7 +152,7 @@ const Header = () => {
           onClick={closeMenu}
           className="flex items-center gap-3 group"
         >
-          <div className="w-10 h-10 relative flex items-center justify-center">
+          <div className="w-15 h-15 relative flex items-center justify-center">
             <img
               src={theme === "dark" ? white_logo_v2 : black_logo_v1}
               alt="Arcanumspace Logo"
@@ -209,7 +164,7 @@ const Header = () => {
 
           <div className="flex flex-col leading-none">
             <span className="font-display text-base font-bold tracking-widest">
-              Arcanumspace
+              ARCANUMSPACE
             </span>
           </div>
         </Link>
@@ -250,104 +205,25 @@ const Header = () => {
             </NavLink>
 
             <div
-              className={`fixed left-1/2 top-18 z-50 w-[min(1120px,calc(100vw-3rem))] -translate-x-1/2 border border-border bg-background/98 shadow-2xl backdrop-blur-md transition-all duration-300 ease-out ${
+              className={`absolute left-1/2 top-full z-50 mt-5 w-64 -translate-x-1/2 border border-border bg-background/98 shadow-2xl backdrop-blur-md transition-all duration-300 ease-out ${
                 defenceDropdownOpen
                   ? "visible translate-x-[-50%] translate-y-0 opacity-100"
                   : "invisible translate-x-[-50%] -translate-y-2 opacity-0 pointer-events-none"
               }`}
             >
-              <div className="grid grid-cols-[0.95fr_1.05fr] gap-8 px-5 py-5 lg:px-6">
-                <div>
-                  <div className="label-mono mb-2 text-[10px] text-tactical">
-                    Products
-                  </div>
-                  <div className="mb-4 font-display text-2xl font-bold leading-none">
-                    Products
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    {productMenuSections.slice(0, 2).map((section) => (
-                      <div key={section.title} className="min-w-0">
-                        <div className="mb-2 border-l-2 border-tactical pl-3 font-display text-lg font-bold leading-none">
-                          {section.title}
-                        </div>
-
-                        <div className="space-y-3">
-                          {section.items.map((item) => (
-                            <Link
-                              key={item.id}
-                              to={item.to}
-                              onClick={() => setDefenceDropdownOpen(false)}
-                              className="group/card block border border-border bg-charcoal/45 p-2.5 transition-colors hover:border-tactical/60 hover:bg-charcoal"
-                            >
-                              <div className="aspect-[16/9] overflow-hidden border border-border bg-background">
-                                <img
-                                  src={item.image}
-                                  alt={item.name}
-                                  className="h-full w-full object-contain p-2.5"
-                                  loading="lazy"
-                                />
-                              </div>
-                              <div className="mt-2.5 font-display text-sm font-semibold leading-tight transition-colors group-hover/card:text-tactical">
-                                {item.name}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-
-                        <Link
-                          to={section.to}
-                          onClick={() => setDefenceDropdownOpen(false)}
-                          className="mt-3 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground transition-colors hover:text-tactical"
-                        >
-                          View More <span aria-hidden>&rarr;</span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <div className="label-mono mb-2 text-[10px] text-tactical">
-                    Explore
-                  </div>
-                  <div className="mb-4 font-display text-2xl font-bold leading-none">
-                    Applications
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    {productMenuSections.slice(2).map((section) => {
-                      const item = section.items[0];
-
-                      return (
-                        <Link
-                          key={section.title}
-                          to={section.to}
-                          onClick={() => setDefenceDropdownOpen(false)}
-                          className="group/card block min-w-0 border border-border bg-charcoal/45 p-2.5 transition-colors hover:border-tactical/60 hover:bg-charcoal"
-                        >
-                          <div className="mb-2 border-l-2 border-tactical pl-3 font-display text-lg font-bold leading-none">
-                            {section.title}
-                          </div>
-                          <div className="aspect-[16/9] overflow-hidden border border-border bg-background">
-                            <img
-                              src={item.image}
-                              alt={item.name}
-                              className="h-full w-full object-contain p-2.5"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div className="mt-2.5 font-display text-sm font-semibold leading-tight transition-colors group-hover/card:text-tactical">
-                            {item.name}
-                          </div>
-                          <div className="mt-3 inline-flex items-center gap-2 border-t border-border pt-2.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground transition-colors group-hover/card:text-tactical">
-                            View More <span aria-hidden>&rarr;</span>
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
+              <div className="flex flex-col py-2">
+                {defenceLinks.map((link) => (
+                  <NavLink
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setDefenceDropdownOpen(false)}
+                    className={(state) =>
+                      `${navClass(state)} px-4 py-3 text-xs hover:bg-charcoal/45`
+                    }
+                  >
+                    {link.label}
+                  </NavLink>
+                ))}
               </div>
             </div>
           </div>

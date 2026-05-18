@@ -41,6 +41,7 @@ import chimeraX1 from "../assets/drone/chimeraX1.png"
 import chimeraX2 from "../assets/drone/chimeraX2.png"
 import chimeraX3 from "../assets/drone/chimeraX3.png"
 import chimeraX4 from "../assets/drone/chimeraX4.png"
+import chimeraX5 from "../assets/drone/chimeraX5.png"
 import agri1 from "../assets/drone/agri1.png"
 import agri2 from "../assets/drone/agri2.png"
 import agri3 from "../assets/drone/agri3.png"
@@ -254,7 +255,7 @@ export const drones = [
     name: "CHIMERA-X",
     use: "Hybrid Combat, Surveillance & Tactical Reconnaissance.",
     image: chimeraX1,
-    gallery: [chimeraX1, chimeraX2, chimeraX3, chimeraX4],
+    gallery: [chimeraX1, chimeraX2, chimeraX3, chimeraX4, chimeraX5],
     model: chimeraX,
 
     specs: [
