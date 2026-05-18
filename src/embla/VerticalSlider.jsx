@@ -62,36 +62,47 @@ export default function VerticalSlider() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-black px-6">
-      <div className="w-full max-w-3xl">
+    <div className="relative flex min-h-[520px] items-center justify-center overflow-hidden bg-background px-4 py-12 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
+      <div className="absolute inset-0 hud-grid opacity-35" />
+      <div className="absolute inset-0 scanlines opacity-20" />
+
+      <div className="relative z-10 w-full max-w-4xl">
         {/* SLIDER */}
-        <div className="overflow-hidden border border-white/10" ref={emblaRef}>
+        <div
+          className="corner-frame overflow-hidden border border-border bg-charcoal/90 shadow-[0_24px_80px_-48px_rgba(0,0,0,0.8)] backdrop-blur"
+          ref={emblaRef}
+        >
           {/* CONTAINER */}
-          <div className="flex h-[340px] flex-col">
+          <div className="flex h-[260px] flex-col sm:h-[340px] lg:h-[420px]">
             {slides.map((item, index) => (
               <div
                 key={index}
-                className="flex min-h-full flex-[0_0_100%] items-center justify-center bg-black"
+                className="relative flex min-h-full flex-[0_0_100%] items-center justify-center overflow-hidden bg-background"
               >
-                <h1 className="text-7xl font-bold text-white">{item}</h1>
+                <div className="absolute inset-0 bg-linear-to-br from-tactical/10 via-transparent to-amber-hud/10" />
+                <div className="absolute inset-x-8 top-8 h-px bg-linear-to-r from-transparent via-tactical/50 to-transparent" />
+                <div className="absolute inset-x-8 bottom-8 h-px bg-linear-to-r from-transparent via-tactical/30 to-transparent" />
+                <h1 className="relative font-display text-6xl font-bold text-foreground sm:text-7xl lg:text-8xl">
+                  {item}
+                </h1>
               </div>
             ))}
           </div>
         </div>
 
         {/* CONTROLS */}
-        <div className="mt-7 flex items-center justify-between">
+        <div className="mt-5 flex flex-col items-stretch gap-4 sm:mt-7 sm:flex-row sm:items-center sm:justify-between">
           {/* LEFT BUTTONS */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3 sm:justify-start">
             <button
               onClick={scrollPrev}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-black text-xl text-white transition hover:border-white/20"
+              className="flex h-11 w-11 items-center justify-center border border-border bg-charcoal text-lg text-foreground transition hover:border-tactical hover:text-tactical sm:h-12 sm:w-12"
             >
               <FaArrowUp />
             </button>
             <button
               onClick={scrollNext}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-black text-xl text-white transition hover:border-white/20"
+              className="flex h-11 w-11 items-center justify-center border border-border bg-charcoal text-lg text-foreground transition hover:border-tactical hover:text-tactical sm:h-12 sm:w-12"
             >
               <FaArrowDown />
             </button>
@@ -100,7 +111,7 @@ export default function VerticalSlider() {
           {/* START / STOP BUTTON */}
           <button
             onClick={toggleAutoplay}
-            className="rounded-full border border-white/10 bg-black px-10 py-3 text-white transition hover:border-white/20 flex items-center gap-2"
+            className="flex items-center justify-center gap-2 border border-tactical bg-tactical px-8 py-3 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition hover:bg-transparent hover:text-tactical sm:px-10"
           >
             {playing ? (
               <>
@@ -116,10 +127,10 @@ export default function VerticalSlider() {
           </button>
 
           {/* SINGLE PROGRESS BAR */}
-          <div className="w-28 overflow-hidden rounded-full bg-white/10">
+          <div className="h-1 w-full overflow-hidden bg-border sm:w-28">
             <div
               key={selectedIndex}
-              className={`h-1 rounded-full bg-white ${
+              className={`h-full bg-tactical ${
                 playing ? "animate-progress" : "w-0"
               }`}
             />

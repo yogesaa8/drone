@@ -10,6 +10,7 @@ import capabilityImg3 from "../assets/about/EA.png";
 import capabilityImg4 from "../assets/about/AG.png";
 import capabilityImg5 from "../assets/about/AI.png";
 import capabilityImg6 from "../assets/about/OD.png";
+import VerticalSlider from "../embla/VerticalSlider";
 
 const capabilities = [
   {
@@ -103,7 +104,7 @@ const AboutPage = () => {
                   alt="Arcanumspace tactical drone platform"
                   className="aspect-4/3 w-full object-cover"
                 />
-              
+
                 <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
 
                 <div className="absolute bottom-4 left-4 label-mono text-[10px] bg-background/80 px-3 py-2">
@@ -286,6 +287,32 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* embla slider */}
+      <section className="border-t border-border bg-background">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 lg:pt-32">
+          <div className="mb-10 max-w-3xl">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="h-px w-8 bg-tactical" />
+
+              <span className="label-mono text-tactical">
+                PLATFORM SEQUENCE
+              </span>
+            </div>
+
+            <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+              Mission flow designed for focused UAV operations
+            </h2>
+
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              A streamlined view of the operational stages that connect product
+              engineering, validation, and deployment readiness.
+            </p>
+          </div>
+        </div>
+
+        <VerticalSlider />
       </section>
     </div>
   );
