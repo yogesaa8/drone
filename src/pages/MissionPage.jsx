@@ -252,14 +252,14 @@ const MissionPage = () => {
                 {/* <div className="absolute -inset-4 border border-tactical/20 corner-frame" /> */}
 
                 <div className="relative border border-border bg-charcoal p-3 corner-frame shadow-2xl overflow-hidden">
-                  <div className="relative aspect-1086/1448 w-full overflow-hidden bg-background/40">
+                  {/* <div className="relative aspect-1086/1448 w-full overflow-hidden bg-background/40">
                     <img
                       src={missionTrainingImage}
                       alt="Arcanumspace UAV training and certification"
                       className="w-full h-full object-contain object-center"
                       loading="eager"
                     />
-                  </div>
+                  </div> */}
 
                   <div className="mt-3 border border-border bg-background/70 px-4 py-3 corner-frame">
                     <div className="label-mono text-tactical text-[10px] mb-1">
@@ -277,24 +277,6 @@ const MissionPage = () => {
 
           {/* Mission Pillars */}
           <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
-            {/* {missionPillars.map((pillar, index) => (
-              <FloatUpText key={pillar.title} delay={index * 0.08}>
-                <article className="bg-charcoal p-8 h-full zero-g-hover min-w-0">
-                  <div className="font-display text-5xl font-bold text-tactical/30 mb-6">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-
-                  <h2 className="font-display text-2xl font-semibold mb-3 wrap-break-word">
-                    {pillar.title}
-                  </h2>
-
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {pillar.desc}
-                  </p>
-                </article>
-              </FloatUpText>
-            ))} */}
-
             {missionPillars.map((pillar, index) => (
               <FloatUpText key={pillar.title} delay={index * 0.08}>
                 <article
@@ -615,54 +597,79 @@ const MissionPage = () => {
       </section>
 
       {/* Partner Ecosystem */}
-      <section className="py-24 lg:py-32 border-t border-border bg-charcoal/20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="h-px w-8 bg-tactical" />
+      <section className="relative overflow-hidden border-t border-border bg-charcoal/20 py-16 sm:py-20 lg:py-28">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_35%)]" />
 
-                <span className="label-mono text-tactical">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
+            {/* Left Content */}
+            <div className="order-1">
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-px w-8 bg-tactical sm:w-10" />
+
+                <span className="label-mono text-[10px] tracking-[0.28em] text-tactical sm:text-xs">
                   PARTNER ECOSYSTEM
                 </span>
               </div>
 
-              <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+              <h2 className="font-display max-w-2xl text-3xl font-bold leading-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
                 Building UAV readiness through practical collaboration
               </h2>
-            </div>
 
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p>
-                Reliable UAV operations require more than a capable aircraft.
-                They require trained operators, clear procedures, appropriate
-                payloads, responsive support, and systems that fit the mission
-                rather than forcing the mission to fit the system.
-              </p>
+              {/* Subtext heading ke niche */}
+              <div className="mt-6 max-w-2xl space-y-5 text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
+                <p>
+                  Reliable UAV operations require more than a capable aircraft.
+                  They require trained operators, clear procedures, appropriate
+                  payloads, responsive support, and systems that fit the mission
+                  rather than forcing the mission to fit the system.
+                </p>
 
-              <p>
-                We work with customers, training partners, technology vendors,
-                and field teams to refine platform configurations, improve
-                operator readiness, and keep UAV deployment practical at scale.
-              </p>
+                <p>
+                  We work with customers, training partners, technology vendors,
+                  and field teams to refine platform configurations, improve
+                  operator readiness, and keep UAV deployment practical at
+                  scale.
+                </p>
 
-              <p>
-                Our direction is steady: strengthen surveillance capability,
-                expand training access, improve ISR workflows, and deliver drone
-                systems that teams can trust in demanding field use.
-              </p>
+                <p>
+                  Our direction is steady: strengthen surveillance capability,
+                  expand training access, improve ISR workflows, and deliver
+                  drone systems that teams can trust in demanding field use.
+                </p>
+              </div>
 
-              <div className="border border-border bg-charcoal p-6 corner-frame">
-                <div className="label-mono text-tactical text-[10px] mb-3">
+              {/* Readiness Box */}
+              <div className="mt-8 max-w-2xl border border-border bg-charcoal/80 p-5 sm:p-6 corner-frame">
+                <div className="label-mono mb-3 text-[10px] tracking-[0.25em] text-tactical">
                   TRAINING & READINESS
                 </div>
 
-                <p className="text-sm leading-relaxed">
+                <p className="text-sm leading-7 text-muted-foreground sm:text-[15px]">
                   Arcanumspace supports UAV readiness through system
                   configuration, pilot training, deployment planning, field
                   validation, and practical documentation for repeatable
                   operations.
                 </p>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="order-2">
+              <div className="relative mx-auto w-full max-w-140 overflow-hidden border border-border bg-background/40 shadow-2xl shadow-black/25 lg:ml-auto">
+                <div className="aspect-4/5 w-full sm:aspect-16/11 lg:aspect-4/5 corner-frame">
+                  <img
+                    src={missionTrainingImage}
+                    alt="Arcanumspace UAV training and certification"
+                    className="h-full w-full object-cover object-center"
+                    loading="eager"
+                  />
+                </div>
+
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent" />
+
+                <div className="pointer-events-none absolute left-4 top-4 h-10 w-10 border-l border-t border-tactical/70" />
+                <div className="pointer-events-none absolute bottom-4 right-4 h-10 w-10 border-b border-r border-tactical/70" />
               </div>
             </div>
           </div>
