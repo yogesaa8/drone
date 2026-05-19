@@ -125,7 +125,7 @@ export default function VerticalSlider() {
   };
 
   return (
-    <section className="relative flex min-h-[520px] items-center justify-center overflow-hidden bg-background px-4 py-12 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
+    <section className="relative flex min-h-130 items-center justify-center overflow-hidden bg-background px-4 py-12 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
       <div className="absolute inset-0 hud-grid opacity-35" />
       <div className="absolute inset-0 scanlines opacity-20" />
 
@@ -134,7 +134,7 @@ export default function VerticalSlider() {
           ref={emblaRef}
           className="corner-frame overflow-hidden border border-border bg-charcoal/90 shadow-[0_24px_80px_-48px_rgba(0,0,0,0.8)] backdrop-blur"
         >
-          <div className="flex h-[260px] flex-col sm:h-[340px] lg:h-[420px]">
+          <div className="flex h-65 flex-col sm:h-85 lg:h-105">
             {slides.map((slide, index) => (
               <div
                 key={`${slide.title}-${index}`}

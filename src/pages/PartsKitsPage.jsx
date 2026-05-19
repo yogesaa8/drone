@@ -99,7 +99,7 @@ const PartsKitsPage = () => {
       {zoomedItem &&
         createPortal(
           <div
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/95 backdrop-blur-md p-4 md:p-8"
+            className="fixed inset-0 z-9999 flex items-center justify-center bg-background/95 backdrop-blur-md p-4 md:p-8"
             role="dialog"
             aria-modal="true"
             aria-label={`${zoomedItem.name} image preview`}

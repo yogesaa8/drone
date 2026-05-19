@@ -46,7 +46,7 @@ const Fleet = () => {
               className="group bg-charcoal flex flex-col h-full min-w-0 cursor-pointer relative"
               onClick={() => navigate("/drone/" + d.id)}
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-background shrink-0">
+              <div className="relative aspect-4/3 overflow-hidden bg-background shrink-0">
                 <img
                   src={d.image}
                   alt={d.name}
@@ -67,7 +67,7 @@ const Fleet = () => {
 
               <div className="p-5 flex flex-col flex-1 min-w-0">
                 <div
-                  className="label-mono text-tactical text-[10px] leading-[1.8] tracking-[0.28em] h-[78px] overflow-hidden break-words"
+                  className="label-mono text-tactical text-[10px] leading-[1.8] tracking-[0.28em] h-19.5 overflow-hidden wrap-break-word"
                   style={{
                     display: "-webkit-box",
                     WebkitLineClamp: 4,
@@ -78,7 +78,7 @@ const Fleet = () => {
                 </div>
 
                 <h3
-                  className="font-display text-xl font-bold leading-tight h-[56px] overflow-hidden break-words"
+                  className="font-display text-xl font-bold leading-tight h-14 overflow-hidden wrap-break-word"
                   style={{
                     display: "-webkit-box",
                     WebkitLineClamp: 2,
@@ -88,17 +88,17 @@ const Fleet = () => {
                   {cleanText(d.name).toUpperCase()}
                 </h3>
 
-                <div className="mt-4 grid grid-cols-2 gap-x-3 gap-y-5 min-h-[132px]">
+                <div className="mt-4 grid grid-cols-2 gap-x-3 gap-y-5 min-h-33">
                   {d.specs.slice(0, 4).map(([k, v]) => (
                     <div
                       key={k}
                       className="border-l border-tactical/40 pl-2 min-w-0"
                     >
-                      <div className="label-mono text-[9px] leading-relaxed break-words">
+                      <div className="label-mono text-[9px] leading-relaxed wrap-break-word">
                         {cleanText(k)}
                       </div>
 
-                      <div className="text-sm font-semibold mt-1 leading-snug break-words">
+                      <div className="text-sm font-semibold mt-1 leading-snug wrap-break-word">
                         {cleanText(v)}
                       </div>
                     </div>

@@ -88,7 +88,7 @@ const MissionTechGrid = () => {
             {combinedData.map((c, i) => (
               <div
                 key={c.mission}
-                className="relative overflow-hidden bg-charcoal p-8 group hover:bg-background zero-g-hover min-w-0 min-h-[310px] flex"
+                className="relative overflow-hidden bg-charcoal p-8 group hover:bg-background zero-g-hover min-w-0 min-h-77.5 flex"
               >
                 {/* Background Image */}
                 <img
@@ -109,7 +109,7 @@ const MissionTechGrid = () => {
                 {/* Content */}
                 <div className="relative z-10 flex h-full w-full flex-col min-w-0">
                   {/* Number Fixed Area */}
-                  <div className="h-[54px] flex items-start justify-between shrink-0">
+                  <div className="h-13.5 flex items-start justify-between shrink-0">
                     <span className="font-display text-5xl font-bold text-tactical/40 group-hover:text-tactical transition-colors leading-none">
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -117,7 +117,7 @@ const MissionTechGrid = () => {
 
                   {/* Title Fixed Area */}
                   <h3
-                    className="font-display text-xl font-semibold leading-tight h-[32px] overflow-hidden break-words"
+                    className="font-display text-xl font-semibold leading-tight h-8 overflow-hidden wrap-break-word"
                     style={{
                       display: "-webkit-box",
                       WebkitLineClamp: 1,
@@ -129,7 +129,7 @@ const MissionTechGrid = () => {
 
                   {/* Description Fixed Area */}
                   <p
-                    className="text-sm text-muted-foreground leading-relaxed h-[48px] overflow-hidden mt-1 break-words"
+                    className="text-sm text-muted-foreground leading-relaxed h-12 overflow-hidden mt-1 wrap-break-word"
                     style={{
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
@@ -143,18 +143,18 @@ const MissionTechGrid = () => {
                   <div className="h-px bg-linear-to-r from-tactical/50 to-transparent my-6 shrink-0" />
 
                   {/* Tech Fixed Area */}
-                  <div className="flex items-start gap-2 min-h-[38px] mb-2">
-                    <span className="text-tactical text-sm leading-none mt-[2px] w-4 shrink-0 flex justify-center">
+                  <div className="flex items-start gap-2 min-h-9.5 mb-2">
+                    <span className="text-tactical text-sm leading-none mt-0.5 w-4 shrink-0 flex justify-center">
                       {c.techIcon}
                     </span>
 
-                    <span className="label-mono text-tactical text-[10px] tracking-wider leading-relaxed break-words">
+                    <span className="label-mono text-tactical text-[10px] tracking-wider leading-relaxed wrap-break-word">
                       POWERED BY: {c.tech.toUpperCase()}
                     </span>
                   </div>
 
                   <p
-                    className="text-xs text-muted-foreground/90 leading-relaxed overflow-hidden break-words"
+                    className="text-xs text-muted-foreground/90 leading-relaxed overflow-hidden wrap-break-word"
                     style={{
                       display: "-webkit-box",
                       WebkitLineClamp: 2,

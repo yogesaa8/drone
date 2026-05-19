@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import heroImg from "../assets/about/about_page_top.webp";
 import btmImg from "../assets/about/about_page1.webp";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
@@ -53,7 +53,38 @@ const metrics = [
   ["FIELD", "Deployment support model"],
 ];
 
+const teamMembers = [
+  {
+    name: "Mary Jane",
+    role: "Founder",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
+    bg: "bg-[#c9dddd]",
+    position: "object-center",
+  },
+  {
+    name: "Emma Grace",
+    role: "Founder",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80",
+    bg: "bg-[#26384a]",
+    position: "object-center",
+  },
+  {
+    name: "John Paul",
+    role: "Founder",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    bg: "bg-[#f4c66f]",
+    position: "object-center",
+  },
+];
+
 const AboutPage = () => {
+  const defaultActiveMember = 0;
+  const [activeMemberIndex, setActiveMemberIndex] =
+    useState(defaultActiveMember);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -287,7 +318,115 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      
+
+      {/* Team Section */}
+      <section className="py-24 lg:py-32 border-t border-border">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-14 items-center">
+            <FloatUpText>
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="h-px w-8 bg-tactical" />
+
+                  <span className="label-mono text-tactical">
+                    LEADERSHIP TEAM
+                  </span>
+                </div>
+
+                <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight">
+                  People behind the mission-ready UAV ecosystem
+                </h2>
+
+                <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
+                  A focused founding team shaping Arcanumspace through product
+                  discipline, engineering clarity, and field-first execution.
+                </p>
+              </div>
+            </FloatUpText>
+
+            <FloatUpText delay={0.15}>
+              <div
+                onMouseLeave={() => setActiveMemberIndex(defaultActiveMember)}
+                className="flex items-center justify-start lg:justify-center gap-3 sm:gap-5 w-full overflow-x-auto pb-3"
+              >
+                {teamMembers.map((member, index) => {
+                  const isActive = activeMemberIndex === index;
+
+                  return (
+                    <button
+                      key={member.name}
+                      type="button"
+                      onMouseEnter={() => setActiveMemberIndex(index)}
+                      onFocus={() => setActiveMemberIndex(index)}
+                      onClick={() => setActiveMemberIndex(index)}
+                      className={`
+                        relative shrink-0 overflow-hidden cursor-pointer border border-border
+                        h-71.25 sm:h-77.5 rounded-[42px] sm:rounded-[52px]
+                        transition-[width,box-shadow] duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
+                        focus:outline-none
+                        ${member.bg}
+                        ${
+                          isActive
+                            ? "w-57.5 sm:w-87.5 shadow-[0_20px_60px_-35px_rgba(140,180,90,0.65)]"
+                            : "w-19 sm:w-27.5"
+                        }
+                      `}
+                    >
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        draggable="false"
+                        className={`
+                          absolute inset-0 h-full w-full object-cover select-none
+                          transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
+                          ${member.position}
+                          ${isActive ? "scale-100" : "scale-110"}
+                        `}
+                      />
+
+                      <div
+                        className={`
+                          absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent
+                          transition-opacity duration-500
+                          ${isActive ? "opacity-100" : "opacity-0"}
+                        `}
+                      />
+
+                      <div
+                        className={`
+                          absolute inset-0 hud-grid pointer-events-none
+                          transition-opacity duration-500
+                          ${isActive ? "opacity-20" : "opacity-0"}
+                        `}
+                      />
+
+                      <div
+                        className={`
+                          absolute left-0 right-0 bottom-7 z-10 text-center text-white
+                          transition-all duration-500
+                          ${
+                            isActive
+                              ? "opacity-100 translate-y-0"
+                              : "opacity-0 translate-y-5 pointer-events-none"
+                          }
+                        `}
+                      >
+                        <h3 className="text-[20px] font-medium leading-none">
+                          {member.name}
+                        </h3>
+
+                        <p className="mt-2 text-[13px] font-normal opacity-95">
+                          {member.role}
+                        </p>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </FloatUpText>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

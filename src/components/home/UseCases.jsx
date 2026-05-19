@@ -59,7 +59,7 @@ const UseCases = () => {
                                         {c.i}
                                     </div>
                                 </div>
-                                <h3 className="font-display text-xl font-semibold mb-2 break-words">{c.t}</h3>
+                                <h3 className="font-display text-xl font-semibold mb-2 wrap-break-word">{c.t}</h3>
                                 <p className="text-sm text-muted-foreground leading-relaxed">{c.d}</p>
                             </div>
                         ))}

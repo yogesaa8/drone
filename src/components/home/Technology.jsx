@@ -65,9 +65,9 @@ const Technology = () => {
                                     MODULE {String(i + 1).padStart(2, "0")}
                                 </span>
                             </div>
-                            <h3 className="font-display text-lg font-semibold mb-2 break-words">{f.title}</h3>
+                            <h3 className="font-display text-lg font-semibold mb-2 wrap-break-word">{f.title}</h3>
                             <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-                            <div className="mt-5 h-px bg-gradient-to-r from-tactical/40 to-transparent" />
+                            <div className="mt-5 h-px bg-linear-to-r from-tactical/40 to-transparent" />
                         </div>
                     ))}
                 </div>

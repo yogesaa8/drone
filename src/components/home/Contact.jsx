@@ -73,7 +73,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-background/45" />
 
         {/* Smooth fade without hiding the map completely */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/25 to-background/80" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/80 via-background/25 to-background/80" />
 
         {/* Tactical green glow */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,rgba(171,188,80,0.22),transparent_40%)]" />

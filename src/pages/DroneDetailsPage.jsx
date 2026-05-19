@@ -64,7 +64,7 @@ const DroneDetailsPage = () => {
         <div className="grid lg:grid-cols-2 gap-px bg-border">
           {/* Image gallery */}
           <div className="bg-charcoal p-6 lg:p-8">
-            <div className="relative aspect-[4/3] bg-background corner-frame overflow-hidden">
+            <div className="relative aspect-4/3 bg-background corner-frame overflow-hidden">
               <img
                 src={drone.gallery[active]}
                 alt={`${drone.name} view ${active + 1}`}
@@ -222,7 +222,7 @@ const DroneDetailsPage = () => {
       {isPreviewOpen &&
         createPortal(
           <div
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/95 backdrop-blur-md p-4 md:p-8"
+            className="fixed inset-0 z-9999 flex items-center justify-center bg-background/95 backdrop-blur-md p-4 md:p-8"
             role="dialog"
             aria-modal="true"
           >

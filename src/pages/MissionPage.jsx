@@ -513,7 +513,7 @@ const MissionPage = () => {
               return (
                 <article
                   key={item.title}
-                  className={`group relative min-h-[360px] overflow-hidden bg-charcoal ${
+                  className={`group relative min-h-90 overflow-hidden bg-charcoal ${
                     isWide ? "lg:col-span-2" : ""
                   }`}
                 >
@@ -527,13 +527,13 @@ const MissionPage = () => {
                   <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-background/10" />
                   <div className="absolute inset-0 hud-grid opacity-15" />
 
-                  <div className="relative z-10 flex min-h-[360px] flex-col justify-end p-6 lg:p-8">
+                  <div className="relative z-10 flex min-h-90 flex-col justify-end p-6 lg:p-8">
                     <div className="w-full max-w-xl">
-                      <div className="mb-4 flex h-[18px] items-center gap-3">
+                      <div className="mb-4 flex h-4.5 items-center gap-3">
                         <span className="h-px w-8 shrink-0 bg-tactical" />
 
                         <span
-                          className="label-mono text-tactical text-[10px] leading-none uppercase tracking-wider overflow-hidden break-words"
+                          className="label-mono text-tactical text-[10px] leading-none uppercase tracking-wider overflow-hidden wrap-break-word"
                           style={{
                             display: "-webkit-box",
                             WebkitLineClamp: 1,
@@ -545,7 +545,7 @@ const MissionPage = () => {
                       </div>
 
                       <h3
-                        className="font-display text-2xl lg:text-3xl font-bold leading-tight h-[76px] overflow-hidden break-words"
+                        className="font-display text-2xl lg:text-3xl font-bold leading-tight h-19 overflow-hidden wrap-break-word"
                         style={{
                           display: "-webkit-box",
                           WebkitLineClamp: 2,
@@ -556,7 +556,7 @@ const MissionPage = () => {
                       </h3>
 
                       <p
-                        className="mt-3 h-[66px] max-w-xl text-sm text-muted-foreground leading-relaxed overflow-hidden break-words transition-colors duration-300 group-hover:text-foreground"
+                        className="mt-3 h-16.5 max-w-xl text-sm text-muted-foreground leading-relaxed overflow-hidden wrap-break-word transition-colors duration-300 group-hover:text-foreground"
                         style={{
                           display: "-webkit-box",
                           WebkitLineClamp: 3,

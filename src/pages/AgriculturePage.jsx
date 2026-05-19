@@ -180,7 +180,7 @@ const AgriculturePage = () => {
               <AgricultureImage
                 src={midImage}
                 alt="Agriculture drone payload and spraying platform"
-                className="aspect-[4/3] w-full"
+                className="aspect-4/3 w-full"
               />
             ) : null}
 

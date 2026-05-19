@@ -656,7 +656,7 @@ const LabPage = () => {
                 {workflowSequence.map((step, index) => (
                   <article
                     key={step.title}
-                    className="group relative overflow-hidden bg-background/70 p-5 min-h-[170px] zero-g-hover"
+                    className="group relative overflow-hidden bg-background/70 p-5 min-h-42.5 zero-g-hover"
                   >
                     <div className="absolute inset-0 bg-linear-to-br from-tactical/0 via-transparent to-tactical/0 group-hover:from-tactical/10 group-hover:to-tactical/5 transition-all duration-500 pointer-events-none" />
 
@@ -744,7 +744,7 @@ const LabPage = () => {
               {zoomedItem &&
                 createPortal(
                   <div
-                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/95 backdrop-blur-md p-4 md:p-8"
+                    className="fixed inset-0 z-9999 flex items-center justify-center bg-background/95 backdrop-blur-md p-4 md:p-8"
                     role="dialog"
                     aria-modal="true"
                     aria-label={`${zoomedItem.name} image preview`}
@@ -993,7 +993,7 @@ const LabPage = () => {
                     MATERIAL {String(index + 1).padStart(2, "0")}
                   </div>
 
-                  <h3 className="font-display text-xl font-semibold mb-3 break-words">
+                  <h3 className="font-display text-xl font-semibold mb-3 wrap-break-word">
                     {title}
                   </h3>
 
