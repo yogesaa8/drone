@@ -1,6 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import worldMap from "../../assets/world-map.png";
+import worldMap from "../../assets/world-map.webp";
 
 function Label({ children }) {
   return <div className="label-mono text-[10px] mb-2">{children}</div>;

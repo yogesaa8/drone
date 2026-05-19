@@ -4,12 +4,12 @@ import Autoplay from "embla-carousel-autoplay";
 import { IoIosPause, IoIosPlay } from "react-icons/io";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
-import emb1 from "../assets/mission/emble/emb1.jpg";
-import emb2 from "../assets/mission/emble/emb2.jpg";
-import emb3 from "../assets/mission/emble/emb3.jpg";
-import emb4 from "../assets/mission/emble/emb4.jpg";
-import emb5 from "../assets/mission/emble/emb5.jpg";
-import emb6 from "../assets/mission/emble/emb6.jpg";
+import emb1 from "../assets/mission/emble/emb1.webp";
+import emb2 from "../assets/mission/emble/emb2.webp";
+import emb3 from "../assets/mission/emble/emb3.webp";
+import emb4 from "../assets/mission/emble/emb4.webp";
+import emb5 from "../assets/mission/emble/emb5.webp";
+import emb6 from "../assets/mission/emble/emb6.webp";
 
 // apne actual video file name/extension ke according path change kar lena
 import embVid from "../assets/mission/emble/embVid.mp4";

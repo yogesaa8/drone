@@ -1,15 +1,15 @@
 import { useEffect } from "react";
-import heroImg from "../assets/about/about_page_top.png";
-import btmImg from "../assets/about/about_page1.jpg";
+import heroImg from "../assets/about/about_page_top.webp";
+import btmImg from "../assets/about/about_page1.webp";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
 
-import capabilityImg1 from "../assets/about/WWA.png";
-import capabilityImg2 from "../assets/about/about_page.png";
-import capabilityImg3 from "../assets/about/EA.png";
-import capabilityImg4 from "../assets/about/AG.png";
-import capabilityImg5 from "../assets/about/AI.png";
-import capabilityImg6 from "../assets/about/OD.png";
+import capabilityImg1 from "../assets/about/WWA.webp";
+import capabilityImg2 from "../assets/about/about_page.webp";
+import capabilityImg3 from "../assets/about/EA.webp";
+import capabilityImg4 from "../assets/about/AG.webp";
+import capabilityImg5 from "../assets/about/AI.webp";
+import capabilityImg6 from "../assets/about/OD.webp";
 
 const capabilities = [
   {

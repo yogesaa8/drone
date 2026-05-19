@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import b1 from "../assets/blog/b1.png";
-import b2 from "../assets/blog/b2.png";
-import b3 from "../assets/blog/b3.png";
-import b4 from "../assets/blog/b4.png";
-import b5 from "../assets/blog/b5.png";
-import b6 from "../assets/blog/b6.png";
+import b1 from "../assets/blog/b1.webp";
+import b2 from "../assets/blog/b2.webp";
+import b3 from "../assets/blog/b3.webp";
+import b4 from "../assets/blog/b4.webp";
+import b5 from "../assets/blog/b5.webp";
+import b6 from "../assets/blog/b6.webp";
 
 import { FloatUpText } from "../components/animations/Antigravity";
 

@@ -1,13 +1,20 @@
 import { useEffect } from "react";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
 import { FloatUpText } from "../components/animations/Antigravity";
-import missionTrainingImage from "../assets/mission-training.png";
-import defenceSurveillanceImage from "../assets/mission/ds.png";
-import droneHabitatImage from "../assets/mission/DH.png";
-import agricultureImage from "../assets/mission/AG.png";
-import smartMappingImage from "../assets/mission/SM.png";
-import industrialInspectionImage from "../assets/mission/IDM.png";
-import searchRescueImage from "../assets/mission/SR.png";
+import missionTrainingImage from "../assets/mission/mission-training.png";
+import police from "../assets/mission/police.webp";
+import logistic from "../assets/mission/logistic.webp";
+import search from "../assets/mission/search.webp";
+import WindTurbine from "../assets/mission/WindTurbine.webp";
+import Forest from "../assets/mission/Forest&Wildlife.webp";
+import Agriculture from "../assets/mission/Agriculture&Crop.webp";
+import Survey from "../assets/mission/Survey&Mapping.webp";
+import bordermonitoring from "../assets/mission/bordermonitoring.webp";
+import IndustrialSite from "../assets/mission/IndustrialSite.webp";
+import DisasterDamage from "../assets/mission/DisasterDamage.webp";
+import ConstructionProgress from "../assets/mission/ConstructionProgress.webp";
+import solar from "../assets/mission/roof&solar.webp";
+
 import VerticalSlider from "../embla/VerticalSlider";
 
 const missionPillars = [
@@ -101,73 +108,73 @@ const useCases = [
   {
     title: "Police & Public Safety",
     tag: "LAW ENFORCEMENT",
-    image: defenceSurveillanceImage,
+    image: police,
     desc: "Aerial overwatch for crowd monitoring, traffic response, incident documentation, and safer field coordination.",
   },
   {
     title: "Wind Turbine Inspection",
     tag: "ENERGY ASSETS",
-    image: industrialInspectionImage,
+    image: WindTurbine,
     desc: "Close visual inspection of blades, towers, and hard-to-reach energy infrastructure without risky manual access.",
   },
   {
     title: "Forest & Wildlife Monitoring",
     tag: "ENVIRONMENT",
-    image: droneHabitatImage,
+    image: Forest,
     desc: "Rapid terrain observation for forest patrols, wildlife tracking, fire-risk review, and remote area assessment.",
   },
   {
     title: "Agriculture & Crop Health",
     tag: "SMART FARMING",
-    image: agricultureImage,
+    image: Agriculture,
     desc: "Crop spraying, field mapping, irrigation review, plantation checks, and precision agriculture workflows.",
   },
   {
     title: "Search & Rescue",
     tag: "EMERGENCY RESPONSE",
-    image: searchRescueImage,
+    image: search,
     desc: "Thermal-guided search, missing-person support, disaster assessment, and fast visibility over difficult terrain.",
   },
   {
     title: "Survey & Mapping",
     tag: "GEOSPATIAL",
-    image: smartMappingImage,
+    image: Survey,
     desc: "High-resolution aerial capture for land survey, construction planning, stockpile review, and GIS documentation.",
   },
   {
     title: "Border & Perimeter Watch",
     tag: "SECURITY",
-    image: defenceSurveillanceImage,
+    image: bordermonitoring,
     desc: "Persistent observation for restricted zones, perimeter alerts, route checks, and tactical reconnaissance.",
   },
   {
     title: "Industrial Site Monitoring",
     tag: "OPERATIONS",
-    image: industrialInspectionImage,
+    image: IndustrialSite,
     desc: "Plant, warehouse, pipeline, and infrastructure monitoring with faster inspection cycles and reduced ground risk.",
   },
   {
     title: "Disaster Damage Assessment",
     tag: "RAPID REVIEW",
-    image: searchRescueImage,
+    image: DisasterDamage,
     desc: "Fast post-event aerial review for flood zones, landslides, fire damage, blocked routes, and relief planning.",
   },
   {
     title: "Construction Progress",
     tag: "SITE INTELLIGENCE",
-    image: smartMappingImage,
+    image: ConstructionProgress,
     desc: "Periodic aerial records for project tracking, site comparison, earthwork progress, and stakeholder reporting.",
   },
   {
     title: "Roof & Solar Inspection",
     tag: "ASSET CHECKS",
-    image: industrialInspectionImage,
+    image: solar,
     desc: "Safer inspection of rooftops, solar arrays, elevated structures, and hard-to-access facility surfaces.",
   },
   {
     title: "Logistics Route Review",
     tag: "FIELD MOVEMENT",
-    image: droneHabitatImage,
+    image: logistic,
     desc: "Aerial route checks for remote access, delivery planning, terrain visibility, and field movement coordination.",
   },
 ];
@@ -404,9 +411,9 @@ const MissionPage = () => {
 
             <p className="mt-6 text-muted-foreground leading-relaxed">
               We develop drone platforms around field usability, stable flight,
-              modular payloads, data capture, operator training, and
-              AI-assisted workflows that improve mission awareness without
-              overcomplicating the system.
+              modular payloads, data capture, operator training, and AI-assisted
+              workflows that improve mission awareness without overcomplicating
+              the system.
             </p>
           </div>
 
@@ -500,13 +507,15 @@ const MissionPage = () => {
           <div className="grid grid-flow-dense md:grid-cols-2 lg:grid-cols-3 auto-rows-fr items-stretch gap-px bg-border border border-border">
             {useCases.map((item, index) => {
               const isWide = wideCardIndexes.has(index);
-              const imageSrc = isWide && item.wideImage ? item.wideImage : item.image;
+              const imageSrc =
+                isWide && item.wideImage ? item.wideImage : item.image;
 
               return (
                 <article
                   key={item.title}
-                  className={`group relative min-h-[360px] overflow-hidden bg-charcoal ${isWide ? "lg:col-span-2" : ""
-                    }`}
+                  className={`group relative min-h-[360px] overflow-hidden bg-charcoal ${
+                    isWide ? "lg:col-span-2" : ""
+                  }`}
                 >
                   <img
                     src={imageSrc}
@@ -639,8 +648,8 @@ const MissionPage = () => {
 
               <p>
                 Our direction is steady: strengthen surveillance capability,
-                expand training access, improve ISR workflows, and deliver
-                drone systems that teams can trust in demanding field use.
+                expand training access, improve ISR workflows, and deliver drone
+                systems that teams can trust in demanding field use.
               </p>
 
               <div className="border border-border bg-charcoal p-6 corner-frame">

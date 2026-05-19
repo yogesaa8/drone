@@ -1,10 +1,10 @@
 import { FloatUpText } from "../animations/Antigravity";
-import AG from "../../assets/mission/AG.png";
-import DH from "../../assets/mission/DH.png";
-import ds from "../../assets/mission/ds.png";
-import SR from "../../assets/mission/SR.png";
-import IDM from "../../assets/mission/IDM.png";
-import SM from "../../assets/mission/SM.png";
+import AG from "../../assets/mission/AG.webp";
+import DH from "../../assets/mission/DH.webp";
+import ds from "../../assets/mission/ds.webp";
+import SR from "../../assets/mission/SR.webp";
+import IDM from "../../assets/mission/IDM.webp";
+import SM from "../../assets/mission/SM.webp";
 
 // Mission & Tech data combined for grid display
 const combinedData = [

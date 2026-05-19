@@ -9,43 +9,43 @@ import agroSprayX from "../assets/model/agroSprayX.glb"
 
 
 // Drone images
-import tinywoop1 from "../assets/drone/tinywoop1.png"
-import tinywoop2 from "../assets/drone/tinywoop2.png"
-import tinywoop3 from "../assets/drone/tinywoop3.png"
-import tinywoop4 from "../assets/drone/tinywoop4.png"
-import tinywoop5 from "../assets/drone/tinywoop5.png"
-import tinywoop6 from "../assets/drone/tinywoop6.png"
-import arc2801 from "../assets/drone/arc2801.png"
-import arc2802 from "../assets/drone/arc2802.png"
-import arc2803 from "../assets/drone/arc2803.png"
-import arc2804 from "../assets/drone/arc2804.png"
-import shadow1 from "../assets/drone/shadow1.png"
-import shadow2 from "../assets/drone/shadow2.png"
-import shadow3 from "../assets/drone/shadow3.png"
-import shadow4 from "../assets/drone/shadow4.png"
-import shadow5 from "../assets/drone/shadow5.png"
-import beetle51 from "../assets/drone/beetle5.png"
-import beetle52 from "../assets/drone/beetle51.png"
-import beetle53 from "../assets/drone/beetle52.png"
-import beetle54 from "../assets/drone/beetle53.png"
-import arc4801 from "../assets/drone/arc4801.png"
-import arc4802 from "../assets/drone/arc4802.png"
-import arc4803 from "../assets/drone/arc4803.png"
-import arc4804 from "../assets/drone/arc4804.png"
-import arc4805 from "../assets/drone/arc4805.png"
-import soccer1 from "../assets/drone/soccer1.png"
-import soccer2 from "../assets/drone/soccer2.png"
-import soccer3 from "../assets/drone/soccer3.png"
-import soccer4 from "../assets/drone/soccer4.png"
-import chimeraX1 from "../assets/drone/chimeraX1.png"
-import chimeraX2 from "../assets/drone/chimeraX2.png"
-import chimeraX3 from "../assets/drone/chimeraX3.png"
-import chimeraX4 from "../assets/drone/chimeraX4.png"
-import chimeraX5 from "../assets/drone/chimeraX5.png"
-import agri1 from "../assets/drone/agri1.png"
-import agri2 from "../assets/drone/agri2.png"
-import agri3 from "../assets/drone/agri3.png"
-import agri4 from "../assets/drone/agri4.png"
+import tinywoop1 from "../assets/drone/tinywoop1.webp"
+import tinywoop2 from "../assets/drone/tinywoop2.webp"
+import tinywoop3 from "../assets/drone/tinywoop3.webp"
+import tinywoop4 from "../assets/drone/tinywoop4.webp"
+import tinywoop5 from "../assets/drone/tinywoop5.webp"
+import tinywoop6 from "../assets/drone/tinywoop6.webp"
+import arc2801 from "../assets/drone/arc2801.webp"
+import arc2802 from "../assets/drone/arc2802.webp"
+import arc2803 from "../assets/drone/arc2803.webp"
+import arc2804 from "../assets/drone/arc2804.webp"
+import shadow1 from "../assets/drone/shadow1.webp"
+import shadow2 from "../assets/drone/shadow2.webp"
+import shadow3 from "../assets/drone/shadow3.webp"
+import shadow4 from "../assets/drone/shadow4.webp"
+import shadow5 from "../assets/drone/shadow5.webp"
+import beetle51 from "../assets/drone/beetle5.webp"
+import beetle52 from "../assets/drone/beetle51.webp"
+import beetle53 from "../assets/drone/beetle52.webp"
+import beetle54 from "../assets/drone/beetle53.webp"
+import arc4801 from "../assets/drone/arc4801.webp"
+import arc4802 from "../assets/drone/arc4802.webp"
+import arc4803 from "../assets/drone/arc4803.webp"
+import arc4804 from "../assets/drone/arc4804.webp"
+import arc4805 from "../assets/drone/arc4805.webp"
+import soccer1 from "../assets/drone/soccer1.webp"
+import soccer2 from "../assets/drone/soccer2.webp"
+import soccer3 from "../assets/drone/soccer3.webp"
+import soccer4 from "../assets/drone/soccer4.webp"
+import chimeraX1 from "../assets/drone/chimeraX1.webp"
+import chimeraX2 from "../assets/drone/chimeraX2.webp"
+import chimeraX3 from "../assets/drone/chimeraX3.webp"
+import chimeraX4 from "../assets/drone/chimeraX4.webp"
+import chimeraX5 from "../assets/drone/chimeraX5.webp"
+import agri1 from "../assets/drone/agri1.webp"
+import agri2 from "../assets/drone/agri2.webp"
+import agri3 from "../assets/drone/agri3.webp"
+import agri4 from "../assets/drone/agri4.webp"
 
 
 
@@ -61,17 +61,17 @@ import kit5 from "../assets/kit/Vikas-Starter-Kit-1-1-324x324.webp"
 
 
 // gallery
-import g1 from "../assets/gallary/1.jpg";
-import g2 from "../assets/gallary/2.png";
-import g3 from "../assets/gallary/3.png";
-import g4 from "../assets/gallary/4.png";
-import g5 from "../assets/gallary/5.png";
-import g6 from "../assets/gallary/6.png";
-import g7 from "../assets/gallary/7.png";
-import g8 from "../assets/gallary/8.png";
-import g9 from "../assets/gallary/9.jpg";
-import g10 from "../assets/gallary/10.png";
-import g11 from "../assets/gallary/11.jpg";
+import g1 from "../assets/gallary/1.webp";
+import g2 from "../assets/gallary/2.webp";
+import g3 from "../assets/gallary/3.webp";
+import g4 from "../assets/gallary/4.webp";
+import g5 from "../assets/gallary/5.webp";
+import g6 from "../assets/gallary/6.webp";
+import g7 from "../assets/gallary/7.webp";
+import g8 from "../assets/gallary/8.webp";
+import g9 from "../assets/gallary/9.webp";
+import g10 from "../assets/gallary/10.webp";
+import g11 from "../assets/gallary/11.webp";
 
 
 // drone parts
