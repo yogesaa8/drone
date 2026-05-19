@@ -210,7 +210,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import footerWave from "../../assets/foot_back.png";
-import drone from "../../assets/footer.png";
 
 const cols = [
   {
@@ -297,14 +296,6 @@ const Footer = () => {
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-cover opacity-20"
-      />
-
-      {/* Drone Image On Footer Top Border */}
-      <img
-        src={drone}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute top-0 z-30 select-none object-contain -translate-y-1/2 left-60 w-36 translate-x-0 xs:left-5 xs:w-[115px] sm:left-8 sm:w-36.25  md:left-[80%] md:w-46.25 md:-translate-x-1/2 lg:left-[30%] lg:w-57.5 xl:w-67.5"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-10">

@@ -85,6 +85,29 @@ const timeline = [
   ],
 ];
 
+const timelineColors = [
+  {
+    bg: "rgba(56, 189, 248, 0.10)",
+    border: "rgba(56, 189, 248, 0.85)",
+    shadow: "rgba(56, 189, 248, 0.22)",
+  },
+  {
+    bg: "rgba(168, 85, 247, 0.10)",
+    border: "rgba(168, 85, 247, 0.85)",
+    shadow: "rgba(168, 85, 247, 0.22)",
+  },
+  {
+    bg: "rgba(45, 212, 191, 0.10)",
+    border: "rgba(45, 212, 191, 0.85)",
+    shadow: "rgba(45, 212, 191, 0.22)",
+  },
+  {
+    bg: "rgba(251, 146, 60, 0.10)",
+    border: "rgba(251, 146, 60, 0.85)",
+    shadow: "rgba(251, 146, 60, 0.22)",
+  },
+];
+
 const technologies = [
   [
     "ISR Workflow Support",
@@ -574,24 +597,40 @@ const MissionPage = () => {
           </div>
 
           <div className="grid lg:grid-cols-4 gap-px bg-border border border-border">
-            {timeline.map(([step, title, desc]) => (
-              <article
-                key={step}
-                className="bg-charcoal p-7 corner-frame min-w-0"
-              >
-                <div className="label-mono text-tactical text-[10px] mb-5">
-                  PHASE {step}
-                </div>
+            {timeline.map(([step, title, desc], index) => {
+              const color = timelineColors[index];
 
-                <h3 className="font-display text-xl font-semibold mb-3">
-                  {title}
-                </h3>
+              return (
+                <article
+                  key={step}
+                  style={{
+                    "--hover-bg": color.bg,
+                    "--hover-border": color.border,
+                    "--hover-shadow": color.shadow,
+                  }}
+                  className="
+              bg-charcoal p-7 corner-frame min-w-0
+              border border-transparent
+              transition-all duration-500 ease-out
+              hover:bg-(--hover-bg)
+              hover:border-(--hover-border)
+              hover:shadow-[0_0_32px_var(--hover-shadow)]
+            "
+                >
+                  <div className="label-mono text-tactical text-[10px] mb-5">
+                    PHASE {step}
+                  </div>
 
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {desc}
-                </p>
-              </article>
-            ))}
+                  <h3 className="font-display text-xl font-semibold mb-3">
+                    {title}
+                  </h3>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {desc}
+                  </p>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
