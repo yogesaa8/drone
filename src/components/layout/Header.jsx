@@ -39,11 +39,12 @@ const Header = () => {
   );
 
   const [theme, setTheme] = useState(() => {
-    const storedTheme = localStorage.getItem("theme");
+    const initialTheme = "dark";
 
-    document.documentElement.classList.toggle("dark", storedTheme === "dark");
+    localStorage.setItem("theme", initialTheme);
+    document.documentElement.classList.toggle("dark", initialTheme === "dark");
 
-    return storedTheme === "dark" ? "dark" : "light";
+    return initialTheme;
   });
 
   useEffect(() => {

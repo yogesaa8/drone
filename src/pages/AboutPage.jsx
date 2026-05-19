@@ -65,8 +65,8 @@ const teamMembers = [
     position: "object-center",
   },
   {
-    name: "Manvender KULHAR",
-    role: "Growth MANAGER",
+    name: "Manvender Kulhar",
+    role: "Growth Manager",
     image: manvender,
     bg: "bg-[#f4c66f]",
     position: "object-center",
