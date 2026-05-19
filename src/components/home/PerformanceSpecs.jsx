@@ -9,15 +9,6 @@ const stats = [
     { value: "AES-256", unit: "", label: "Encryption Standard" },
 ];
 
-// const specs = [
-//     { label: "Wingspan", value: "1.2 m" },
-//     { label: "Max Speed", value: "72 km/h" },
-//     { label: "Takeoff Weight", value: "3.8 kg" },
-//     { label: "Operating Temp", value: "-20° to 50°C" },
-//     { label: "Payload Capacity", value: "800 g" },
-//     { label: "Frequency Band", value: "2.4 / 5.8 GHz" },
-// ];
-
 const PerformanceSpecs = () => {
     return (
         <section id="specs" className="relative py-24 lg:py-32 border-y border-border bg-charcoal/30">

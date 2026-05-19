@@ -10,33 +10,6 @@ import industrialInspectionImage from "../assets/mission/IDM.png";
 import searchRescueImage from "../assets/mission/SR.png";
 import VerticalSlider from "../embla/VerticalSlider";
 
-// const missionPillars = [
-//   {
-//     title: "Our Mission",
-//     desc: "To make advanced UAV capability accessible, reliable, and field-ready for teams operating in real environments.",
-//   },
-//   {
-//     title: "Operational Focus",
-//     desc: "We support surveillance, ISR, mapping, rapid response, training, payload operations, and AI-assisted drone workflows.",
-//   },
-//   {
-//     title: "Training & Readiness",
-//     desc: "Pilot training, familiarization, checklists, and deployment guidance help teams operate UAV systems with confidence.",
-//   },
-//   {
-//     title: "Technology Direction",
-//     desc: "Our roadmap focuses on modular airframes, secure control workflows, payload flexibility, autonomy, and AI-enabled field intelligence.",
-//   },
-//   {
-//     title: "Partner Ecosystem",
-//     desc: "We collaborate with operators, institutions, suppliers, and field teams to align UAV capability with practical mission needs.",
-//   },
-//   {
-//     title: "Field Support",
-//     desc: "Configuration support, validation, maintenance guidance, and documentation keep UAV operations repeatable after delivery.",
-//   },
-// ];
-
 const missionPillars = [
   {
     title: "Our Mission",
