@@ -14,6 +14,7 @@ import IndustrialSite from "../assets/mission/IndustrialSite.webp";
 import DisasterDamage from "../assets/mission/DisasterDamage.webp";
 import ConstructionProgress from "../assets/mission/ConstructionProgress.webp";
 import solar from "../assets/mission/roof&solar.webp";
+import mis_hero from "../assets/mission/mis_hero.webp";
 
 import VerticalSlider from "../embla/VerticalSlider";
 
@@ -271,28 +272,28 @@ const MissionPage = () => {
 
             {/* Right Portrait Image - Full Image Visible */}
             <FloatUpText delay={0.1}>
-              <div className="relative w-full max-w-130 mx-auto lg:mx-0">
-                {/* <div className="absolute -inset-4 border border-tactical/20 corner-frame" /> */}
+              <div className="relative w-full max-w-[360px] sm:max-w-[430px] md:max-w-[500px] lg:max-w-[520px] mx-auto lg:mx-0">
+                <div className="relative border border-border bg-charcoal p-2 sm:p-3 corner-frame shadow-2xl overflow-hidden">
 
-                <div className="relative border border-border bg-charcoal p-3 corner-frame shadow-2xl overflow-hidden">
-                  {/* <div className="relative aspect-1086/1448 w-full overflow-hidden bg-background/40">
+                  <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10] lg:aspect-[4/3] overflow-hidden bg-background/40">
                     <img
-                      src={missionTrainingImage}
+                      src={mis_hero}
                       alt="Arcanumspace UAV training and certification"
-                      className="w-full h-full object-contain object-center"
+                      className="w-full h-full object-cover object-center"
                       loading="eager"
                     />
-                  </div> */}
+                  </div>
 
-                  <div className="mt-3 border border-border bg-background/70 px-4 py-3 corner-frame">
-                    <div className="label-mono text-tactical text-[10px] mb-1">
+                  <div className="mt-3 border border-border bg-background/70 px-3 sm:px-4 py-3 corner-frame">
+                    <div className="label-mono text-tactical text-[9px] sm:text-[10px] mb-1 tracking-[0.25em]">
                       ARCANUMSPACE PRIVATE LIMITED
                     </div>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      UAV training, pilot readiness, and mission-focused drone
-                      capability.
+
+                    <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
+                      UAV training, pilot readiness, and mission-focused drone capability.
                     </p>
                   </div>
+
                 </div>
               </div>
             </FloatUpText>
@@ -518,9 +519,8 @@ const MissionPage = () => {
               return (
                 <article
                   key={item.title}
-                  className={`group relative min-h-90 overflow-hidden bg-charcoal ${
-                    isWide ? "lg:col-span-2" : ""
-                  }`}
+                  className={`group relative min-h-90 overflow-hidden bg-charcoal ${isWide ? "lg:col-span-2" : ""
+                    }`}
                 >
                   <img
                     src={imageSrc}

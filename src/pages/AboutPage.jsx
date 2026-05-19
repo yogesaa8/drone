@@ -59,26 +59,18 @@ const metrics = [
 const teamMembers = [
   {
     name: "Harsh Shrivastava",
-    role: "Founder",
+    role: "CEO & DIRECTOR",
     image: harsh,
     bg: "bg-[#c9dddd]",
     position: "object-center",
   },
   {
-    name: "Manvender Singh",
-    role: "Founder",
+    name: "Manvender KULHAR",
+    role: "Growth MANAGER",
     image: manvender,
     bg: "bg-[#f4c66f]",
     position: "object-center",
-  },
-  {
-    name: "John Paul",
-    role: "Founder",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
-    bg: "bg-[#f4c66f]",
-    position: "object-center",
-  },
+  }  
 ];
 
 const AboutPage = () => {
