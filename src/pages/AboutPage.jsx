@@ -347,7 +347,7 @@ const AboutPage = () => {
             <FloatUpText delay={0.15}>
               <div
                 onMouseLeave={() => setActiveMemberIndex(defaultActiveMember)}
-                className="flex items-center justify-start lg:justify-center gap-3 sm:gap-5 w-full overflow-x-auto pb-3"
+                className="grid grid-cols-1 sm:grid-cols-3 lg:flex items-stretch lg:items-center justify-start lg:justify-center gap-4 sm:gap-5 w-full"
               >
                 {teamMembers.map((member, index) => {
                   const isActive = activeMemberIndex === index;
@@ -360,15 +360,15 @@ const AboutPage = () => {
                       onFocus={() => setActiveMemberIndex(index)}
                       onClick={() => setActiveMemberIndex(index)}
                       className={`
-                        relative shrink-0 overflow-hidden cursor-pointer border border-border
-                        h-71.25 sm:h-77.5 rounded-[42px] sm:rounded-[52px]
+                        relative min-w-0 overflow-hidden cursor-pointer border border-border
+                        h-72 sm:h-80 lg:h-77.5 w-full rounded-[32px] sm:rounded-[42px] lg:rounded-[52px]
                         transition-[width,box-shadow] duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
                         focus:outline-none
                         ${member.bg}
                         ${
                           isActive
-                            ? "w-57.5 sm:w-87.5 shadow-[0_20px_60px_-35px_rgba(140,180,90,0.65)]"
-                            : "w-19 sm:w-27.5"
+                            ? "lg:w-87.5 shadow-[0_20px_60px_-35px_rgba(140,180,90,0.65)]"
+                            : "lg:w-27.5"
                         }
                       `}
                     >
@@ -380,7 +380,7 @@ const AboutPage = () => {
                           absolute inset-0 h-full w-full object-cover select-none
                           transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
                           ${member.position}
-                          ${isActive ? "scale-100" : "scale-110"}
+                          ${isActive ? "scale-100" : "scale-100 lg:scale-110"}
                         `}
                       />
 
@@ -388,7 +388,7 @@ const AboutPage = () => {
                         className={`
                           absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent
                           transition-opacity duration-500
-                          ${isActive ? "opacity-100" : "opacity-0"}
+                          ${isActive ? "opacity-100" : "opacity-100 lg:opacity-0"}
                         `}
                       />
 
@@ -396,7 +396,7 @@ const AboutPage = () => {
                         className={`
                           absolute inset-0 hud-grid pointer-events-none
                           transition-opacity duration-500
-                          ${isActive ? "opacity-20" : "opacity-0"}
+                          ${isActive ? "opacity-20" : "opacity-20 lg:opacity-0"}
                         `}
                       />
 
@@ -407,7 +407,7 @@ const AboutPage = () => {
                           ${
                             isActive
                               ? "opacity-100 translate-y-0"
-                              : "opacity-0 translate-y-5 pointer-events-none"
+                              : "opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-5 lg:pointer-events-none"
                           }
                         `}
                       >
