@@ -11,6 +11,9 @@ import capabilityImg4 from "../assets/about/AG.webp";
 import capabilityImg5 from "../assets/about/AI.webp";
 import capabilityImg6 from "../assets/about/OD.webp";
 
+import harsh from "../assets/about/harsh.webp";
+import manvender from "../assets/about/manvender.webp";
+
 const capabilities = [
   {
     title: "Who We Are",
@@ -55,19 +58,17 @@ const metrics = [
 
 const teamMembers = [
   {
-    name: "Mary Jane",
+    name: "Harsh Shrivastava",
     role: "Founder",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
+    image: harsh,
     bg: "bg-[#c9dddd]",
     position: "object-center",
   },
   {
-    name: "Emma Grace",
+    name: "Manvender Singh",
     role: "Founder",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80",
-    bg: "bg-[#26384a]",
+    image: manvender,
+    bg: "bg-[#f4c66f]",
     position: "object-center",
   },
   {

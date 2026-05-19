@@ -609,12 +609,12 @@ const MissionPage = () => {
                     "--hover-shadow": color.shadow,
                   }}
                   className="
-              bg-charcoal p-7 corner-frame min-w-0
-              border border-transparent
-              transition-all duration-500 ease-out
-              hover:bg-(--hover-bg)
-              hover:border-(--hover-border)
-              hover:shadow-[0_0_32px_var(--hover-shadow)]
+                bg-charcoal p-7 corner-frame min-w-0
+                border border-transparent
+                transition-all duration-500 ease-out
+                hover:bg-(--hover-bg)
+                hover:border-(--hover-border)
+                hover:shadow-[0_0_32px_var(--hover-shadow)]
             "
                 >
                   <div className="label-mono text-tactical text-[10px] mb-5">
@@ -696,7 +696,7 @@ const MissionPage = () => {
             {/* Right Image */}
             <div className="order-2">
               <div className="relative mx-auto w-full max-w-140 overflow-hidden border border-border bg-background/40 shadow-2xl shadow-black/25 lg:ml-auto">
-                <div className="aspect-4/5 w-full sm:aspect-16/11 lg:aspect-4/5 corner-frame">
+                <div className="aspect-4/5 w-full corner-frame">
                   <img
                     src={missionTrainingImage}
                     alt="Arcanumspace UAV training and certification"
