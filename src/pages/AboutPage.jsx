@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaLinkedinIn } from "react-icons/fa";
 import heroImg from "../assets/about/about_page_top.webp";
 import btmImg from "../assets/about/about_page1.webp";
 import { AnimatedGrid } from "../components/animations/AnimatedGrid";
@@ -62,15 +63,17 @@ const teamMembers = [
     role: "CEO & DIRECTOR",
     image: harsh,
     bg: "bg-[#c9dddd]",
-    position: "object-center",
+    position: "object-center md:object-center",
+    linkedin: "https://linkedin.com/in/harsh",
   },
   {
     name: "Manvender Kulhar",
     role: "Growth Manager",
     image: manvender,
     bg: "bg-[#f4c66f]",
-    position: "object-center",
-  }  
+    position: "object-center md:object-center",
+    linkedin: "https://linkedin.com/in/manvender",
+  },
 ];
 
 const AboutPage = () => {
@@ -395,14 +398,14 @@ const AboutPage = () => {
 
                       <div
                         className={`
-                          absolute left-0 right-0 bottom-7 z-10 text-center text-white
-                          transition-all duration-500
-                          ${
-                            isActive
-                              ? "opacity-100 translate-y-0"
-                              : "opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-5 lg:pointer-events-none"
-                          }
-                        `}
+    absolute left-0 right-0 bottom-7 z-10 text-center text-white
+    transition-all duration-500
+    ${
+      isActive
+        ? "opacity-100 translate-y-0"
+        : "opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-5 lg:pointer-events-none"
+    }
+  `}
                       >
                         <h3 className="text-[20px] font-medium leading-none">
                           {member.name}
@@ -411,6 +414,16 @@ const AboutPage = () => {
                         <p className="mt-2 text-[13px] font-normal opacity-95">
                           {member.role}
                         </p>
+
+                        {/* LINKEDIN ICON */}
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300"
+                        >
+                          <FaLinkedinIn size={16} />
+                        </a>
                       </div>
                     </button>
                   );
