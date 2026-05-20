@@ -97,7 +97,6 @@ const AboutPage = () => {
               <div>
                 <div className="flex items-center gap-3 mb-5">
                   <span className="h-px w-8 bg-tactical" />
-
                   <span className="label-mono text-tactical">
                     Arcanumspace / Company Profile
                   </span>
@@ -130,9 +129,7 @@ const AboutPage = () => {
                   alt="Arcanumspace tactical drone platform"
                   className="aspect-4/3 w-full object-cover"
                 />
-
                 <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
-
                 <div className="absolute bottom-4 left-4 label-mono text-[10px] bg-background/80 px-3 py-2">
                   FIELD UNIT / ACTIVE READINESS
                 </div>
@@ -147,7 +144,6 @@ const AboutPage = () => {
                 <div className="font-display text-3xl font-bold text-tactical">
                   {value}
                 </div>
-
                 <div className="label-mono text-[10px] mt-3">{label}</div>
               </div>
             ))}
@@ -161,7 +157,6 @@ const AboutPage = () => {
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-8 bg-tactical" />
-
               <span className="label-mono text-tactical">COMPANY OVERVIEW</span>
             </div>
 
@@ -177,7 +172,6 @@ const AboutPage = () => {
                 work spans airframe selection, electronics integration, payload
                 configuration, flight tuning, and deployment planning.
               </p>
-
               <p>
                 Our platforms support training, surveillance, ISR workflows,
                 rapid response, mapping, modular payload missions, and
@@ -185,13 +179,11 @@ const AboutPage = () => {
                 stable flight, quick launch readiness, field durability, and
                 clear operator control.
               </p>
-
               <p>
                 We work with teams from concept to deployment: defining mission
                 requirements, configuring platforms, validating performance,
                 preparing documentation, and supporting operator training.
               </p>
-
               <p>
                 The result is a focused UAV ecosystem designed for practical
                 readiness, repeatable field performance, and long-term
@@ -202,7 +194,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* image */}
+      {/* Image */}
       <section className="py-10 sm:py-14 lg:py-20 border-t border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
           <FloatUpText>
@@ -212,7 +204,6 @@ const AboutPage = () => {
                 alt="Arcanumspace UAV operations"
                 className="w-full h-65 sm:h-95 md:h-115 lg:h-150 object-contain lg:object-cover object-center"
               />
-
               <div className="absolute inset-0 hud-grid opacity-20 pointer-events-none" />
             </div>
           </FloatUpText>
@@ -225,10 +216,8 @@ const AboutPage = () => {
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <span className="h-px w-8 bg-tactical" />
-
               <span className="label-mono text-tactical">CORE OPERATIONS</span>
             </div>
-
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
               Focused capabilities for reliable UAV deployment
             </h2>
@@ -246,18 +235,14 @@ const AboutPage = () => {
                   aria-hidden="true"
                   className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-80"
                 />
-
                 <div className="absolute inset-0 bg-charcoal/60 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100" />
-
                 <div className="relative z-10">
                   <div className="label-mono text-tactical text-[10px] mb-5">
                     CAPABILITY {String(index + 1).padStart(2, "0")}
                   </div>
-
                   <h3 className="font-display text-2xl font-semibold mb-3 wrap-break-word">
                     {title}
                   </h3>
-
                   <p className="text-sm text-muted-foreground leading-relaxed transition-colors duration-300 group-hover:text-foreground">
                     {desc}
                   </p>
@@ -275,10 +260,8 @@ const AboutPage = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="h-px w-8 bg-tactical" />
-
                 <span className="label-mono text-tactical">WHY CHOOSE US</span>
               </div>
-
               <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight">
                 Practical UAV systems backed by engineering discipline and field
                 support
@@ -291,18 +274,15 @@ const AboutPage = () => {
                 complete operational system: platform, payload, communications,
                 training, maintenance, documentation, and deployment workflow.
               </p>
-
               <p>
                 From compact FPV training platforms to AI-assisted tactical
                 multirotor UAVs, every configuration is built with usability,
                 reliability, and mission adaptability at the center.
               </p>
-
               <div className="border border-border bg-charcoal p-6 corner-frame">
                 <div className="label-mono text-tactical text-[10px] mb-3">
                   FIELD-READY UAV DELIVERY
                 </div>
-
                 <p className="text-sm leading-relaxed">
                   Arcanumspace supports teams with platform selection,
                   configuration, flight validation, pilot training, and
@@ -323,16 +303,13 @@ const AboutPage = () => {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="h-px w-8 bg-tactical" />
-
                   <span className="label-mono text-tactical">
                     LEADERSHIP TEAM
                   </span>
                 </div>
-
                 <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight">
                   People behind the mission-ready UAV ecosystem
                 </h2>
-
                 <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
                   A focused founding team shaping Arcanumspace through product
                   discipline, engineering clarity, and field-first execution.
@@ -343,7 +320,7 @@ const AboutPage = () => {
             <FloatUpText delay={0.15}>
               <div
                 onMouseLeave={() => setActiveMemberIndex(defaultActiveMember)}
-                className="grid grid-cols-1 sm:grid-cols-3 lg:flex items-stretch lg:items-center justify-start lg:justify-center gap-4 sm:gap-5 w-full"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:flex items-stretch lg:items-center justify-center lg:justify-center gap-4 sm:gap-5 w-full"
               >
                 {teamMembers.map((member, index) => {
                   const isActive = activeMemberIndex === index;
@@ -396,34 +373,55 @@ const AboutPage = () => {
                         `}
                       />
 
+                      {/* Name / Role / LinkedIn */}
                       <div
                         className={`
-    absolute left-0 right-0 bottom-7 z-10 text-center text-white
-    transition-all duration-500
-    ${
-      isActive
-        ? "opacity-100 translate-y-0"
-        : "opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-5 lg:pointer-events-none"
-    }
-  `}
+                          absolute left-0 right-0 bottom-7 z-10 px-5 text-white
+                          transition-all duration-500
+                          ${
+                            isActive
+                              ? "opacity-100 translate-y-0"
+                              : "opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-5 lg:pointer-events-none"
+                          }
+                        `}
                       >
-                        <h3 className="text-[20px] font-medium leading-none">
-                          {member.name}
-                        </h3>
+                        {/* Mobile & Tablet — centered vertical layout (unchanged) */}
+                        <div className="flex flex-col items-center text-center lg:hidden">
+                          <h3 className="text-[20px] font-medium leading-none">
+                            {member.name}
+                          </h3>
+                          <p className="mt-2 text-[13px] font-normal opacity-95">
+                            {member.role}
+                          </p>
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-4 inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300"
+                          >
+                            <FaLinkedinIn size={16} />
+                          </a>
+                        </div>
 
-                        <p className="mt-2 text-[13px] font-normal opacity-95">
-                          {member.role}
-                        </p>
-
-                        {/* LINKEDIN ICON */}
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-4 inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300"
-                        >
-                          <FaLinkedinIn size={16} />
-                        </a>
+                        {/* Desktop — name + LinkedIn icon on same line, role below */}
+                        <div className="hidden lg:block">
+                          <div className="flex items-center gap-3">
+                            <h3 className="text-[20px] font-medium leading-none">
+                              {member.name}
+                            </h3>
+                            <a
+                              href={member.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300 flex-shrink-0"
+                            >
+                              <FaLinkedinIn size={14} />
+                            </a>
+                          </div>
+                          <p className="mt-1.5 text-[13px] font-normal opacity-95">
+                            {member.role}
+                          </p>
+                        </div>
                       </div>
                     </button>
                   );
