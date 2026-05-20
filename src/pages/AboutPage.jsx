@@ -374,53 +374,67 @@ const AboutPage = () => {
                       />
 
                       {/* Name / Role / LinkedIn */}
+                      {/* Name / Role / LinkedIn */}
                       <div
                         className={`
-                          absolute left-0 right-0 bottom-7 z-10 px-5 text-white
-                          transition-all duration-500
-                          ${
-                            isActive
-                              ? "opacity-100 translate-y-0"
-                              : "opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-5 lg:pointer-events-none"
-                          }
-                        `}
+    absolute left-0 right-0 bottom-7 z-10 px-5 text-white
+    transition-all duration-500
+    ${
+      isActive
+        ? "opacity-100 translate-y-0"
+        : "opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-5 lg:pointer-events-none"
+    }
+  `}
                       >
-                        {/* Mobile & Tablet — centered vertical layout (unchanged) */}
+                        {/* Mobile & Tablet */}
                         <div className="flex flex-col items-center text-center lg:hidden">
                           <h3 className="text-[20px] font-medium leading-none">
                             {member.name}
                           </h3>
+
                           <p className="mt-2 text-[13px] font-normal opacity-95">
                             {member.role}
                           </p>
+
                           <a
                             href={member.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-4 inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300"
+                            className="
+        mt-4 inline-flex items-center justify-center
+        w-9 h-9 rounded-full
+        border border-white/40
+        bg-white/10 backdrop-blur-sm
+        hover:bg-white hover:text-black
+        transition-all duration-300
+      "
                           >
                             <FaLinkedinIn size={16} />
                           </a>
                         </div>
 
-                        {/* Desktop — name + LinkedIn icon on same line, role below */}
-                        <div className="hidden lg:block">
-                          <div className="flex items-center gap-3">
+                        {/* Desktop */}
+                        <div className="hidden lg:flex items-center justify-between gap-4">
+                          {/* Name + Role */}
+                          <div className="flex flex-col text-left">
                             <h3 className="text-[20px] font-medium leading-none">
                               {member.name}
                             </h3>
-                            <a
-                              href={member.linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300 flex-shrink-0"
-                            >
-                              <FaLinkedinIn size={14} />
-                            </a>
+
+                            <p className="mt-1.5 text-[13px] font-normal opacity-95">
+                              {member.role}
+                            </p>
                           </div>
-                          <p className="mt-1.5 text-[13px] font-normal opacity-95">
-                            {member.role}
-                          </p>
+
+                          {/* LinkedIn */}
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black transition-all duration-300 flex-shrink-0"
+                          >
+                            <FaLinkedinIn size={15} />
+                          </a>
                         </div>
                       </div>
                     </button>
